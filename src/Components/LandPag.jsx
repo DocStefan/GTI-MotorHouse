@@ -1,6 +1,8 @@
 import React from 'react'
 import "../Styles/LandPag.css"
 import { useState, useEffect, useRef, useMemo, useContext, Fragment } from 'react'
+import { useScroll } from './Scroller'
+import { ModelContext } from './MainModelManager'
 
 function LandPag() {
 
@@ -17,6 +19,9 @@ function LandPag() {
   ]
 
   let [MainLogoAlternator, setMainLogoAlternator] = useState(0)
+
+  const scrollToElement = useScroll();
+  const {HomeModelSelected, setHomeModelSelected} = useContext(ModelContext)
 
   useEffect(() => {
 
@@ -64,7 +69,7 @@ function LandPag() {
 
         <div className="FirstPartNav">
 
-          <div className="BotoneraPrimeraNav"><button type="button" className="Botonera BotoneraLeft">Vehiculos</button></div>
+          <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("VehiclesScrollRef")}}><button type="button" className="Botonera BotoneraLeft">Vehiculos</button></div>
           <div className="BotoneraPrimeraNav"><button type="button" className="Botonera">Servicios</button></div>
           <div className="BotoneraPrimeraNav"><button type="button" className="Botonera BotoneraRight">Noticias</button></div>
 
@@ -100,7 +105,7 @@ function LandPag() {
 
             <div className="ActionButton">
 
-              <button type="button" className="ButtonMain">Ver Modelos</button>
+              <button type="button" className="ButtonMain" onClick={() => {setHomeModelSelected({ModeloSeleccionado: SelectedCarMenu.Marca.charAt(0).toUpperCase() + SelectedCarMenu.Marca.slice(1).toLowerCase()}), scrollToElement("VehiclesScrollRef")}}>Ver Modelos</button>
 
             </div>
 

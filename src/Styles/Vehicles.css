@@ -766,6 +766,44 @@
     color: #fff;
 }
 
+.NoAvailableOptionsSign {
+
+ width: 100%;
+ height: 100%;
+
+ /* background-color: blue; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ 
+}
+
+.NoOptionsAvailableText {
+
+    color: #1b0424;
+    opacity: 0.25;
+    font-family: "Sofia Sans", Arial;
+    font-size: 2vw;
+    font-weight: 500;
+
+}
+
+.NoOptionsAvailablePic {
+
+ width: 20%;
+ height: 40%;
+ background-image: url("./noOptions.png");
+ background-repeat: no-repeat;
+ background-size: contain;
+ /* background-color: red; */
+ background-position: center;
+ color: #1b0424;
+ opacity: 0.25;
+
+}
+
 .VehicleCatalogueButtons {
 
     grid-row: 2;

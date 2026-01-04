@@ -3,6 +3,7 @@ import "../Styles/Vehicles.css"
 import { useId, useState, useEffect, useRef, useMemo, useContext, Fragment } from 'react'
 import Select from "react-select"
 import VehiclesData from './VehiclesData'
+import { ModelContext } from './MainModelManager'
 
 function Vehicles() {
 
@@ -21,6 +22,8 @@ function Vehicles() {
 
     let [PaginatorFowardStyleManager, SetPaginatorFowardStyleManager] = useState(true)
     let [PaginatorBackwardsStyleManager, setPaginatorBackwardsStyleManager] = useState(false)
+
+    const { HomeModelSelected } = useContext(ModelContext)
 
     let ModelOptions = useMemo(() => {
 
@@ -145,8 +148,43 @@ function Vehicles() {
 
     }
 
+    useEffect(() => {
+
+        if (HomeModelSelected) {
+
+            if (HomeModelSelected.ModeloSeleccionado === "Bmw") {
+
+                setFilterAction(PreVal => ({ ...PreVal, Marca: "BMW" }))
+
+
+            } else {
+
+                setFilterAction(PreVal => ({ ...PreVal, Marca: HomeModelSelected.ModeloSeleccionado }))
+
+            }
+
+        }
+
+    }, [HomeModelSelected])
+
+    let [NoOptionsFilter, setNotOptionsFilter] = useState(false)
+
+    useEffect(() => {
+
+        if (!SelectedFilterOptions.length) {
+
+            setNotOptionsFilter(true)
+
+        } else {
+
+            setNotOptionsFilter(false)
+
+        }
+
+    }, [SelectedFilterOptions])
+
     return (
-        <div className="MainVehicles">
+        <div className="MainVehicles" id="VehiclesScrollRef">
 
             <div className="VehiclesTypes">
 
@@ -181,8 +219,11 @@ function Vehicles() {
 
                     <div className="VehiclesFilterBrandApart">
                         <span className="VehicleFilterText">Marca</span>
-                        <Select options={MarcaOptions} onChange={(SelectOptionMarca) => { setFilterAction(PreVal => ({ ...PreVal, Marca: SelectOptionMarca ? SelectOptionMarca.value : "" })) }} className="VehicleFilterSelectorReactSelect" classNamePrefix="SelectModel" placeholder="Marcas" noOptionsMessage={() => "Sin marcas"} isClearable />
+                        <Select options={MarcaOptions} value={MarcaOptions.find(option => option.value === FilterAction.Marca) || null} onChange={(SelectOptionMarca) => { setFilterAction(PreVal => ({ ...PreVal, Marca: SelectOptionMarca ? SelectOptionMarca.value : "" })) }} className="VehicleFilterSelectorReactSelect" classNamePrefix="SelectModel" placeholder="Marcas" noOptionsMessage={() => "Sin marcas"} isClearable />
                     </div>
+
+                    {/* el apartado value del select anterior "MARCA" mas todo lo relacionado al HomeModelSelected en este componente puede dar un error, chequear en caso de que suceda */}
+
                     <div className="VehiclesFilterModelApart">
                         <span className="VehicleFilterText">Modelo</span>
                         <Select options={ModelOptions} onChange={(SelectOptionModel) => { setFilterAction(PreVal => ({ ...PreVal, Modelo: SelectOptionModel ? SelectOptionModel.value : "" })) }} className="VehicleFilterSelectorReactSelect" classNamePrefix="SelectModel" placeholder="Modelos" noOptionsMessage={() => "Sin modelos"} isClearable />
@@ -304,26 +345,30 @@ function Vehicles() {
 
                     })}
 
+                    {NoOptionsFilter ? <div className="NoAvailableOptionsSign">
+                        <div className="NoOptionsAvailablePic"> </div>
+                        <span className="NoOptionsAvailableText">No se encontraron vehiculos</span>
+                    </div> : ""}
+
                 </div>
 
-                <div className="VehicleCatalogueButtons">
+                {NoOptionsFilter ? "" : <div className="VehicleCatalogueButtons">
 
                     <div className="CatalogueButtonsContainer">
 
-                        <div className="CatalogueArrow" style={{animation: PaginatorBackwardsStyleManager ? "" : "none", cursor: PaginatorBackwardsStyleManager ? "" : "default", opacity: PaginatorBackwardsStyleManager ? "" : 0.25}}  onClick={() => { IndexManagerChanger(IndexMinus) }}><span className="material-symbols-outlined ArrrowAsText">arrow_back</span></div>
+                        <div className="CatalogueArrow" style={{ animation: PaginatorBackwardsStyleManager ? "" : "none", cursor: PaginatorBackwardsStyleManager ? "" : "default", opacity: PaginatorBackwardsStyleManager ? "" : 0.25 }} onClick={() => { IndexManagerChanger(IndexMinus) }}><span className="material-symbols-outlined ArrrowAsText">arrow_back</span></div>
 
                         <div className="CatalogueNumbers">
-                            
-                         {Array.from({length: Math.ceil(VehicleDataLengthIndex / 4) + 1}, (val, index) =>  
-                         { if(index === PaginatorIndexManager / 4) {return <span className="MainNumberCatalogue">{index}</span>} else {return <span onClick={() => {setPaginatorIndexManager(index * 4)}} className="SecondaryNumberCatalogue">{index}</span>} })}
+
+                            {Array.from({ length: Math.ceil(VehicleDataLengthIndex / 4) + 1 }, (val, index) => { if (index === PaginatorIndexManager / 4) { return <span className="MainNumberCatalogue">{index}</span> } else { return <span onClick={() => { setPaginatorIndexManager(index * 4) }} className="SecondaryNumberCatalogue">{index}</span> } })}
 
                         </div>
 
-                        <div className="CatalogueArrow" style={{animation: PaginatorFowardStyleManager ? "" : "none", cursor: PaginatorFowardStyleManager ? "" : "default", opacity: PaginatorFowardStyleManager ? "" : 0.25}}  onClick={() => { IndexManagerChanger(IndexPlus) }}><span className="material-symbols-outlined ArrrowAsText">arrow_forward</span></div>
+                        <div className="CatalogueArrow" style={{ animation: PaginatorFowardStyleManager ? "" : "none", cursor: PaginatorFowardStyleManager ? "" : "default", opacity: PaginatorFowardStyleManager ? "" : 0.25 }} onClick={() => { IndexManagerChanger(IndexPlus) }}><span className="material-symbols-outlined ArrrowAsText">arrow_forward</span></div>
 
                     </div>
 
-                </div>
+                </div>}
 
             </div>
 
