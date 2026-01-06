@@ -8,7 +8,7 @@ let VehiclesData = [
     tipo: "Sedan",
     caja: "Automatico",
     combustible: "Electrico",
-    foto: "https://example.com/autos/toyota-corolla-2019.jpg"
+    foto: "url(./toyotaCrown.jpg)"
   },
   {
     marca: "Ford",
@@ -19,7 +19,7 @@ let VehiclesData = [
     tipo: "PickUp",
     caja: "Manual",
     combustible: "Diesel",
-    foto: "https://example.com/autos/ford-ranger-2021.jpg"
+    foto: "url(./fordRanger.jpg)"
   },
   {
     marca: "Volkswagen",
@@ -30,7 +30,7 @@ let VehiclesData = [
     tipo: "HatchBack",
     caja: "Manual",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/vw-golf-2018.jpg"
+    foto: "url(./volkswagenGolf.jpg)"
   },
   {
     marca: "Chevrolet",
@@ -41,7 +41,7 @@ let VehiclesData = [
     tipo: "Hatchback",
     caja: "Automatico",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/chevrolet-onix-2020.jpg"
+    foto: "url(./chevroletOnix.jpg)"
   },
   {
     marca: "Honda",
@@ -52,7 +52,7 @@ let VehiclesData = [
     tipo: "Sedan",
     caja: "Manual",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/honda-civic-2017.jpg"
+    foto: "url(./hondaCivic.jpg)"
   },
   {
     marca: "Peugeot",
@@ -63,7 +63,7 @@ let VehiclesData = [
     tipo: "HatchBack",
     caja: "Automatico",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/peugeot-208-2022.jpg"
+    foto: "url(./peugeot208.jpeg)"
   },
   {
     marca: "Renault",
@@ -74,7 +74,7 @@ let VehiclesData = [
     tipo: "SUV",
     caja: "Manual",
     combustible: "Diesel",
-    foto: "https://example.com/autos/renault-duster-2019.jpg"
+    foto: "url(./renaultDuster.jpg)"
   },
   {
     marca: "Jeep",
@@ -85,7 +85,7 @@ let VehiclesData = [
     tipo: "SUV",
     caja: "Automatico",
     combustible: "Diesel",
-    foto: "https://example.com/autos/jeep-compass-2021.jpg"
+    foto: "url(./jeepCompass.jpg)"
   },
   {
     marca: "BMW",
@@ -96,7 +96,7 @@ let VehiclesData = [
     tipo: "Coupe",
     caja: "Automatico",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/bmw-320i-2018.jpg"
+    foto: "url(./bmwM4.jpg)"
   },
   {
     marca: "Mercedes-Benz",
@@ -107,7 +107,7 @@ let VehiclesData = [
     tipo: "Sedan",
     caja: "Automatico",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/mercedes-c200-2019.jpg"
+    foto: "url(./mercedesC200.jpg)"
   },
   {
     marca: "Audi",
@@ -118,7 +118,7 @@ let VehiclesData = [
     tipo: "HatchBack",
     caja: "Automatico",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/audi-a3-2017.jpg"
+    foto: "url(./audiRS4.jpeg)"
   },
   {
     marca: "Nissan",
@@ -129,7 +129,7 @@ let VehiclesData = [
     tipo: "Coupe",
     caja: "Manual",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/nissan-sentra-2020.jpg"
+    foto: "url(./nissanGTR.jpg)"
   },
   {
     marca: "Fiat",
@@ -140,7 +140,7 @@ let VehiclesData = [
     tipo: "Sedan",
     caja: "Manual",
     combustible: "GNC",
-    foto: "https://example.com/autos/fiat-cronos-2021.jpg"
+    foto: "url(./fiatCronos.jpg)"
   },
   {
     marca: "Toyota",
@@ -151,7 +151,7 @@ let VehiclesData = [
     tipo: "PickUp",
     caja: "Automatico",
     combustible: "Diesel",
-    foto: "https://example.com/autos/toyota-hilux-2022.jpg"
+    foto: "url(./toyotaHilux.jpg)"
   },
   {
     marca: "Chevrolet",
@@ -162,7 +162,7 @@ let VehiclesData = [
     tipo: "SUV",
     caja: "Automatico",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/chevrolet-tracker-2021.jpg"
+    foto: "url(./chevroletTracker.jpg)"
   },
   {
     marca: "Hyundai",
@@ -173,29 +173,29 @@ let VehiclesData = [
     tipo: "SUV",
     caja: "Automatico",
     combustible: "Diesel",
-    foto: "https://example.com/autos/hyundai-tucson-2018.jpg"
+    foto: "url(./hyundaiTucson.jpg)"
   },
   {
-    marca: "Tesla",
-    modelo: "Model 3",
+    marca: "Ford",
+    modelo: "Mondeo",
     año: 2022,
     kms: 21000,
     precio: 39500,
     tipo: "Sedan",
     caja: "Automatico",
-    combustible: "Electrico",
-    foto: "https://example.com/autos/tesla-model-3-2022.jpg"
+    combustible: "Hibrido",
+    foto: "url(./fordMondeo.jpg)"
   },
   {
     marca: "Toyota",
-    modelo: "Prius",
+    modelo: "Land Cruiser",
     año: 2020,
     kms: 56000,
     precio: 26800,
-    tipo: "Sedan",
+    tipo: "SUV",
     caja: "Automatico",
     combustible: "Hibrido",
-    foto: "https://example.com/autos/toyota-prius-2020.jpg"
+    foto: "url(./toyotaLandCruiser.jpg)"
   },
   {
     marca: "Ford",
@@ -206,7 +206,7 @@ let VehiclesData = [
     tipo: "Coupe",
     caja: "Manual",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/ford-mustang-2016.jpg"
+    foto: "url(./fordMustang.jpg)"
   },
   {
     marca: "Volkswagen",
@@ -217,7 +217,7 @@ let VehiclesData = [
     tipo: "PickUp",
     caja: "Automatico",
     combustible: "Diesel",
-    foto: "https://example.com/autos/vw-amarok-2020.jpg"
+    foto: "url(./volkswagenAmarok.jpg)"
   },
   {
     marca: "Dodge",
@@ -228,7 +228,7 @@ let VehiclesData = [
     tipo: "Coupe",
     caja: "Manual",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/ford-ranger-2021.jpg"
+    foto: "url(./dodgeChallenger.png)"
   },
   {
     marca: "Porsche",
@@ -239,7 +239,7 @@ let VehiclesData = [
     tipo: "Coupe",
     caja: "Manual",
     combustible: "Gasolina",
-    foto: "https://example.com/autos/ford-ranger-2021.jpg"
+    foto: "url(./porsche718.jpg)"
   }
 ];
 

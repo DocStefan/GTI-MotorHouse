@@ -299,7 +299,7 @@ function Vehicles() {
                             return <div className="CataloguePost">
                                 <div className="CalaloguePostBox">
 
-                                    <div className="PostPic"></div>
+                                    <div className="PostPic" style={{backgroundImage: val.foto}}></div>
 
                                     <div className="PostName">
                                         <span>{val.año.toString() + " " + val.marca + " " + val.modelo} </span>
