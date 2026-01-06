@@ -540,6 +540,30 @@
 
 }
 
+.BotoneraLogoSegundaNav {
+
+
+   height: 100%;
+  /* background-color: green; */
+  width: 80%;
+  /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.LogoNav {
+
+ height: 65%;
+ width: 50%;
+ background-image: url("./public/logoc.png");
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: contain;
+
+}
+
 .BotoneraRightB {
 
   border-left: solid 2px rgb(255, 255, 255, 0.8);

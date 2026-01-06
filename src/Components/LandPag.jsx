@@ -77,7 +77,7 @@ function LandPag() {
 
         <div className="SecondPartNav">
 
-          <div className="BotoneraSegundaNav"><button type="button" className="Botonera BotoneraRightB" style={{ visibility: "hidden" }}>AcaVaElLogo</button></div>
+          <div className="BotoneraLogoSegundaNav"><div className="LogoNav"></div></div>
           <div className="BotoneraSegundaNav" onClick={() => {scrollToElement("FooterScrollRef")}}><button type="button" className="Botonera BotoneraRightB">Contacto</button></div>
 
         </div>
