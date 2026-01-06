@@ -61,14 +61,14 @@
     justify-content: space-evenly;
     align-items: start;
 
-    padding-bottom: 3vh;
+    padding-bottom: 2%;
 
 }
 
 .DataServiceBox {
 
     width: 27.5%;
-    height: 40vh;
+    height: 20vw;
     /* background-color: wheat; */
 
     display: flex;
