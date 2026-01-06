@@ -7,6 +7,7 @@ import { ScrollProvider } from './Components/Scroller'
 import { MainModelManager } from './Components/MainModelManager'
 import Services from './Components/Services'
 import News from './Components/News'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
     
     <BrowserRouter>
      <Routes>
-       <Route path="/" element={[<ScrollProvider><MainModelManager><LandPag /><Vehicles /><Services /><News /></MainModelManager></ScrollProvider>]} />
+       <Route path="/" element={[<ScrollProvider><MainModelManager><LandPag /><Vehicles /><Services /><News /><Footer /></MainModelManager></ScrollProvider>]} />
      </Routes>
     </BrowserRouter>
 
