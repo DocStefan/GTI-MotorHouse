@@ -8,7 +8,7 @@ export const ScrollProvider = ({ children }) => {
   const scrollToElement = (elementId) => {
     const element = document.getElementById(elementId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: "end" });
+      element.scrollIntoView({ behavior: 'smooth', block: "start" });
     }
   };
 

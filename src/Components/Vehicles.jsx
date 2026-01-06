@@ -4,6 +4,7 @@ import { useId, useState, useEffect, useRef, useMemo, useContext, Fragment } fro
 import Select from "react-select"
 import VehiclesData from './VehiclesData'
 import { ModelContext } from './MainModelManager'
+import { useScroll } from './Scroller'
 
 function Vehicles() {
 
@@ -23,6 +24,7 @@ function Vehicles() {
     let [PaginatorFowardStyleManager, SetPaginatorFowardStyleManager] = useState(true)
     let [PaginatorBackwardsStyleManager, setPaginatorBackwardsStyleManager] = useState(false)
 
+    const scrollToElement = useScroll();
     const { HomeModelSelected } = useContext(ModelContext)
 
     let ModelOptions = useMemo(() => {
@@ -184,7 +186,7 @@ function Vehicles() {
     }, [SelectedFilterOptions])
 
     return (
-        <div className="MainVehicles" id="VehiclesScrollRef">
+        <div className="MainVehicles" id="VehiclesScrollRef" onClick={() => {scrollToElement("VehiclesScrollRef")}}>
 
             <div className="VehiclesTypes">
 

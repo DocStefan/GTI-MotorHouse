@@ -5,6 +5,8 @@ import LandPag from './Components/LandPag'
 import Vehicles from './Components/Vehicles'
 import { ScrollProvider } from './Components/Scroller'
 import { MainModelManager } from './Components/MainModelManager'
+import Services from './Components/Services'
+import News from './Components/News'
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
     
     <BrowserRouter>
      <Routes>
-       <Route path="/" element={[<ScrollProvider><MainModelManager><LandPag /><Vehicles /></MainModelManager></ScrollProvider>]} />
+       <Route path="/" element={[<ScrollProvider><MainModelManager><LandPag /><Vehicles /><Services /><News /></MainModelManager></ScrollProvider>]} />
      </Routes>
     </BrowserRouter>
 

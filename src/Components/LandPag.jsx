@@ -63,15 +63,15 @@ function LandPag() {
 
   return (
 
-    <div className="MainLandPag">
+    <div className="MainLandPag" id="MainLandPagRef" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
       <div className="NavContainer">
 
         <div className="FirstPartNav">
 
           <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("VehiclesScrollRef")}}><button type="button" className="Botonera BotoneraLeft">Vehiculos</button></div>
-          <div className="BotoneraPrimeraNav"><button type="button" className="Botonera">Servicios</button></div>
-          <div className="BotoneraPrimeraNav"><button type="button" className="Botonera BotoneraRight">Noticias</button></div>
+          <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("ServicesScrollRef")}}><button type="button" className="Botonera">Servicios</button></div>
+          <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("NewsScrollRef")}}><button type="button" className="Botonera BotoneraRight">Noticias</button></div>
 
         </div>
 
