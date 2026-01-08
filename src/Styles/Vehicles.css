@@ -2,13 +2,16 @@
 
 
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
 
     background-color: #fafafa;
 
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 25% 10% 65%;
+    grid-template-rows: auto 10vh 65vh;
+
+
+    /* PARTE DEL SEGUNDO FIX, HEIGHT DEBERIA ESTAR SIN COMMENT Y GRID ROW 25% 10% 65% Y VEHICLES TYPES SIN PADDING BOTTOM Y VehicleTypeSelectorContainer SIN PADDING TOP */
 
 }
 
@@ -23,6 +26,7 @@
     justify-content: start;
     align-items: center;
 
+    padding-bottom: 0.4%;
 
 }
 
@@ -54,7 +58,9 @@
     justify-content: space-evenly;
     align-items: center;
 
-    /* el align solia ser start */
+    /* el align solia ser start  UNICA PARTE DEL PRIMER FIX */
+
+    padding-top: 0.5%;
 
 }
 
