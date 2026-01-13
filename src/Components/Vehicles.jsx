@@ -67,6 +67,19 @@ function Vehicles() {
         return Años.map((val) => ({ value: val, label: val.toString() }))
     }, [VehiclesData, FilterAction])
 
+        let TiposOptions = useMemo(() => {
+        let Tipos = [...new Set(VehiclesData.filter(vehicle => {
+            return (
+                (FilterAction.Modelo === "" || vehicle.modelo === FilterAction.Modelo) &&
+                (FilterAction.Marca === "" || vehicle.marca === FilterAction.Marca) &&
+                ((vehicle.año >= FilterAction.AñoFrom && vehicle.año <= FilterAction.AñoUpTo) || (vehicle.año <= FilterAction.AñoFrom && vehicle.año >= FilterAction.AñoUpTo)) &&
+                ((vehicle.kms >= FilterAction.KmFrom && vehicle.kms <= FilterAction.KmUpTo) || (vehicle.kms <= FilterAction.KmFrom && vehicle.kms >= FilterAction.KmUpTo)) &&
+                ((vehicle.precio >= FilterAction.PrecioFrom && vehicle.precio <= FilterAction.PrecioUpTo) || (vehicle.precio <= FilterAction.PrecioFrom && vehicle.precio >= FilterAction.PrecioUpTo))
+            )
+        }).map((val) => val.tipo))]
+        return Tipos.map((val => ({ value: val, label: val })))
+    }, [VehiclesData, FilterAction])
+
     let SelectedFilterOptions = useMemo(() => {
 
         return VehiclesData.filter(vehicle => {
@@ -185,12 +198,26 @@ function Vehicles() {
 
     }, [SelectedFilterOptions])
 
+   const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+    const isViewportPc = width >= 1000;
+
+    let [FilterActiveNotPc, setFilterActiveNotPc] = useState(false)
+
     return (
         <div className="MainVehicles" id="VehiclesScrollRef" onClick={() => {scrollToElement("VehiclesScrollRef")}}>
 
             <div className="VehiclesTypes">
 
                 <div className="VehiclesTypesTittle">
+
+                    <span class="material-symbols-outlined VehiclesFilterTypeApart VehiclesFylterToogleButton" onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}} style={{color: FilterActiveNotPc ? "lightgray" : ""}}> menu </span>
 
                     <div className="SeparatorVehicles"></div>
 
@@ -215,9 +242,14 @@ function Vehicles() {
 
             </div>
 
-            <div className="VehiclesFilter">
+            <div className="VehiclesFilter" style={{visibility: isViewportPc ? "visible" : FilterActiveNotPc ? "visible" : "hidden", zIndex: isViewportPc ? 3 : FilterActiveNotPc ? 3 : -1}}>
 
                 <div className="VehiclesFilterMenu">
+
+                    <div className="VehiclesFilterBrandApart VehiclesFilterTypeApart">
+                        <span className="VehicleFilterText">Tipo</span>
+                        <Select options={TiposOptions} value={TiposOptions.find(option => option.value === FilterAction.Type) || null} onChange={(SelectOptionTipo) => { setFilterAction(PreVal => ({ ...PreVal, Type: SelectOptionTipo ? SelectOptionTipo.value : "" })) }} className="VehicleFilterSelectorReactSelect" classNamePrefix="SelectModel" placeholder="Marcas" noOptionsMessage={() => ""} isClearable />
+                    </div>
 
                     <div className="VehiclesFilterBrandApart">
                         <span className="VehicleFilterText">Marca</span>
@@ -287,7 +319,7 @@ function Vehicles() {
 
             </div>
 
-            <div className="VehiclesCatalogue">
+            <div className="VehiclesCatalogue" onClick={() => {setFilterActiveNotPc(false)}}>
 
                 <div className="VehicleCatalogueContainer">
 

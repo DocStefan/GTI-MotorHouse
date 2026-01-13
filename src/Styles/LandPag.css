@@ -287,7 +287,10 @@
 .PicBrandsLogo {
 
   /* background-color: black; */
-  width: 20vh;
+  width: 10%;
+
+  /* solia ser 20 vh el width */
+
   height: 20vh;
   margin-left: 5px;
   margin-right: 5px;

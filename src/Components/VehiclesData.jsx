@@ -1,5 +1,49 @@
 let VehiclesData = [
   {
+    marca: "Ford",
+    modelo: "Mondeo",
+    año: 2022,
+    kms: 21000,
+    precio: 39500,
+    tipo: "Sedan",
+    caja: "Automatico",
+    combustible: "Hibrido",
+    foto: "url(./fordMondeo.jpg)"
+  },
+  {
+    marca: "Toyota",
+    modelo: "Land Cruiser",
+    año: 2020,
+    kms: 56000,
+    precio: 26800,
+    tipo: "SUV",
+    caja: "Automatico",
+    combustible: "Hibrido",
+    foto: "url(./toyotaLandCruiser.jpg)"
+  },
+  {
+    marca: "Ford",
+    modelo: "Mustang",
+    año: 2016,
+    kms: 68000,
+    precio: 34500,
+    tipo: "Coupe",
+    caja: "Manual",
+    combustible: "Gasolina",
+    foto: "url(./fordMustang.jpg)"
+  },
+  {
+    marca: "Volkswagen",
+    modelo: "Amarok",
+    año: 2020,
+    kms: 59000,
+    precio: 32500,
+    tipo: "PickUp",
+    caja: "Automatico",
+    combustible: "Diesel",
+    foto: "url(./volkswagenAmarok.jpg)"
+  },
+  {
     marca: "Toyota",
     modelo: "Crown",
     año: 2019,
@@ -38,7 +82,7 @@ let VehiclesData = [
     año: 2020,
     kms: 51000,
     precio: 12300,
-    tipo: "Hatchback",
+    tipo: "HatchBack",
     caja: "Automatico",
     combustible: "Gasolina",
     foto: "url(./chevroletOnix.jpg)"
@@ -174,50 +218,6 @@ let VehiclesData = [
     caja: "Automatico",
     combustible: "Diesel",
     foto: "url(./hyundaiTucson.jpg)"
-  },
-  {
-    marca: "Ford",
-    modelo: "Mondeo",
-    año: 2022,
-    kms: 21000,
-    precio: 39500,
-    tipo: "Sedan",
-    caja: "Automatico",
-    combustible: "Hibrido",
-    foto: "url(./fordMondeo.jpg)"
-  },
-  {
-    marca: "Toyota",
-    modelo: "Land Cruiser",
-    año: 2020,
-    kms: 56000,
-    precio: 26800,
-    tipo: "SUV",
-    caja: "Automatico",
-    combustible: "Hibrido",
-    foto: "url(./toyotaLandCruiser.jpg)"
-  },
-  {
-    marca: "Ford",
-    modelo: "Mustang",
-    año: 2016,
-    kms: 68000,
-    precio: 34500,
-    tipo: "Coupe",
-    caja: "Manual",
-    combustible: "Gasolina",
-    foto: "url(./fordMustang.jpg)"
-  },
-  {
-    marca: "Volkswagen",
-    modelo: "Amarok",
-    año: 2020,
-    kms: 59000,
-    precio: 32500,
-    tipo: "PickUp",
-    caja: "Automatico",
-    combustible: "Diesel",
-    foto: "url(./volkswagenAmarok.jpg)"
   },
   {
     marca: "Dodge",

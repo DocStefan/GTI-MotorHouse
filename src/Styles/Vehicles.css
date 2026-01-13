@@ -1,3 +1,7 @@
+/* SECCION PC ----------------------- */
+
+@media (min-width: 1000px) {
+
 .MainVehicles {
 
 
@@ -8,7 +12,8 @@
 
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: auto 10vh 65vh;
+    grid-template-rows: auto 10vh minmax(65vh, 1fr);
+    height: 100vh;
 
 
     /* PARTE DEL SEGUNDO FIX, HEIGHT DEBERIA ESTAR SIN COMMENT Y GRID ROW 25% 10% 65% Y VEHICLES TYPES SIN PADDING BOTTOM Y VehicleTypeSelectorContainer SIN PADDING TOP */
@@ -265,6 +270,12 @@
 
     padding-left: 0.75vw;
     padding-top: 0.3vw;
+
+}
+
+.VehiclesFilterTypeApart {
+
+ display: none;
 
 }
 
@@ -542,12 +553,16 @@
     /* background-color: red; */
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-evenly;
 
 
-    flex-wrap: wrap;
-    overflow: hidden;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
 
+    scrollbar-width: none;
+
+    /* solian ser wrap y overflowx:hidden */
 
     /* SOLO PARA TESTING */
 
@@ -556,8 +571,12 @@
 
 .CataloguePost {
 
-    width: 25%;
+    width: 50vh;
+
+    /* width solia ser 25% sin flex shrink */
+
     height: 100%;
+    flex-shrink: 0;
     /* background-color: green; */
     display: flex;
     justify-content: center;
@@ -608,7 +627,7 @@
 
     color: black;
     font-family: "Jost", sans-serif;
-    font-size: 1.3vw;
+    font-size: 2.7vh;
     font-weight: 400;
 
     padding-left: 0.5vw;
@@ -629,7 +648,7 @@
 
     color: #606470;
     font-family: "Jost", sans-serif;
-    font-size: 0.9vw;
+    font-size: 1.7vh;
     font-weight: 400;
 
     padding-left: 0.5vw;
@@ -675,7 +694,7 @@
     align-items: center;
     color: #606470;
     font-family: "Jost", sans-serif;
-    font-size: 0.9vw;
+    font-size: 1.8vh;
     font-weight: 600;
     border-radius: 5PX;
 
@@ -694,7 +713,7 @@
 
     color: #595b5e;
     font-family: "Jost", sans-serif;
-    font-size: 1vw;
+    font-size: 2vh;
     font-weight: 500;
 
       cursor: default;
@@ -744,7 +763,7 @@
 
     color: #1b0424;
     font-family: "Jost", sans-serif;
-    font-size: 1.3vw;
+    font-size: 2.5vh;
     font-weight: 500;
 
     /* margin-bottom: vw; */
@@ -778,7 +797,7 @@
 
     color: white;
     font-family: "Sofia Sans", Arial;
-    font-size: 0.8vw;
+    font-size: 1.6vh;
     font-weight: 600;
 
 }
@@ -837,7 +856,9 @@
     justify-content: center;
     align-items: center;
 
-    padding-bottom: 10px;
+    height: auto;
+
+    padding-bottom: 1%;
 
 }
 
@@ -936,5 +957,1636 @@
         background-color: white;
         color: #1b0424;
     }
+
+}
+
+}
+
+/* SECCION TABLET ------------------- */ 
+
+@media (min-width: 500px) and (max-width: 999px) {
+
+ .MainVehicles {
+
+
+    width: 100vw;
+    /* height: 100vh; */
+
+    background-color: #fafafa;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto 10vh minmax(65vh, 1fr);
+    height: 100vh;
+
+
+    /* PARTE DEL SEGUNDO FIX, HEIGHT DEBERIA ESTAR SIN COMMENT Y GRID ROW 25% 10% 65% Y VEHICLES TYPES SIN PADDING BOTTOM Y VehicleTypeSelectorContainer SIN PADDING TOP */
+
+}
+
+.VehiclesTypes {
+
+    grid-column: 1/span 2;
+    grid-row: 1;
+    /* background-color: blue; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* padding-bottom: 0.4%; */
+
+}
+
+.VehiclesTypesTittle {
+
+    width: 100%;
+    height: 20%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 350;
+    font-size: 4vh;
+    color: #1b0424;
+
+    cursor: default;
+
+}
+
+.VehicleTypeSelectorContainer {
+
+    display: none;
+
+}
+
+.SpanBrandVehicles {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.SeparatorVehicles {
+
+    width: 15%;
+    height: 3px;
+    background-color: #1b0424;
+
+
+}
+
+.VehiclesFilter {
+
+    grid-column: 1/ span 2;
+    grid-row: 2/ span 3;
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+    width: fit-content;
+    visibility: hidden;
+ 
+    /* solia estar la etiqueta zindex con 3 */
+
+}
+
+.VehiclesFylterToogleButton {
+
+ position: absolute;   
+ /* background-color: red;    */
+ width: auto;
+ height: auto;
+ font-size: 40px;
+ left: 1.5vw;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.VehiclesFilterMenu {
+
+    width: 350px;
+    height: 92.5%;
+    background-color: white;
+    /* border-radius: 10px; */
+border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    /* solia ser start */
+
+    align-items: center;
+    margin-left: 20px;
+
+}
+
+.VehiclesFilterBrandApart,
+.VehiclesFilterModelApart,
+.VehiclesFilterYearApart,
+.VehiclesFilterMileageApart,
+.VehiclesFilterPriceApart {
+
+    height: 100px;
+    width: 80%;
+    color: #1b0424;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+
+    padding-left: 0.75vw;
+    padding-top: 0.3vw;
+
+}
+
+.VehiclesFilterResetButtonApart {
+
+    width: 60%;
+    /* background-color: green; */
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.FilterResetButton {
+
+    background-color: #f3f7fe;
+    /* color: #3b82f6; */
+    border: none;
+    border-radius: 8px;
+    width: 70%;
+    height: 50%;
+    transition: 0.3s;
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 600;
+    font-size: 1.6vh;
+
+
+}
+
+.FilterResetButton:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #a4a2a5;
+    color: #fff;
+}
+
+.VehicleFilterText {
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 2vh;
+
+}
+
+.VehicleFilterSelector {
+
+    width: 80%;
+    height: 25%;
+
+    margin-bottom: 1.3vh;
+
+    border: 1.5px solid #1b0424;
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 0.75vw;
+    font-weight: 600;
+
+}
+
+.VehicleFilterSelectorReactSelect {
+
+    width: 100%;
+    height: 25%;
+
+    margin-bottom: 1.3vh;
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 0.5vw;
+    font-weight: 600;
+
+
+}
+
+.SelectModel__control.SelectModel__control {
+
+    min-height: 0;
+    height: 120%;
+
+    padding-top: 0px;
+    align-items: start;
+    flex-wrap: nowrap;
+
+}
+
+.SelectModel__control.SelectModel__control--is-focused {
+
+    box-shadow: none;
+    border-color: #ccc;
+
+}
+
+.SelectModel__control.SelectModel__control:hover {
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+.SelectModel__value-container.SelectModel__value-container {
+
+
+    height: 100%;
+
+    padding: 0px 8px;
+    font-size: 1.6vh;
+    height: 100%;
+    margin-top: 0px;
+    padding-top: 0px;
+
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+
+}
+
+.SelectModel__option.SelectModel__option {
+
+    font-size: 1.4vh;
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 600;
+
+}
+
+.SelectModel__option.SelectModel__option--is-selected {
+    background-color: #1b0424;
+    /* 👈 color que quieras */
+    color: #fff;
+}
+
+
+
+
+/* .SelectModel__control {
+
+
+  width: 80%;
+ height: 25%;
+
+ margin-bottom: 1.3vh;
+
+ border: 1.5px solid #1b0424; 
+ color: #1b0424;
+ font-family: "Sofia Sans", Arial;
+ font-size: 0.75vw;
+ font-weight: 600;
+
+
+
+} */
+
+.VehicleFilterSelector:focus {
+    outline: none;
+    border-color: #1b0424;
+}
+
+
+.ContainerDoubleSelect {
+
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+.VehicleFilterTextB {
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 1.8vh;
+    color: #1b0424;
+
+    width: fit-content;
+
+}
+
+.VehicleFilterSelectorB {
+
+    width: 50%;
+    height: 80%;
+
+}
+
+.VehicleFilterSelectorReactSelectB {
+
+
+    width: 62.5%;
+    height: 65%;
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1vh;
+    font-weight: 600;
+
+}
+
+.VehicleFilterInput {
+
+    width: 62.5%;
+    height: 80%;
+
+    box-sizing: border-box;
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1vh;
+    font-weight: 600;
+
+    background-color: #fff;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    outline: none;
+    box-shadow: none;
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+}
+
+.ResetButtonInputContainer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    position: absolute;
+    right: 3vh;
+    height: 80%;
+}
+
+.ResetButtonInputs {
+
+    font-size: 2vh;
+    cursor: default;
+    color: #999;
+
+
+}
+
+.ResetButtonInputs:hover {
+    color: #333;
+}
+
+.VehiclesCatalogue {
+
+    grid-column: 1/ span 2;
+    grid-row: 2/ span 3;
+    /* background-color: purple; */
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 92.5% 7.5%;
+
+    z-index: 2;
+
+}
+
+.VehicleCatalogueContainer {
+
+    grid-row: 1;
+    grid-column: 1;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* scrollbar-width: none; */
+
+    /* solian ser wrap y overflowx:hidden */
+
+    /* SOLO PARA TESTING */
+
+
+}
+
+.CataloguePost {
+
+    width: 100%;
+
+    /* width solia ser 25% sin flex shrink */
+
+    height: 75%;
+    flex-shrink: 0;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.CalaloguePostBox {
+
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+}
+
+.PostPic {
+
+    width: 100%;
+    height: 55%;
+
+    /* background-image: url("./DodgeHead.png"); */
+    background-size: cover;
+
+    /* solia ser contain */
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* border-bottom: 3px black solid; */
+
+}
+
+.PostName {
+
+    width: 100%;
+    height: 8%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    color: black;
+    font-family: "Jost", sans-serif;
+    font-size: 2.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+}
+
+.PostKMS {
+
+
+    width: 100%;
+    height: 5%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+      cursor: default;
+
+}
+
+.KmsText {
+
+    margin-left: 0.2vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostTypeFilter {
+
+    width: 100%;
+    height: 10%;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 0.5vw;
+
+      cursor: default;
+
+}
+
+.PostTypeFilterContainer {
+
+    background-color: #e7eaf6;
+    width: 100px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.8vh;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+.PostMainCharacteristics {
+
+
+    height: 7.5%;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+
+    color: #595b5e;
+    font-family: "Jost", sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+
+      cursor: default;
+
+}
+
+.TransmisionInfo,
+.EngineInfo {
+
+    margin-left: 0.75vw;
+    width: auto;
+    /* background-color: red;   */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.InternInfoFix {
+
+    margin-left: 0.25vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostActionSection {
+
+    height: 14.5%;
+    /* background-color: red; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.PostPrice {
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #1b0424;
+    font-family: "Jost", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 500;
+
+    /* margin-bottom: vw; */
+    /* background-color: red; */
+
+      cursor: default;
+
+}
+
+.PostActionButton {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* margin-top: 0.8vw; */
+
+}
+
+.BuyNowButton {
+
+    background-color: #1b0424;
+    /* color: #3b82f6; */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 85%;
+    height: 60%;
+    transition: 0.3s;
+
+    color: white;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+}
+
+.BuyNowButton:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #cdc9cf;
+    color: #fff;
+}
+
+.NoAvailableOptionsSign {
+
+    width: 100%;
+    height: 100%;
+
+    /* background-color: blue; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.NoOptionsAvailableText {
+
+    color: #1b0424;
+    opacity: 0.25;
+    font-family: "Sofia Sans", Arial;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.NoOptionsAvailablePic {
+
+    width: 50%;
+    height: 40%;
+    background-image: url("./noOptions.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: red; */
+    background-position: center;
+    color: #1b0424;
+    opacity: 0.25;
+
+}
+
+.VehicleCatalogueButtons {
+
+    grid-row: 2;
+    grid-column: 1;
+    /* background-color: beige; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+
+    padding-bottom: 1%;
+
+}
+
+.CatalogueButtonsContainer {
+
+    width: 60%;
+    height: 100%;
+
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.CatalogueArrow {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 50%;
+
+    background-color: #1b0424;
+    color: white;
+    cursor: pointer;
+
+    border: 2px solid #1b0424;
+
+}
+
+.ArrrowAsText {
+
+    font-size: 2.6vh;
+    font-weight: 400;
+
+}
+
+.CatalogueNumbers {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+
+}
+
+.MainNumberCatalogue {
+
+    font-size: 3.75vh;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 5px;
+    cursor: default;
+
+}
+
+.SecondaryNumberCatalogue {
+
+    font-size: 2.5vh;
+    margin-left: 2px;
+    margin-right: 2px;
+    opacity: 0.75;
+    cursor: pointer;
+
+}
+
+}
+
+/* SECCION MOBILE ------------------------ */
+
+@media (min-width: 180px) and (max-width: 499px) {
+
+  .MainVehicles {
+
+
+    width: 100vw;
+    /* height: 100vh; */
+
+    background-color: #fafafa;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto 10vh minmax(65vh, 1fr);
+    height: 100vh;
+
+
+    /* PARTE DEL SEGUNDO FIX, HEIGHT DEBERIA ESTAR SIN COMMENT Y GRID ROW 25% 10% 65% Y VEHICLES TYPES SIN PADDING BOTTOM Y VehicleTypeSelectorContainer SIN PADDING TOP */
+
+}
+
+.VehiclesTypes {
+
+    grid-column: 1/span 2;
+    grid-row: 1;
+    /* background-color: blue; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* padding-bottom: 0.4%; */
+
+}
+
+.VehiclesTypesTittle {
+
+    width: 100%;
+    height: 20%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 350;
+    font-size: 4vh;
+    color: #1b0424;
+
+    cursor: default;
+
+}
+
+.VehicleTypeSelectorContainer {
+
+    display: none;
+
+}
+
+.SpanBrandVehicles {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.SeparatorVehicles {
+
+    width: 5%;
+    height: 3px;
+    background-color: #1b0424;
+
+
+}
+
+.VehiclesFilter {
+
+    grid-column: 1/ span 2;
+    grid-row: 2/ span 3;
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+    width: fit-content;
+    visibility: hidden;
+ 
+    /* solia estar la etiqueta zindex con 3 */
+
+}
+
+.VehiclesFylterToogleButton {
+
+ position: absolute;   
+ /* background-color: red;    */
+ width: auto;
+ height: auto;
+ font-size: 40px;
+ left: 1.5vw;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.VehiclesFilterMenu {
+
+    width: 200px;
+    height: 92.5%;
+    background-color: white;
+    /* border-radius: 10px; */
+border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    /* solia ser start */
+
+    align-items: center;
+    margin-left: 5px;
+
+}
+
+.VehiclesFilterBrandApart,
+.VehiclesFilterModelApart,
+.VehiclesFilterYearApart,
+.VehiclesFilterMileageApart,
+.VehiclesFilterPriceApart {
+
+    height: 100px;
+    width: 80%;
+    color: #1b0424;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+
+    padding-left: 0.75vw;
+    padding-top: 0.3vw;
+
+}
+
+.VehiclesFilterResetButtonApart {
+
+    width: 60%;
+    /* background-color: green; */
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.FilterResetButton {
+
+    background-color: #f3f7fe;
+    /* color: #3b82f6; */
+    border: none;
+    border-radius: 8px;
+    width: 70%;
+    height: 50%;
+    transition: 0.3s;
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 600;
+    font-size: 1.6vh;
+
+
+}
+
+.FilterResetButton:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #a4a2a5;
+    color: #fff;
+}
+
+.VehicleFilterText {
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 2vh;
+
+}
+
+.VehicleFilterSelector {
+
+    width: 80%;
+    height: 25%;
+
+    margin-bottom: 1.3vh;
+
+    border: 1.5px solid #1b0424;
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 0.75vw;
+    font-weight: 600;
+
+}
+
+.VehicleFilterSelectorReactSelect {
+
+    width: 100%;
+    height: 25%;
+
+    margin-bottom: 1.3vh;
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 0.5vw;
+    font-weight: 600;
+
+
+}
+
+.SelectModel__control.SelectModel__control {
+
+    min-height: 0;
+    height: 120%;
+
+    padding-top: 0px;
+    align-items: start;
+    flex-wrap: nowrap;
+
+}
+
+.SelectModel__control.SelectModel__control--is-focused {
+
+    box-shadow: none;
+    border-color: #ccc;
+
+}
+
+.SelectModel__control.SelectModel__control:hover {
+    border-color: #ccc;
+    box-shadow: none;
+}
+
+.SelectModel__value-container.SelectModel__value-container {
+
+
+    height: 100%;
+
+    padding: 0px 8px;
+    font-size: 1.6vh;
+    height: 100%;
+    margin-top: 0px;
+    padding-top: 0px;
+
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+
+}
+
+.SelectModel__option.SelectModel__option {
+
+    font-size: 1.4vh;
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 600;
+
+}
+
+.SelectModel__option.SelectModel__option--is-selected {
+    background-color: #1b0424;
+    /* 👈 color que quieras */
+    color: #fff;
+}
+
+
+
+
+/* .SelectModel__control {
+
+
+  width: 80%;
+ height: 25%;
+
+ margin-bottom: 1.3vh;
+
+ border: 1.5px solid #1b0424; 
+ color: #1b0424;
+ font-family: "Sofia Sans", Arial;
+ font-size: 0.75vw;
+ font-weight: 600;
+
+
+
+} */
+
+.VehicleFilterSelector:focus {
+    outline: none;
+    border-color: #1b0424;
+}
+
+
+.ContainerDoubleSelect {
+
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+.VehicleFilterTextB {
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 1.8vh;
+    color: #1b0424;
+
+    width: fit-content;
+
+}
+
+.VehicleFilterSelectorB {
+
+    width: 50%;
+    height: 80%;
+
+}
+
+.VehicleFilterSelectorReactSelectB {
+
+
+    width: 62.5%;
+    height: 65%;
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1vh;
+    font-weight: 600;
+
+}
+
+.VehicleFilterInput {
+
+    width: 62.5%;
+    height: 80%;
+
+    box-sizing: border-box;
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1vh;
+    font-weight: 600;
+
+    background-color: #fff;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    outline: none;
+    box-shadow: none;
+
+    color: #1b0424;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+}
+
+.ResetButtonInputContainer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    position: absolute;
+    right: 3vh;
+    height: 80%;
+}
+
+.ResetButtonInputs {
+
+    font-size: 2vh;
+    cursor: default;
+    color: #999;
+
+
+}
+
+.ResetButtonInputs:hover {
+    color: #333;
+}
+
+.VehiclesCatalogue {
+
+    grid-column: 1/ span 2;
+    grid-row: 2/ span 3;
+    /* background-color: purple; */
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 92.5% 7.5%;
+
+    z-index: 2;
+
+}
+
+.VehicleCatalogueContainer {
+
+    grid-row: 1;
+    grid-column: 1;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+    flex-wrap: nowrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    /* scrollbar-width: none; */
+
+    /* solian ser wrap y overflowx:hidden */
+
+    /* SOLO PARA TESTING */
+
+
+}
+
+.CataloguePost {
+
+    width: 100%;
+
+    /* width solia ser 25% sin flex shrink */
+
+    height: 75%;
+    flex-shrink: 0;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.CalaloguePostBox {
+
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+}
+
+.PostPic {
+
+    width: 100%;
+    height: 55%;
+
+    /* background-image: url("./DodgeHead.png"); */
+    background-size: cover;
+
+    /* solia ser contain */
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* border-bottom: 3px black solid; */
+
+}
+
+.PostName {
+
+    width: 100%;
+    height: 8%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    color: black;
+    font-family: "Jost", sans-serif;
+    font-size: 2.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+}
+
+.PostKMS {
+
+
+    width: 100%;
+    height: 5%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+      cursor: default;
+
+}
+
+.KmsText {
+
+    margin-left: 0.2vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostTypeFilter {
+
+    width: 100%;
+    height: 10%;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 0.5vw;
+
+      cursor: default;
+
+}
+
+.PostTypeFilterContainer {
+
+    background-color: #e7eaf6;
+    width: 100px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.8vh;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+.PostMainCharacteristics {
+
+
+    height: 7.5%;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+
+    color: #595b5e;
+    font-family: "Jost", sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+
+      cursor: default;
+
+}
+
+.TransmisionInfo,
+.EngineInfo {
+
+    margin-left: 0.75vw;
+    width: auto;
+    /* background-color: red;   */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.InternInfoFix {
+
+    margin-left: 0.25vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostActionSection {
+
+    height: 14.5%;
+    /* background-color: red; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.PostPrice {
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #1b0424;
+    font-family: "Jost", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 500;
+
+    /* margin-bottom: vw; */
+    /* background-color: red; */
+
+      cursor: default;
+
+}
+
+.PostActionButton {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* margin-top: 0.8vw; */
+
+}
+
+.BuyNowButton {
+
+    background-color: #1b0424;
+    /* color: #3b82f6; */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 85%;
+    height: 60%;
+    transition: 0.3s;
+
+    color: white;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+}
+
+.BuyNowButton:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #cdc9cf;
+    color: #fff;
+}
+
+.NoAvailableOptionsSign {
+
+    width: 100%;
+    height: 100%;
+
+    /* background-color: blue; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.NoOptionsAvailableText {
+
+    color: #1b0424;
+    opacity: 0.25;
+    font-family: "Sofia Sans", Arial;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.NoOptionsAvailablePic {
+
+    width: 50%;
+    height: 40%;
+    background-image: url("./noOptions.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-color: red; */
+    background-position: center;
+    color: #1b0424;
+    opacity: 0.25;
+
+}
+
+.VehicleCatalogueButtons {
+
+    grid-row: 2;
+    grid-column: 1;
+    /* background-color: beige; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+
+    padding-bottom: 1%;
+
+}
+
+.CatalogueButtonsContainer {
+
+    width: 60%;
+    height: 100%;
+
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.CatalogueArrow {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 50%;
+
+    background-color: #1b0424;
+    color: white;
+    cursor: pointer;
+
+    border: 2px solid #1b0424;
+
+}
+
+.ArrrowAsText {
+
+    font-size: 2.6vh;
+    font-weight: 400;
+
+}
+
+.CatalogueNumbers {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+
+}
+
+.MainNumberCatalogue {
+
+    font-size: 3.75vh;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 5px;
+    cursor: default;
+
+}
+
+.SecondaryNumberCatalogue {
+
+    font-size: 2.5vh;
+    margin-left: 2px;
+    margin-right: 2px;
+    opacity: 0.75;
+    cursor: pointer;
+
+}
+
+@media (max-width: 350px) {
+
+ .CalaloguePostBox {
+
+    width: 95%;
+
+
+}
+
+.PostName {
+
+    font-size: 2.2vh;
+
+}
+
+.PostPrice {
+
+
+    font-size: 2vh;
+
+
+}
+
+.BuyNowButton {
+
+
+    font-size: 1.2vh;
+ 
+
+}
+
+}
 
 }
