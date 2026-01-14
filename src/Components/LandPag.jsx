@@ -63,7 +63,7 @@ function LandPag() {
 
   return (
 
-    <div className="MainLandPag" id="MainLandPagRef" onClick={() => {scrollToElement("MainLandPagRef")}}>
+    <div className="MainLandPag" id="MainLandPagRef">
 
       <div className="NavContainer">
 
@@ -85,7 +85,7 @@ function LandPag() {
       </div>
 
       <Fragment key={MainLogoAlternator}>
-        <div className="MainLogo">
+        <div className="MainLogo" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
           <span className="TXTLogo" style={{ fontSize: SelectedCarMenu.Fix ? "22vw" : "26.5vw" }}>{SelectedCarMenu.Marca}</span>
 
@@ -93,11 +93,11 @@ function LandPag() {
 
         </div>
 
-        <div className="MainText">
+        <div className="MainText" >
 
           <div className="MainContainer">
 
-            <div className="MainTextContainer">
+            <div className="MainTextContainer" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
               {SelectedCarMenu.Frase}
 
@@ -113,13 +113,13 @@ function LandPag() {
 
         </div>
 
-        <div className="MainPic">
+        <div className="MainPic" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
           <img src={SelectedCarMenu.Foto} className="MainPicPix"></img>
 
         </div>
 
-        <div className="MainLogoBrandModel">
+        <div className="MainLogoBrandModel" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
           <span className="LogoBrandModel" style={{ color: SelectedCarMenu.ColorModelo }}>{SelectedCarMenu.Modelo}</span>
 
@@ -127,7 +127,7 @@ function LandPag() {
 
       </Fragment>
 
-      <div className="MainBrands">
+      <div className="MainBrands" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
         <div className="UtilBrands">
 
@@ -137,7 +137,7 @@ function LandPag() {
 
             <div className="Separator"></div>
 
-            <span className="SpanBrand">Marcas</span>
+            <span className="SpanBrand">Destacados</span>
 
             <div className="Separator"></div>
 

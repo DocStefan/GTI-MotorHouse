@@ -1,575 +1,1577 @@
-.MainLandPag {
+/* SECCION PC ---------------- */
 
-  width: 100vw;
-  height: 100vh;
+@media (min-width: 1000px) {
 
-  display: grid;
-  grid-template-rows: 10% 64% 26%;
-  grid-template-columns: 20% 20% 47.5% 12.5%;
+  .MainLandPag {
 
-  /* background-color: green; */
+    width: 100vw;
+    height: 100vh;
 
-}
+    display: grid;
+    grid-template-rows: 10% 64% 26%;
+    grid-template-columns: 20% 20% 47.5% 12.5%;
 
-.MainLogo {
+    overflow: hidden;
 
-  width: 100%;
-  /* background-color: blue;     */
+    /* background-color: green; */
 
-  grid-row: 2;
-  grid-column: 1/span 4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 600;
+  }
+
+  .MainLogo {
+
+    width: 100%;
+    /* background-color: blue;     */
+
+    grid-row: 2;
+    grid-column: 1/span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
 
 
-  font-size: 25vw;
-  color: rgb(173, 216, 230, 0.4);
+    font-size: 25vw;
+    color: rgb(173, 216, 230, 0.4);
 
-  animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
+    animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
 
-  cursor: default;
+    cursor: default;
 
-  /* background-color: red; */
+    /* background-color: red; */
 
-  /* placeholder, ambos variaran con cada marca */
+    /* placeholder, ambos variaran con cada marca */
 
-}
+  }
 
-.MainLogoBrandModel {
+  .MainLogoBrandModel {
 
-  grid-row: 2;
-  grid-column: 3/ span 4;
+    grid-row: 2;
+    grid-column: 3/ span 4;
 
-  height: 100%;
-  width: 82.5%;
-  /* background-color: rgb(255, 0, 0, 0.5); */
+    height: 100%;
+    width: 82.5%;
+    /* background-color: rgb(255, 0, 0, 0.5); */
 
-  display: flex;
-  justify-content: end;
-  align-items: end;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 
-}
+  }
 
-.LogoBrandModel {
+  .LogoBrandModel {
 
-  font-family: "Carattere", cursive;
-  font-weight: 600;
-  font-size: 7vw;
-  animation: slide-in-right .35s linear both;
-  z-index: 10;
-  cursor: default;
-  /* color: red; */
+    font-family: "Carattere", cursive;
+    font-weight: 600;
+    font-size: 7vw;
+    animation: slide-in-right .35s linear both;
+    z-index: 10;
+    cursor: default;
+    /* color: red; */
 
-}
+  }
 
-.MainText {
+  .MainText {
 
-  grid-row: 2;
-  grid-column: 1/span 2;
-  /* background-color: blueviolet; */
+    grid-row: 2;
+    grid-column: 1/span 2;
+    /* background-color: blueviolet; */
 
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
 
-}
+  }
 
-.MainContainer {
+  .MainContainer {
 
-  /* background-color: yellow; */
-  width: 70%;
-  height: 75%;
+    /* background-color: yellow; */
+    width: 70%;
+    height: 75%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  animation: slide-in-left .35s linear both
-}
+    animation: slide-in-left .35s linear both
+  }
 
-.MainTextContainer {
+  .MainTextContainer {
 
-  /* background-color: wheat; */
-  width: 100%;
-  height: 40%;
+    /* background-color: wheat; */
+    width: 100%;
+    height: 40%;
 
-  font-family: "Sofia Sans", Arial;
-  font-weight: 500;
-  font-size: 2.5vw;
-  color: #430f58;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 2.5vw;
+    color: #430f58;
 
-  display: flex;
-  justify-content: end;
-  align-items: end;
+    display: flex;
+    justify-content: end;
+    align-items: end;
 
-  margin-top: 4vw;
+    margin-top: 4vw;
 
-  cursor: default;
+    cursor: default;
 
-}
+  }
 
-.ActionButton {
+  .ActionButton {
 
-  height: 30%;
-  width: 100%;
-  /* background-color: black; */
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
+    height: 30%;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
 
-}
+  }
 
-.ButtonMain {
+  .ButtonMain {
 
-  height: 40%;
-  width: 50%;
+    height: 40%;
+    width: 50%;
 
-  font-family: "Sofia Sans", Arial;
-  font-weight: 500;
-  font-size: 1.25vw;
-  background-color: #1b0424;
-  color: white;
-  border: none;
-  padding: 0px 0px 0px 0px;
-  border-radius: 50px;
-
-  margin-left: 4vw;
-  margin-top: 17.5px;
-
-  cursor: pointer;
-
-}
-
-.ButtonMain:hover {
-
-  background-color: rgb(27, 4, 36, 0.8);
-  animation: HoverAnimnMainTextButton 0.5s forwards;
-
-}
-
-@keyframes HoverAnimnMainTextButton {
-
-  0% {
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 1.25vw;
     background-color: #1b0424;
     color: white;
     border: none;
+    padding: 0px 0px 0px 0px;
+    border-radius: 50px;
+
+    margin-left: 4vw;
+    margin-top: 17.5px;
+
+    cursor: pointer;
 
   }
 
-  100% {
-    background-color: rgb(255, 255, 255, 0.5);
-    color: rgb(27, 4, 36);
-    border: solid 2px #1b0424;
+  .ButtonMain:hover {
+
+    background-color: rgb(27, 4, 36, 0.8);
+    animation: HoverAnimnMainTextButton 0.5s forwards;
+
   }
 
-}
+  @keyframes HoverAnimnMainTextButton {
 
-.MainPic {
+    0% {
+      background-color: #1b0424;
+      color: white;
+      border: none;
 
-  grid-column: 3;
-  grid-row: 2/span 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    }
 
-  /* background-color: yellow; */
+    100% {
+      background-color: rgb(255, 255, 255, 0.5);
+      color: rgb(27, 4, 36);
+      border: solid 2px #1b0424;
+    }
 
-}
-
-.MainPicPix {
-
-  width: 85%;
-  height: 100%;
-  object-fit: contain;
-
-  animation: slide-in-right .35s linear both;
-  z-index: 1;
-
-  /* las fotos deben estar ajustadas al auto!!! evitar autos grises */
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.MainBrands {
-
-  grid-row: 3;
-  grid-column: 1/span 4;
-
-  display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 100%;
-
-
-}
-
-.UtilBrands {
-
-  grid-row: 1;
-  grid-column: 1;
-  /* background-color: red; */
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  z-index: 15;
-
-}
-
-.BrandsText {
-
-  width: 100%;
-  height: 20%;
-  /* background-color: green; */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-family: "Sofia Sans", Arial;
-  font-weight: 300;
-  font-size: 1.5vw;
-  color: #005792;
-
-}
-
-.SpanBrand {
-
-  margin-left: 10px;
-  margin-right: 10px;
-
-  cursor: default;
-
-}
-
-.Separator {
-
-  width: 15%;
-  height: 1.5px;
-  background-color: #005792;
-
-
-}
-
-.ContainerPicBrandsLogo {
-
-  width: 100%;
-
-  /* ojo aca */
-
-  height: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-
-  position: relative;
-  overflow: hidden;
-
-  /* estas ultimas dos fueron añadidas como fix */
-
-}
-
-.PicBrandsLogo {
-
-  /* background-color: black; */
-  width: 10%;
-
-  /* solia ser 20 vh el width */
-
-  height: 20vh;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 10px;
-  object-fit: contain;
-  position: absolute;
-  animation: SliderBrands 110s linear infinite;
-
-}
-
-.BrandsPics {
-
-  width: 100%;
-  filter: grayscale(100%);
-  transition: filter 0.75s ease;
-
-}
-
-.BrandsPics:hover {
-  filter: grayscale(0%);
-}
-
-@keyframes SliderBrands {
-
-  0% {
-    transform: translateX(100vw);
   }
 
-  100% {
-    transform: translateX(-100%);
+  .MainPic {
+
+    grid-column: 3;
+    grid-row: 2/span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: yellow; */
+
   }
 
-}
+  .MainPicPix {
 
-.SliderActionButton {
+    width: 85%;
+    height: 100%;
+    object-fit: contain;
 
-  background-color: #1b0424;
-  color: white;
-  border: none;
-  padding: 0px 0px 0px 0px;
-  width: 4.5vh;
-  height: 4.5vh;
-  border-radius: 50%;
-  margin: 10px;
+    animation: slide-in-right .35s linear both;
+    z-index: 1;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    /* las fotos deben estar ajustadas al auto!!! evitar autos grises */
 
-  cursor: pointer;
+  }
 
-}
 
-.PlusArrowSymbols {
 
-  font-size: 2.75vh;
 
-}
 
-.SliderActionButton:hover {
 
-  animation: HoverAnimnSliderButton 0.5s forwards;
 
-}
 
-@keyframes HoverAnimnSliderButton {
 
-  0% {
+
+
+
+  .MainBrands {
+
+    grid-row: 3;
+    grid-column: 1/span 4;
+
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+
+
+  }
+
+  .UtilBrands {
+
+    grid-row: 1;
+    grid-column: 1;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    z-index: 15;
+
+  }
+
+  .BrandsText {
+
+    width: 100%;
+    height: 20%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 300;
+    font-size: 1.5vw;
+    color: #005792;
+
+  }
+
+  .SpanBrand {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    cursor: default;
+
+  }
+
+  .Separator {
+
+    width: 15%;
+    height: 1.5px;
+    background-color: #005792;
+
+
+  }
+
+  .ContainerPicBrandsLogo {
+
+    width: 100%;
+
+    /* ojo aca */
+
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    /* estas ultimas dos fueron añadidas como fix */
+
+  }
+
+  .PicBrandsLogo {
+
+    /* background-color: black; */
+    width: 10%;
+
+    /* solia ser 20 vh el width */
+
+    height: fit-content;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    position: absolute;
+    animation: SliderBrands 110s linear infinite;
+
+  }
+
+  .BrandsPics {
+
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.75s ease;
+
+  }
+
+  .BrandsPics:hover {
+    filter: grayscale(0%);
+  }
+
+  @keyframes SliderBrands {
+
+    0% {
+      transform: translateX(100vw);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+
+  }
+
+  .SliderActionButton {
+
     background-color: #1b0424;
     color: white;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 50%;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
 
   }
 
-  100% {
-    background-color: white;
-    color: #1b0424;
-  }
+  .PlusArrowSymbols {
 
-}
-
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(1000px);
-    /* opacity: 0 */
-  }
-
-  100% {
-    transform: translateX(0);
-    /* opacity: 1 */
-  }
-}
-
-@keyframes slide-in-left {
-  0% {
-    transform: translateX(-1000px);
-    /* opacity: 0 */
-  }
-
-  100% {
-    transform: translateX(0);
-    /* opacity: 1 */
-  }
-}
-
-@keyframes scale-in-center {
-  0% {
-    transform: scale(0);
-    opacity: 1
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1
-  }
-}
-
-.NavContainer {
-
-  grid-row: 1;
-  background-color: #1b0424;
-  grid-column: 1/span 4;
-  height: 100%;
-  z-index: 25;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-}
-
-.FirstPartNav {
-
-  width: 40%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  /* background-color: yellow; */
-
-}
-
-.BotoneraPrimeraNav {
-
-  height: 100%;
-  /* background-color: green; */
-  width: 30%;
-  /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-}
-
-.BotoneraPrimeraNav:hover {
-
-  .ButtonSymbol {
-
-    display: block;
+    font-size: 2.75vh;
 
   }
 
-}
+  .SliderActionButton:hover {
 
-.Botonera {
+    animation: HoverAnimnSliderButton 0.5s forwards;
 
-  height: 100%;
-  width: 100%;
+  }
 
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 300;
-  color: white;
-  font-size: 1.15vw;
+  @keyframes HoverAnimnSliderButton {
 
-  background-color: #1b0424;
-  border: none;
-  padding: 0px 0px 0px 0px;
-  border-right: solid 1px rgb(255, 255, 255, 0.8);
-  border-left: solid 1px rgb(255, 255, 255, 0.8);
+    0% {
+      background-color: #1b0424;
+      color: white;
 
-  cursor: pointer;
+    }
 
-  /* background-color: green; */
+    100% {
+      background-color: white;
+      color: #1b0424;
+    }
 
+  }
 
-}
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(1000px);
+      /* opacity: 0 */
+    }
 
-.BotoneraLeft {
+    100% {
+      transform: translateX(0);
+      /* opacity: 1 */
+    }
+  }
 
-  border-left: 0px;
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-1000px);
+      /* opacity: 0 */
+    }
 
-}
+    100% {
+      transform: translateX(0);
+      /* opacity: 1 */
+    }
+  }
 
-.BotoneraRight {
+  @keyframes scale-in-center {
+    0% {
+      transform: scale(0);
+      opacity: 1
+    }
 
-  border-right: solid 2px rgb(255, 255, 255, 0.8);
+    100% {
+      transform: scale(1);
+      opacity: 1
+    }
+  }
 
-}
+  .NavContainer {
 
-.Botonera:hover {
+    grid-row: 1;
+    background-color: #1b0424;
+    grid-column: 1/span 4;
+    height: 100%;
+    z-index: 25;
 
-  animation: HoverAnimnNavButton 0.5s forwards;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-}
+  }
 
-@keyframes HoverAnimnNavButton {
+  .FirstPartNav {
 
-  0% {
-    background-color: rgb(27, 4, 36, 0);
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    /* background-color: yellow; */
+
+  }
+
+  .BotoneraPrimeraNav {
+
+    height: 100%;
+    /* background-color: green; */
+    width: 30%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .BotoneraPrimeraNav:hover {
+
+    .ButtonSymbol {
+
+      display: block;
+
+    }
+
+  }
+
+  .Botonera {
+
+    height: 100%;
+    width: 100%;
+
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
     color: white;
+    font-size: 1.15vw;
+
+    background-color: #1b0424;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    border-right: solid 1px rgb(255, 255, 255, 0.8);
+    border-left: solid 1px rgb(255, 255, 255, 0.8);
+
+    cursor: pointer;
+
+    /* background-color: green; */
+
 
   }
 
-  100% {
-    background-color: white;
-    color: rgb(27, 4, 36);
+  .BotoneraLeft {
+
+    border-left: 0px;
+
+  }
+
+  .BotoneraRight {
+
+    border-right: solid 2px rgb(255, 255, 255, 0.8);
+
+  }
+
+  .Botonera:hover {
+
+    animation: HoverAnimnNavButton 0.5s forwards;
+
+  }
+
+  @keyframes HoverAnimnNavButton {
+
+    0% {
+      background-color: rgb(27, 4, 36, 0);
+      color: white;
+
+    }
+
+    100% {
+      background-color: white;
+      color: rgb(27, 4, 36);
+    }
+
+  }
+
+  .SecondPartNav {
+
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: yellow; */
+
+  }
+
+  .BotoneraSegundaNav {
+
+
+    height: 100%;
+    /* background-color: green; */
+    width: 20%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+  }
+
+  .BotoneraLogoSegundaNav {
+
+
+    height: 100%;
+    /* background-color: green; */
+    width: 80%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .LogoNav {
+
+    height: 65%;
+    width: 50%;
+    background-image: url("./public/logoc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  }
+
+  .BotoneraRightB {
+
+    border-left: solid 2px rgb(255, 255, 255, 0.8);
+    border-right: none;
+
   }
 
 }
 
-.SecondPartNav {
+@media (min-width: 500px) and (max-width: 999px) {
 
-  width: 60%;
-  height: 100%;
+  .MainLandPag {
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  /* background-color: yellow; */
+    width: 100vw;
+    height: auto;
+
+    display: grid;
+    grid-template-rows: 10vh 82.5vh auto;
+    grid-template-columns: 20% 20% 47.5% 12.5%;
+
+    overflow: hidden;
+
+    /* background-color: green; */
+
+  }
+
+  .MainLogo {
+
+    width: 100%;
+    /* background-color: blue;     */
+
+    grid-row: 2;
+    grid-column: 1/span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+
+    color: rgb(173, 216, 230, 0.4);
+
+    animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
+
+    cursor: default;
+
+    /* background-color: red; */
+
+    /* placeholder, ambos variaran con cada marca */
+
+  }
+
+  .TXTLogo {
+
+       height: auto;
+       width: auto;
+       padding-bottom: 20vh;
+
+  }
+
+.MainLogoBrandModel {
+
+    grid-row: 2;
+    grid-column: 1/ span 4;
+
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(255, 0, 0, 0.5); */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* padding-top: 15vh; */
+    margin-top: 20px;
+    margin-left: 3vw;
+
+  }
+
+  .LogoBrandModel {
+
+    font-family: "Carattere", cursive;
+    font-weight: 600;
+    font-size: 10vw;
+    animation: slide-in-right .35s linear both;
+    z-index: 10;
+    cursor: default;
+    /* color: red; */
+
+  }
+
+  .MainText {
+
+    grid-row: 2;
+    grid-column: 1/span 4;
+    /* background-color: blueviolet; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+  }
+
+  .MainContainer {
+
+    /* background-color: yellow; */
+    width: 100%;
+    height: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: slide-in-left .35s linear both;
+    padding-top: 55vh;
+  }
+
+  .MainTextContainer {
+
+    /* background-color: wheat; */
+    width: 100vw;
+    height: auto;
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 4.25vw;
+    color: #430f58;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-top: 5vw; */
+    /* margin-left: -5vw; */
+
+    cursor: default;
+    padding-bottom: 40px;
+
+  }
+
+  .ActionButton {
+
+    height: 30%;
+    width: 100vw;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+  }
+
+  .ButtonMain {
+
+    height: 50px;
+    width: 32.5%;
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 3.5vw;
+    background-color: #1b0424;
+    color: white;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    border-radius: 50px;
+
+    /* margin-left: -5vw; */
+
+  }
+
+  .MainPic {
+
+    grid-column: 2/ span 2;
+    grid-row: 2/span 3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    /* background-color: yellow; */
+    padding-bottom: 10vh;
+    
+  }
+
+  .MainPicPix {
+
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+
+    animation: slide-in-right .35s linear both;
+    z-index: 1;
+
+    /* background-color: red; */
+
+    /* las fotos deben estar ajustadas al auto!!! evitar autos grises */
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  .MainBrands {
+
+    grid-row: 3;
+    grid-column: 1/span 4;
+
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+
+
+  }
+
+  .UtilBrands {
+
+    grid-row: 1;
+    grid-column: 1;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+
+  }
+
+  .BrandsText {
+
+    width: 100%;
+    height: 20%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 300;
+    font-size: 25px;
+    color: #005792;
+
+  }
+
+  .SpanBrand {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    cursor: default;
+
+  }
+
+  .Separator {
+
+    width: 15%;
+    height: 2px;
+    background-color: #005792;
+
+
+  }
+
+  .ContainerPicBrandsLogo {
+
+    display: none;
+
+  }
+
+  .SliderActionButton {
+
+    background-color: #1b0424;
+    color: white;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+  }
+
+  .PlusArrowSymbols {
+
+    font-size: 25px;
+
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(1000px);
+      /* opacity: 0 */
+    }
+
+    100% {
+      transform: translateX(0);
+      /* opacity: 1 */
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-1000px);
+      /* opacity: 0 */
+    }
+
+    100% {
+      transform: translateX(0);
+      /* opacity: 1 */
+    }
+  }
+
+  @keyframes scale-in-center {
+    0% {
+      transform: scale(0);
+      opacity: 1
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1
+    }
+  }
+
+  .NavContainer {
+
+    grid-row: 1;
+    background-color: #1b0424;
+    grid-column: 1/span 4;
+    height: 100%;
+    z-index: 25;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .FirstPartNav {
+
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    /* background-color: yellow; */
+
+  }
+
+  .BotoneraPrimeraNav {
+
+    height: 100%;
+    /* background-color: green; */
+    width: 30%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .BotoneraPrimeraNav:hover {
+
+    .ButtonSymbol {
+
+      display: block;
+
+    }
+
+  }
+
+  .Botonera {
+
+    height: 100%;
+    width: 100%;
+
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 1.15vw;
+
+    background-color: #1b0424;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    border-right: solid 1px rgb(255, 255, 255, 0.8);
+    border-left: solid 1px rgb(255, 255, 255, 0.8);
+
+    cursor: pointer;
+
+    /* background-color: green; */
+
+
+  }
+
+  .BotoneraLeft {
+
+    border-left: 0px;
+
+  }
+
+  .BotoneraRight {
+
+    border-right: solid 2px rgb(255, 255, 255, 0.8);
+
+  }
+
+  .Botonera:hover {
+
+    animation: HoverAnimnNavButton 0.5s forwards;
+
+  }
+
+  @keyframes HoverAnimnNavButton {
+
+    0% {
+      background-color: rgb(27, 4, 36, 0);
+      color: white;
+
+    }
+
+    100% {
+      background-color: white;
+      color: rgb(27, 4, 36);
+    }
+
+  }
+
+  .SecondPartNav {
+
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: yellow; */
+
+  }
+
+  .BotoneraSegundaNav {
+
+
+    height: 100%;
+    /* background-color: green; */
+    width: 20%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+  }
+
+  .BotoneraLogoSegundaNav {
+
+
+    height: 100%;
+    /* background-color: green; */
+    width: 80%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .LogoNav {
+
+    height: 65%;
+    width: 50%;
+    background-image: url("./public/logoc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  }
+
+  .BotoneraRightB {
+
+    border-left: solid 2px rgb(255, 255, 255, 0.8);
+    border-right: none;
+
+  }
 
 }
 
-.BotoneraSegundaNav {
+/* SECCION MOBILE --------------------- */
+
+@media (min-width: 180px) and (max-width: 499px) {
+
+  .MainLandPag {
+
+    width: 100vw;
+    height: auto;
+
+    display: grid;
+    grid-template-rows: 10vh auto auto;
+    grid-template-columns: 20% 20% 47.5% 12.5%;
+
+    overflow: hidden;
+
+    /* background-color: green; */
+
+  }
+
+  .MainLogo {
+
+    width: 100%;
+    /* background-color: blue;     */
+
+    grid-row: 2;
+    grid-column: 1/span 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+
+    color: rgb(173, 216, 230, 0.4);
+
+    animation: scale-in-center .5s cubic-bezier(.25, .46, .45, .94) both;
+
+    cursor: default;
+
+    /* background-color: red; */
+
+    /* placeholder, ambos variaran con cada marca */
+
+  }
+
+  .TXTLogo {
+
+       height: auto;
+       width: auto;
+       padding-bottom: 20vh;
+
+  }
+
+.MainLogoBrandModel {
+
+    grid-row: 2;
+    grid-column: 1/ span 4;
+
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(255, 0, 0, 0.5); */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* padding-top: 15vh; */
+    /* margin-top: 20px; */
+    margin-left: 3vw;
+
+  }
+
+  .LogoBrandModel {
+
+    font-family: "Carattere", cursive;
+    font-weight: 600;
+    font-size: 10vw;
+    animation: slide-in-right .35s linear both;
+    z-index: 10;
+    cursor: default;
+    /* color: red; */
+
+  }
+
+  .MainText {
+
+    grid-row: 2;
+    grid-column: 1/span 4;
+    /* background-color: blueviolet; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+  }
+
+  .MainContainer {
+
+    /* background-color: yellow; */
+    width: 100%;
+    height: 75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    animation: slide-in-left .35s linear both;
+    padding-top: 20vh;
+  }
+
+  .MainTextContainer {
+
+    /* background-color: wheat; */
+    width: 100vw;
+    height: auto;
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 4.25vw;
+    color: #430f58;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* margin-top: 5vw; */
+    /* margin-left: -5vw; */
+
+    cursor: default;
+    padding-bottom: 20px;
+
+  }
+
+  .ActionButton {
+
+    height: 30%;
+    width: 100vw;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+
+  }
+
+  .ButtonMain {
+
+    height: 50px;
+    width: 32.5%;
+
+    font-family: "Sofia Sans", Arial;
+    font-weight: 500;
+    font-size: 3.5vw;
+    background-color: #1b0424;
+    color: white;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    border-radius: 50px;
+
+    /* margin-left: -5vw; */
+
+  }
+
+  .MainPic {
+
+    grid-column: 2/ span 2;
+    grid-row: 2/span 3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    /* background-color: yellow; */
+    padding-bottom: 12.5vh;
+    
+  }
+
+  .MainPicPix {
+
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+
+    animation: slide-in-right .35s linear both;
+    z-index: 1;
+
+    /* background-color: red; */
+
+    /* las fotos deben estar ajustadas al auto!!! evitar autos grises */
+
+  }
 
 
-  height: 100%;
-  /* background-color: green; */
-  width: 20%;
-  /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 
 
-}
-
-.BotoneraLogoSegundaNav {
 
 
-   height: 100%;
-  /* background-color: green; */
-  width: 80%;
-  /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-}
 
-.LogoNav {
 
- height: 65%;
- width: 50%;
- background-image: url("./public/logoc.png");
- background-position: center;
- background-repeat: no-repeat;
- background-size: contain;
 
-}
 
-.BotoneraRightB {
 
-  border-left: solid 2px rgb(255, 255, 255, 0.8);
-  border-right: none;
+  .MainBrands {
+
+    grid-row: 3;
+    grid-column: 1/span 4;
+
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+
+
+  }
+
+  .UtilBrands {
+
+    grid-row: 1;
+    grid-column: 1;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+
+  }
+
+  .BrandsText {
+
+    width: 100%;
+    height: 20%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: "Sofia Sans", Arial;
+    font-weight: 300;
+    font-size: 25px;
+    color: #005792;
+
+  }
+
+  .SpanBrand {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    cursor: default;
+
+  }
+
+  .Separator {
+
+    width: 15%;
+    height: 2px;
+    background-color: #005792;
+
+
+  }
+
+  .ContainerPicBrandsLogo {
+
+    display: none;
+
+  }
+
+  .SliderActionButton {
+
+    background-color: #1b0424;
+    color: white;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+  }
+
+  .PlusArrowSymbols {
+
+    font-size: 25px;
+
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(1000px);
+      /* opacity: 0 */
+    }
+
+    100% {
+      transform: translateX(0);
+      /* opacity: 1 */
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-1000px);
+      /* opacity: 0 */
+    }
+
+    100% {
+      transform: translateX(0);
+      /* opacity: 1 */
+    }
+  }
+
+  @keyframes scale-in-center {
+    0% {
+      transform: scale(0);
+      opacity: 1
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1
+    }
+  }
+
+  .NavContainer {
+
+    grid-row: 1;
+    background-color: #1b0424;
+    grid-column: 1/span 4;
+    height: 100%;
+    z-index: 25;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .FirstPartNav {
+
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    /* background-color: yellow; */
+
+  }
+
+  .BotoneraPrimeraNav {
+
+    height: 100%;
+    /* background-color: green; */
+    width: 30%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .BotoneraPrimeraNav:hover {
+
+    .ButtonSymbol {
+
+      display: block;
+
+    }
+
+  }
+
+  .Botonera {
+
+    height: 100%;
+    width: 100%;
+
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 1.15vw;
+
+    background-color: #1b0424;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    border-right: solid 1px rgb(255, 255, 255, 0.8);
+    border-left: solid 1px rgb(255, 255, 255, 0.8);
+
+    cursor: pointer;
+
+    /* background-color: green; */
+
+
+  }
+
+  .BotoneraLeft {
+
+    border-left: 0px;
+
+  }
+
+  .BotoneraRight {
+
+    border-right: solid 2px rgb(255, 255, 255, 0.8);
+
+  }
+
+  .Botonera:hover {
+
+    animation: HoverAnimnNavButton 0.5s forwards;
+
+  }
+
+  @keyframes HoverAnimnNavButton {
+
+    0% {
+      background-color: rgb(27, 4, 36, 0);
+      color: white;
+
+    }
+
+    100% {
+      background-color: white;
+      color: rgb(27, 4, 36);
+    }
+
+  }
+
+  .SecondPartNav {
+
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: yellow; */
+
+  }
+
+  .BotoneraSegundaNav {
+
+
+    height: 100%;
+    /* background-color: green; */
+    width: 20%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+  }
+
+  .BotoneraLogoSegundaNav {
+
+
+    height: 100%;
+    /* background-color: green; */
+    width: 80%;
+    /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .LogoNav {
+
+    height: 65%;
+    width: 50%;
+    background-image: url("./public/logoc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+  }
+
+  .BotoneraRightB {
+
+    border-left: solid 2px rgb(255, 255, 255, 0.8);
+    border-right: none;
+
+  } 
 
 }
