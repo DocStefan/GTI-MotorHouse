@@ -67,7 +67,7 @@ function Vehicles() {
         return Años.map((val) => ({ value: val, label: val.toString() }))
     }, [VehiclesData, FilterAction])
 
-        let TiposOptions = useMemo(() => {
+    let TiposOptions = useMemo(() => {
         let Tipos = [...new Set(VehiclesData.filter(vehicle => {
             return (
                 (FilterAction.Modelo === "" || vehicle.modelo === FilterAction.Modelo) &&
@@ -107,12 +107,21 @@ function Vehicles() {
 
     let [VehicleDataLengthIndex, setVehicleDataLengthIndex] = useState(SelectedFilterOptions.length - 4)
 
+    const containerRef = useRef(null);
+
     useEffect(() => {
 
         setVehicleDataLengthIndex(SelectedFilterOptions.length - 4)
         setPaginatorIndexManager(0)
 
+
     }, [SelectedFilterOptions])
+
+    useEffect(() => {
+        if (containerRef.current) {
+            containerRef.current.scrollTop = 0;
+        }
+    }, [PaginatorIndexManager])
 
     useEffect(() => {
 
@@ -198,26 +207,26 @@ function Vehicles() {
 
     }, [SelectedFilterOptions])
 
-   const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(window.innerWidth);
 
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const isViewportPc = width >= 1000;
 
     let [FilterActiveNotPc, setFilterActiveNotPc] = useState(false)
 
     return (
-        <div className="MainVehicles" id="VehiclesScrollRef" onClick={() => {scrollToElement("VehiclesScrollRef")}}>
+        <div className="MainVehicles" id="VehiclesScrollRef" onClick={() => { scrollToElement("VehiclesScrollRef") }}>
 
             <div className="VehiclesTypes">
 
                 <div className="VehiclesTypesTittle">
 
-                    <span class="material-symbols-outlined VehiclesFilterTypeApart VehiclesFylterToogleButton" onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}} style={{color: FilterActiveNotPc ? "lightgray" : ""}}> menu </span>
+                    <span class="material-symbols-outlined VehiclesFilterTypeApart VehiclesFylterToogleButton" onClick={() => { setFilterActiveNotPc(!FilterActiveNotPc) }} style={{ color: FilterActiveNotPc ? "lightgray" : "" }}> menu </span>
 
                     <div className="SeparatorVehicles"></div>
 
@@ -242,7 +251,7 @@ function Vehicles() {
 
             </div>
 
-            <div className="VehiclesFilter" style={{visibility: isViewportPc ? "visible" : FilterActiveNotPc ? "visible" : "hidden", zIndex: isViewportPc ? 3 : FilterActiveNotPc ? 3 : -1}}>
+            <div className="VehiclesFilter" style={{ visibility: isViewportPc ? "visible" : FilterActiveNotPc ? "visible" : "hidden", zIndex: isViewportPc ? 3 : FilterActiveNotPc ? 3 : -1 }}>
 
                 <div className="VehiclesFilterMenu">
 
@@ -319,9 +328,9 @@ function Vehicles() {
 
             </div>
 
-            <div className="VehiclesCatalogue" onClick={() => {setFilterActiveNotPc(false)}}>
+            <div className="VehiclesCatalogue" onClick={() => { setFilterActiveNotPc(false) }}>
 
-                <div className="VehicleCatalogueContainer">
+                <div className="VehicleCatalogueContainer" ref={containerRef}>
 
                     {SelectedFilterOptions.map((val, index) => {
 
@@ -331,7 +340,7 @@ function Vehicles() {
                             return <div className="CataloguePost">
                                 <div className="CalaloguePostBox">
 
-                                    <div className="PostPic" style={{backgroundImage: val.foto}}></div>
+                                    <div className="PostPic" style={{ backgroundImage: val.foto }}></div>
 
                                     <div className="PostName">
                                         <span>{val.año.toString() + " " + val.marca + " " + val.modelo} </span>

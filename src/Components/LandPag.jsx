@@ -61,13 +61,41 @@ function LandPag() {
 
   let SelectedCarMenu = useMemo(() => { return LandPagManager[MainLogoAlternator] }, [LandPagManager, MainLogoAlternator])
 
+     const [width, setWidth] = useState(window.innerWidth);
+  
+    useEffect(() => {
+      const handleResize = () => setWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+      const isViewportMobile = width <= 499;
+  
+      let [FilterActiveNotPc, setFilterActiveNotPc] = useState(false)
+
   return (
 
     <div className="MainLandPag" id="MainLandPagRef">
 
-      <div className="NavContainer">
+  {isViewportMobile ? 
+  
+  <div className="NavContainerMobile" style={{height: FilterActiveNotPc ? "385px" : "75px"}}>
 
-        <div className="FirstPartNav">
+    <div className="LogoAndMenu">
+      <span class="material-symbols-outlined" onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
+      <div className="LogoNav"></div>
+    </div>
+
+{FilterActiveNotPc && <>         
+          <div className="BotoneraMobile" onClick={() => {scrollToElement("VehiclesScrollRef"), setFilterActiveNotPc(false)}}>Vehiculos</div>
+          <div className="BotoneraMobile" onClick={() => {scrollToElement("ServicesScrollRef"), setFilterActiveNotPc(false)}}>Servicios</div>
+          <div className="BotoneraMobile" onClick={() => {scrollToElement("NewsScrollRef"), setFilterActiveNotPc(false)}}>Noticias</div>
+          <div className="BotoneraMobile" onClick={() => {scrollToElement("FooterScrollRef"), setFilterActiveNotPc(false)}}>Contacto</div></> }
+     </div> 
+  
+  : <div className="NavContainer">
+
+       <div className="FirstPartNav">
 
           <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("VehiclesScrollRef")}}><button type="button" className="Botonera BotoneraLeft">Vehiculos</button></div>
           <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("ServicesScrollRef")}}><button type="button" className="Botonera">Servicios</button></div>
@@ -82,7 +110,7 @@ function LandPag() {
 
         </div>
 
-      </div>
+      </div>}
 
       <Fragment key={MainLogoAlternator}>
         <div className="MainLogo" onClick={() => {scrollToElement("MainLandPagRef")}}>
