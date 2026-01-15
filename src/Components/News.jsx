@@ -8,7 +8,7 @@ function News() {
 
   const scrollToElement = useScroll();
 
-  let NewsData = [{NewsImg: "url(./public/noticia1.jpg)", NewsTittle: "Toyota Corolla Cross, El SUV híbrido más elegido en el 2025"},{NewsImg: "url(./public/noticia2.jpg)", NewsTittle: "El Volkswagen Golf GTI cumple 50 años y lo celebra a lo grande"},{NewsImg: "url(./public/noticia3.jpg)", NewsTittle: "El Volkswagen Passat más deseado: berlina y 1.300 km de autonomía"},]
+  let NewsData = [{NewsImg: "url(./noticia1.jpg)", NewsTittle: "Toyota Corolla Cross, El SUV híbrido más elegido en el 2025"},{NewsImg: "url(./noticia2.jpg)", NewsTittle: "El Volkswagen Golf GTI cumple 50 años y lo celebra a lo grande"},{NewsImg: "url(./noticia3.jpg)", NewsTittle: "El Volkswagen Passat más deseado: berlina y 1.300 km de autonomía"},]
 
   return (
 
