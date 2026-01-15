@@ -83,7 +83,7 @@ function LandPag() {
 
     <div className="LogoAndMenu">
       <span class="material-symbols-outlined" style={{border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)"}} onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
-      <div className="LogoNav"></div>
+      <div className="LogoNav" style={{backgroundImage: "url(./logoc.png)"}}></div>
     </div>
 
 {FilterActiveNotPc && <>         
@@ -105,7 +105,7 @@ function LandPag() {
 
         <div className="SecondPartNav">
 
-          <div className="BotoneraLogoSegundaNav"><div className="LogoNav"></div></div>
+          <div className="BotoneraLogoSegundaNav"><div className="LogoNav" style={{backgroundImage: "url(./logoc.png)"}}></div></div>
           <div className="BotoneraSegundaNav" onClick={() => {scrollToElement("FooterScrollRef")}}><button type="button" className="Botonera BotoneraRightB">Contacto</button></div>
 
         </div>
