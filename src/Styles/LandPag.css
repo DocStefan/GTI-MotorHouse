@@ -566,7 +566,7 @@
 
     height: 65%;
     width: 50%;
-    background-image: url("./logoc.png");
+    background-image: "url(./logoc.png)";
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1030,7 +1030,7 @@
 
     height: 100%;
     width: 100%;
-    background-image: url("./logoc.png");
+    background-image: "url(./logoc.png)";
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1468,7 +1468,7 @@
 
     height: 100%;
     width: 200px;
-    background-image: url("./public/logoc.png");
+    background-image: "url(./logoc.png)";
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
