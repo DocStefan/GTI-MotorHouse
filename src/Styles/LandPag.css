@@ -1442,8 +1442,8 @@
    position: absolute;
    left: 10px;
    bottom: 22.5px;
-   font-size: 30px;
-    color: white;
+   font-size: 35px;
+   color: white;
 
  }
  @media (max-width: 300px) {

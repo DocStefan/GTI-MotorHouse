@@ -82,7 +82,7 @@ function LandPag() {
   <div className="NavContainerMobile" style={{height: FilterActiveNotPc ? "385px" : "75px"}}>
 
     <div className="LogoAndMenu">
-      <span class="material-symbols-outlined" onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
+      <span class="material-symbols-outlined" style={{border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)"}} onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
       <div className="LogoNav"></div>
     </div>
 

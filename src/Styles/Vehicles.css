@@ -1459,7 +1459,7 @@ border-radius: 10px;
     font-size: 2.7vh;
     font-weight: 400;
 
-    padding-left: 0.5vw;
+    padding-left: 1vw;
 
 }
 
@@ -1478,7 +1478,7 @@ border-radius: 10px;
     font-size: 1.7vh;
     font-weight: 400;
 
-    padding-left: 0.5vw;
+    padding-left: 1vw;
 
     display: flex;
     justify-content: start;
@@ -1505,7 +1505,7 @@ border-radius: 10px;
     justify-content: start;
     align-items: center;
 
-    padding-left: 0.5vw;
+    padding-left: 1vw;
 
       cursor: default;
 
@@ -1544,6 +1544,8 @@ border-radius: 10px;
     font-weight: 500;
 
       cursor: default;
+
+      padding-left: 0.5vw;
 
 }
 
@@ -2257,7 +2259,7 @@ border-radius: 10px;
     font-size: 2.7vh;
     font-weight: 400;
 
-    padding-left: 0.5vw;
+    padding-left: 1.5vw;
 
 }
 
@@ -2276,7 +2278,7 @@ border-radius: 10px;
     font-size: 1.7vh;
     font-weight: 400;
 
-    padding-left: 0.5vw;
+    padding-left: 1.5vw;
 
     display: flex;
     justify-content: start;
@@ -2303,7 +2305,7 @@ border-radius: 10px;
     justify-content: start;
     align-items: center;
 
-    padding-left: 0.5vw;
+    padding-left: 1.5vw;
 
       cursor: default;
 
@@ -2342,6 +2344,9 @@ border-radius: 10px;
     font-weight: 500;
 
       cursor: default;
+
+          padding-left: 1vw;
+
 
 }
 
