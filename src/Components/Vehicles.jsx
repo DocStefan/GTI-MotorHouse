@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { lazy } from 'react'
 import "../Styles/Vehicles.css"
 import { useId, useState, useEffect, useRef, useMemo, useContext, Fragment } from 'react'
 import Select from "react-select"
-import VehiclesData from './VehiclesData'
+
+// import VehiclesData from './VehiclesData'
+
 import { ModelContext } from './MainModelManager'
 import { useScroll } from './Scroller'
+import axios from 'axios'
 
 function Vehicles() {
 
@@ -26,6 +29,26 @@ function Vehicles() {
 
     const scrollToElement = useScroll();
     const { HomeModelSelected } = useContext(ModelContext)
+
+    let [VehiclesData, setVehiclesData] = useState([])
+
+async function Starter() {
+
+   try {
+
+    let responseCatalogue = await axios.get("https://us-central1-gti-motorhouse.cloudfunctions.net/api/auth/GetCatalogue", {})
+    
+    if(responseCatalogue) {setVehiclesData(responseCatalogue.data)}
+
+   } catch {
+
+    setNotOptionsFilter(true)
+
+   }
+
+}
+
+useEffect(() => {Starter()}, [])
 
     let ModelOptions = useMemo(() => {
 
@@ -244,7 +267,7 @@ function Vehicles() {
                                 close
                             </span></div>
                             <span className="TextVehicleSelector">{val.Type}</span>
-                            <img src={val.Pic} className="PicVehicleSelector" style={{ animation: val.Type === FilterAction.Type ? "none" : "" }}></img></div>
+                            <img src={val.Pic} className="PicVehicleSelector" rel='preload' style={{ animation: val.Type === FilterAction.Type ? "none" : "" }}></img></div>
                     })}
 
                 </div>
@@ -340,7 +363,7 @@ function Vehicles() {
                             return <div className="CataloguePost">
                                 <div className="CalaloguePostBox">
 
-                                    <div className="PostPic" style={{ backgroundImage: val.foto }}></div>
+                                    <div className="PostPic" style={{ backgroundImage: val.foto }} onLoad={lazy}></div>
 
                                     <div className="PostName">
                                         <span>{val.año.toString() + " " + val.marca + " " + val.modelo} </span>
