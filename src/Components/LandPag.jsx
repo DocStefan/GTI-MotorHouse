@@ -143,7 +143,7 @@ function LandPag() {
 
         <div className="MainPic" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
-          <img src={SelectedCarMenu.Foto} className="MainPicPix" rel='preload'></img>
+          <img rel='preload' src={SelectedCarMenu.Foto} className="MainPicPix" ></img>
 
         </div>
 
@@ -181,7 +181,7 @@ function LandPag() {
 
                 <div className="PicBrandsLogo" style={{ animationDelay: index * -10 - 10 + "s" }}>
 
-                  <img className="BrandsPics" src={val + ".png"} rel='preload'></img>
+                  <img className="BrandsPics" rel='preload' src={val + ".png"} ></img>
 
                 </div>
 
