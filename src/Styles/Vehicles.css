@@ -614,6 +614,33 @@
 
     /* border-bottom: 3px black solid; */
 
+    display: flex;
+    justify-content: end;
+    align-items: start;
+
+}
+
+.FavMarkPost {
+
+ width: 50px;
+ height: 50px;
+
+ /* background-color: red; */
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.FavPost {
+
+ font-variation-settings:'FILL' 0;
+ color: white;
+ font-size: 30px;
+
+ cursor: pointer;
+
 }
 
 .PostName {
@@ -1442,6 +1469,32 @@ border-radius: 10px;
     background-position: center;
 
     /* border-bottom: 3px black solid; */
+    display: flex;
+    justify-content: end;
+    align-items: start;
+
+}
+
+.FavMarkPost {
+
+ width: 50px;
+ height: 50px;
+
+ /* background-color: red; */
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.FavPost {
+
+ font-variation-settings:'FILL' 0;
+ color: white;
+ font-size: 30px;
+
+ cursor: pointer;
 
 }
 
@@ -2242,6 +2295,32 @@ border-radius: 10px;
     background-position: center;
 
     /* border-bottom: 3px black solid; */
+    display: flex;
+    justify-content: end;
+    align-items: start;
+
+}
+
+.FavMarkPost {
+
+ width: 50px;
+ height: 50px;
+
+ /* background-color: red; */
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.FavPost {
+
+ font-variation-settings:'FILL' 0;
+ color: white;
+ font-size: 30px;
+
+ cursor: pointer;
 
 }
 

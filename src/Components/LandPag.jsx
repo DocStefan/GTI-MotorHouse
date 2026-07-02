@@ -69,7 +69,8 @@ function LandPag() {
       return () => window.removeEventListener("resize", handleResize);
     }, []);
   
-      const isViewportMobile = width <= 499;
+      const isViewportMobile = width <= 999;
+      const isViewportMobileB = width <= 500;
   
       let [FilterActiveNotPc, setFilterActiveNotPc] = useState(false)
 
@@ -84,6 +85,7 @@ function LandPag() {
     <div className="LogoAndMenu">
       <span class="material-symbols-outlined" style={{border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)"}} onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
       <div className="LogoNav" style={{backgroundImage: "url(./logoc.png)"}}></div>
+      <div className="BotoneraSegundaNav" onClick={() => {}}><button type="button" className="Botonera BotoneraRightB"><div className="LogoSignIn"><div class="material-symbols-outlined NotSignIn">person</div></div>{isViewportMobileB ? "" : "Iniciar Sesion"}</button></div>
     </div>
 
 {FilterActiveNotPc && <>         
@@ -99,14 +101,15 @@ function LandPag() {
 
           <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("VehiclesScrollRef")}}><button type="button" className="Botonera BotoneraLeft">Vehiculos</button></div>
           <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("ServicesScrollRef")}}><button type="button" className="Botonera">Servicios</button></div>
-          <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("NewsScrollRef")}}><button type="button" className="Botonera BotoneraRight">Noticias</button></div>
+          <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("NewsScrollRef")}}><button type="button" className="Botonera">Noticias</button></div>
+          <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("FooterScrollRef")}}><button type="button" className="Botonera BotoneraRight">Contacto</button></div>
 
         </div>
 
         <div className="SecondPartNav">
 
           <div className="BotoneraLogoSegundaNav"><div className="LogoNav" style={{backgroundImage: "url(./logoc.png)"}}></div></div>
-          <div className="BotoneraSegundaNav" onClick={() => {scrollToElement("FooterScrollRef")}}><button type="button" className="Botonera BotoneraRightB">Contacto</button></div>
+          <div className="BotoneraSegundaNav" onClick={() => {}}><button type="button" className="Botonera BotoneraRightB"><div className="LogoSignIn"><span class="material-symbols-outlined NotSignIn">person</span></div>Iniciar Sesion</button></div>
 
         </div>
 
