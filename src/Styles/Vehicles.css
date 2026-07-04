@@ -597,6 +597,8 @@
 
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 
+    position: relative;
+
 }
 
 .PostPic {
@@ -605,12 +607,11 @@
     height: 55%;
 
     /* background-image: url("./DodgeHead.png"); */
-    background-size: cover;
+    object-fit: cover;
 
     /* solia ser contain */
 
-    background-repeat: no-repeat;
-    background-position: center;
+    object-position: center;
 
     /* border-bottom: 3px black solid; */
 
@@ -630,6 +631,9 @@
  display: flex;
  justify-content: center;
  align-items: center;
+
+ position: absolute;
+ right: 0px;
 
 }
 
@@ -1453,6 +1457,8 @@ border-radius: 10px;
 
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 
+    position: relative;
+
 }
 
 .PostPic {
@@ -1461,12 +1467,11 @@ border-radius: 10px;
     height: 55%;
 
     /* background-image: url("./DodgeHead.png"); */
-    background-size: cover;
+    object-fit: cover;
 
     /* solia ser contain */
 
-    background-repeat: no-repeat;
-    background-position: center;
+    object-position: center;
 
     /* border-bottom: 3px black solid; */
     display: flex;
@@ -1485,6 +1490,9 @@ border-radius: 10px;
  display: flex;
  justify-content: center;
  align-items: center;
+
+ position: absolute;
+ right: 0px;
 
 }
 
@@ -2279,6 +2287,8 @@ border-radius: 10px;
 
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 
+    position: relative;
+
 }
 
 .PostPic {
@@ -2287,12 +2297,11 @@ border-radius: 10px;
     height: 55%;
 
     /* background-image: url("./DodgeHead.png"); */
-    background-size: cover;
+    object-fit: cover;
 
     /* solia ser contain */
 
-    background-repeat: no-repeat;
-    background-position: center;
+    object-position: center;
 
     /* border-bottom: 3px black solid; */
     display: flex;
@@ -2311,6 +2320,9 @@ border-radius: 10px;
  display: flex;
  justify-content: center;
  align-items: center;
+
+ position: absolute;
+ right: 0px;
 
 }
 

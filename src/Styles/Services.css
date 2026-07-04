@@ -90,9 +90,8 @@
     height: 40%;
 
     /* background-image: url("./public/SaleLogo.png"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    object-position: center;
+    object-fit: contain;
 
     /* background-color: red; */
 
@@ -233,9 +232,8 @@
     height: 10vw;
 
     /* background-image: url("./public/SaleLogo.png"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    object-position: center;
+    object-fit: contain;
 
     /* background-color: red; */
 
@@ -383,9 +381,8 @@
     height: 20vw;
 
     /* background-image: url("./public/SaleLogo.png"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    object-position: center;
+    object-fit: contain;
 
     margin-bottom: 10px;
 

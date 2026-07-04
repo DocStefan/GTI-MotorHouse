@@ -45,7 +45,7 @@ useEffect(() => {Starter()}, [])
 
         {NewsData.map((val) => {return <div className="NewsDataBox">
 
-          <div className="NewsImg" style={{backgroundImage: val.NewsImg}}></div>
+          <img loading='lazy' decoding='async' className="NewsImg" src={val.NewsImg}></img>
           <div className="NewsTittle"><span>{val.NewsTittle}</span></div>
 
         </div>

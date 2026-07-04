@@ -125,9 +125,8 @@
     /* background-color: red; */
 
     /* background-image: url("./public/noticia1.jpg"); */
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    object-position: top;
+    object-fit: cover;
 
 }
 
@@ -280,9 +279,8 @@
     /* background-color: red; */
 
     /* background-image: url("./public/noticia1.jpg"); */
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    object-position: top;
+    object-fit: cover;
 
 }
 
@@ -418,9 +416,8 @@
     /* background-color: red; */
 
     /* background-image: url("./public/noticia1.jpg"); */
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    object-position: top;
+    object-fit: cover;
 
 }
 

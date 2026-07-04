@@ -12,7 +12,7 @@ import axios from 'axios'
 function Vehicles() {
 
 
-    let SelectorVehicleData = [{ Type: "Sedan", Pic: "SedanLogo.png" }, { Type: "HatchBack", Pic: "HatchBackLogo.png" }, { Type: "Coupe", Pic: "CoupeLogo.png" }, { Type: "SUV", Pic: "SuvLogo.png" }, { Type: "PickUp", Pic: "PickUpLogo.png" },]
+    let SelectorVehicleData = [{ Type: "Sedan", Pic: "SedanLogo.webp" }, { Type: "HatchBack", Pic: "HatchBackLogo.webp" }, { Type: "Coupe", Pic: "CoupeLogo.webp" }, { Type: "SUV", Pic: "SuvLogo.webp" }, { Type: "PickUp", Pic: "PickUpLogo.webp" },]
 
     let [FilterAction, setFilterAction] = useState({ Marca: "", Modelo: "", AñoFrom: 0, AñoUpTo: Infinity, KmFrom: 0, KmUpTo: Infinity, PrecioFrom: 0, PrecioUpTo: Infinity, Type: "" })
 
@@ -267,7 +267,7 @@ useEffect(() => {Starter()}, [])
                                 close
                             </span></div>
                             <span className="TextVehicleSelector">{val.Type}</span>
-                            <img src={val.Pic} className="PicVehicleSelector" rel='preload' style={{ animation: val.Type === FilterAction.Type ? "none" : "" }}></img></div>
+                            <img src={val.Pic} className="PicVehicleSelector" loading='eager' decoding='async' fetchPriority="high" style={{ animation: val.Type === FilterAction.Type ? "none" : "" }}></img></div>
                     })}
 
                 </div>
@@ -363,9 +363,12 @@ useEffect(() => {Starter()}, [])
                             return <div className="CataloguePost">
                                 <div className="CalaloguePostBox">
 
-                                    <div className="PostPic" style={{ backgroundImage: val.foto }} onLoad={lazy}>
-                                        <div className="FavMarkPost" id={index}><span class="material-symbols-outlined FavPost">bookmark</span></div>
-                                    </div>
+                                    <img loading='eager' decoding='async' fetchPriority='high' className="PostPic" src={val.foto} >
+                                    </img>
+
+                                    {/* quitar el fetchPriority en caso de lag */}
+
+                                    <div className="FavMarkPost" id={index}><span class="material-symbols-outlined FavPost">bookmark</span></div>
 
                                     <div className="PostName">
                                         <span>{val.año.toString() + " " + val.marca + " " + val.modelo} </span>

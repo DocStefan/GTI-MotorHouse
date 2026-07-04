@@ -9,13 +9,13 @@ function LandPag() {
   let BrandPicsArray = ["marca (1)", "marca (2)", "marca (3)", "marca (4)", "marca (5)", "marca (6)", "marca (7)", "marca (8)", "marca (9)", "marca (10)", "marca (11)"]
 
   let LandPagManager = [
-    { Marca: "TOYOTA", Modelo: "Crown", Foto: "ToyotaHead.png", Frase: "El auto que siempre quisiste a un click de distancia", ColorModelo: "#a1151eff" },
-    { Marca: "PORSCHE", Modelo: "718 Cayman", Foto: "PorscheHead.png", Frase: "El auto ideal para vos te esta esperando", ColorModelo: "#ff5722", Fix: true },
-    { Marca: "AUDI", Modelo: "SportBack", Foto: "AudiHead.png", Frase: "El camino a tu nuevo auto empieza hoy", ColorModelo: "#0e7cf4" },
-    { Marca: "BMW", Modelo: "M4 Coupe", Foto: "BMWHead.png", Frase: "El auto que deseas esta mas cerca que nunca", ColorModelo: "#2772db" },
-    { Marca: "DODGE", Modelo: "Challenger", Foto: "DodgeHead.png", Frase: "Tu auto ideal, más cerca y más fácil que nunca", ColorModelo: "#0fc9e7" },
-    { Marca: "FORD", Modelo: "Mustang", Foto: "FordHead.png", Frase: "Elegir tu próximo auto nunca fue tan emocionante", ColorModelo: "#eb2632" },
-    { Marca: "NISSAN", Modelo: "GTR", Foto: "NissanHead.png", Frase: "Encontrá el auto ideal para vos con tan solo un click", ColorModelo: "#f96d00" },
+    { Marca: "TOYOTA", Modelo: "Crown", Foto: "ToyotaHead.webp", Frase: "El auto que siempre quisiste a un click de distancia", ColorModelo: "#a1151eff" },
+    { Marca: "PORSCHE", Modelo: "718 Cayman", Foto: "PorscheHead.webp", Frase: "El auto ideal para vos te esta esperando", ColorModelo: "#ff5722", Fix: true },
+    { Marca: "AUDI", Modelo: "SportBack", Foto: "AudiHead.webp", Frase: "El camino a tu nuevo auto empieza hoy", ColorModelo: "#0e7cf4" },
+    { Marca: "BMW", Modelo: "M4 Coupe", Foto: "BMWHead.webp", Frase: "El auto que deseas esta mas cerca que nunca", ColorModelo: "#2772db" },
+    { Marca: "DODGE", Modelo: "Challenger", Foto: "DodgeHead.webp", Frase: "Tu auto ideal, más cerca y más fácil que nunca", ColorModelo: "#0fc9e7" },
+    { Marca: "FORD", Modelo: "Mustang", Foto: "FordHead.webp", Frase: "Elegir tu próximo auto nunca fue tan emocionante", ColorModelo: "#eb2632" },
+    { Marca: "NISSAN", Modelo: "GTR", Foto: "NissanHead.webp", Frase: "Encontrá el auto ideal para vos con tan solo un click", ColorModelo: "#f96d00" },
   ]
 
   let [MainLogoAlternator, setMainLogoAlternator] = useState(0)
@@ -84,7 +84,7 @@ function LandPag() {
 
     <div className="LogoAndMenu">
       <span class="material-symbols-outlined" style={{border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)"}} onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
-      <div className="LogoNav" style={{backgroundImage: "url(./logoc.png)"}}></div>
+      <img loading='eager' decoding='async' fetchPriority="high" className="LogoNav" src={"logoc.webp"}></img>
       <div className="BotoneraSegundaNav" onClick={() => {}}><button type="button" className="Botonera BotoneraRightB"><div className="LogoSignIn"><div class="material-symbols-outlined NotSignIn">person</div></div>{isViewportMobileB ? "" : "Iniciar Sesion"}</button></div>
     </div>
 
@@ -108,7 +108,7 @@ function LandPag() {
 
         <div className="SecondPartNav">
 
-          <div className="BotoneraLogoSegundaNav"><div className="LogoNav" style={{backgroundImage: "url(./logoc.png)"}}></div></div>
+          <div className="BotoneraLogoSegundaNav"><img loading='eager' decoding='async' fetchPriority="high" className="LogoNav" src={"logoc.webp"}></img></div>
           <div className="BotoneraSegundaNav" onClick={() => {}}><button type="button" className="Botonera BotoneraRightB"><div className="LogoSignIn"><span class="material-symbols-outlined NotSignIn">person</span></div>Iniciar Sesion</button></div>
 
         </div>
@@ -146,7 +146,7 @@ function LandPag() {
 
         <div className="MainPic" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
-          <img rel='preload' src={SelectedCarMenu.Foto} className="MainPicPix" ></img>
+          <img loading='eager' decoding='async' fetchPriority="high" src={SelectedCarMenu.Foto} className="MainPicPix" ></img>
 
         </div>
 
@@ -184,7 +184,7 @@ function LandPag() {
 
                 <div className="PicBrandsLogo" style={{ animationDelay: index * -10 - 10 + "s" }}>
 
-                  <img className="BrandsPics" rel='preload' src={val + ".png"} ></img>
+                  <img className="BrandsPics" loading='eager' decoding='async' fetchPriority="high" src={val + ".webp"} ></img>
 
                 </div>
 
