@@ -363,10 +363,8 @@ useEffect(() => {Starter()}, [])
                             return <div className="CataloguePost">
                                 <div className="CalaloguePostBox">
 
-                                    <img loading='eager' decoding='async' fetchPriority='high' className="PostPic" src={val.foto} >
+                                    <img loading='eager' decoding='async' className="PostPic" src={val.foto} >
                                     </img>
-
-                                    {/* quitar el fetchPriority en caso de lag */}
 
                                     <div className="FavMarkPost" id={index}><span class="material-symbols-outlined FavPost">bookmark</span></div>
 
