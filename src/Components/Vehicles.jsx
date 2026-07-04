@@ -363,7 +363,7 @@ useEffect(() => {Starter()}, [])
                             return <div className="CataloguePost">
                                 <div className="CalaloguePostBox">
 
-                                    <img loading='eager' decoding='async' className="PostPic" src={val.foto} >
+                                    <img loading='lazy' decoding='async' className="PostPic" src={val.foto} >
                                     </img>
 
                                     <div className="FavMarkPost" id={index}><span class="material-symbols-outlined FavPost">bookmark</span></div>
