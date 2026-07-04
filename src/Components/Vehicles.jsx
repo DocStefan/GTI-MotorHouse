@@ -363,8 +363,7 @@ useEffect(() => {Starter()}, [])
                             return <div className="CataloguePost">
                                 <div className="CalaloguePostBox">
 
-                                    <img className="PostPic" src={val.foto} >
-                                    </img>
+                                    <img className="PostPic" src={val.foto}></img>
 
                                     <div className="FavMarkPost" id={index}><span class="material-symbols-outlined FavPost">bookmark</span></div>
 
