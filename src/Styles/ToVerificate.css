@@ -1,4 +1,8 @@
-.MainLogin {
+/* SECCION PC ------------------------------------------------------------- */
+
+@media (min-width: 1000px) {
+
+.MainLoginVerificate {
 
     width: 100vw;
     height: 100vh;
@@ -9,7 +13,7 @@
 
 }
 
-.BackPickLogin {
+.BackPickLoginVerificate {
 
     grid-column: 2;
     grid-row: 1;
@@ -24,7 +28,7 @@
 
 }
 
-.LoginPic {
+.LoginPicVerificate {
 
     width: 100%;
     height: 100%;
@@ -63,7 +67,7 @@
 
 }
 
-.LogInLogo {
+.LogInLogoVerificate {
 
     width: 100%;
     height: 15%;
@@ -76,9 +80,9 @@
 
 }
 
-.LogInLogoPic {
+.LogInLogoPicVerificate {
 
-    width: 85%;
+    width: 400px;
     height: 100%;
 
     object-fit: contain;
@@ -89,13 +93,13 @@
 .VerificationWelcomeText {
 
     width: 100%;
-    height: 17.5%;
+    height: 35%;
 
     /* background-color: red; */
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: start;
 
 }
@@ -131,109 +135,7 @@
      
 }
 
-.LogInSpanInput {
-
-    width: 100%;
-    height: 10%;
-    /* background-color: blue; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    /* background-color: rgb(238, 232, 232); */
-
-
-}
-
-.inpuText {
-
-    width: 100%;
-
-    /* background-color: black; */
-
-    font-family: "Sofia Sans";
-    font-weight: 700;
-    font-size: 18px;
-
-    padding-left: 5px;
-    color: #1b0424;
-
-    cursor: default;
-
-}
-
-.LogInput {
-
-    width: 98%;
-    height: 50%;
-
-    border-radius: 6px;
-    outline: none;
-    border: none;
-
-    font-family: "Sofia Sans";
-    font-weight: 400;
-    font-size: 16px;
-
-    padding-left: 5px;
-    color: #1b0424;
-
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-
-}
-
-.LogInput:focus {
-
-    border: none;
-    outline: none;
-
-}
-
-.CreateAccountError {
-
-    width: 100%;
-    height: 5%;
-
-    /* background-color: gray; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-
-}
-
-.CreateError {
-
-    width: 100%;
-    height: auto;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* background-color: black; */
-
-}
-
-.CreateErrorCode {
-
-    font-family: "Sofia Sans";
-    font-weight: 700;
-    font-size: 20px;
-
-    color: red;
-    width: auto;
-
-    height: auto;
-
-    cursor: default;
-
-}
-
-.LogInButton {
+.LogInButtonVerificate {
 
     width: 100%;
     height: 7.5%;
@@ -244,7 +146,7 @@
 
 }
 
-.LogInEmailPassButton {
+.LogInEmailPassButtonVerificate {
 
     width: 100%;
     height: 100%;
@@ -262,18 +164,186 @@
 
 }
 
-.LogInEmailPassButton:hover {
+.LogInEmailPassButtonVerificate:hover {
 
      background-color: rgb(71, 17, 92);
 
 }
 
-.LogInGoogleButton {
+}
+
+/* FIX SECCION PC ------------------------------------------------------------- */
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+
+ .FirstVerificationText {
+
+    font-size: 2.25vw;
+
+}
+
+.SecondVerificationText {
+
+    font-size: 1.5vw;
+     
+}
+
+}
+
+/* SECCION TABLET ------------------------------------------------------------- */
+
+@media (min-width: 500px) and (max-width: 999px) {
+
+.MainLoginVerificate {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 100%;
+
+}
+
+.BackPickLoginVerificate {
+
+    grid-column: 2;
+    grid-row: 1;
+
+    height: 100%;
+    width: 100%;
+
+    border-bottom-left-radius: 3%;
+    border-top-left-radius: 3%;
+
+    overflow: hidden;
+
+}
+
+.LoginPicVerificate {
 
     width: 100%;
     height: 100%;
-    background-color: #fafafa;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
+
+.VerificationPanelContainer {
+
+    grid-row: 1;
+    grid-column: 1;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.VerificationInput {
+
+    width: 80%;
+    height: 80%;
+
+    /* background-color: rgb(250, 250, 250); */
+
+    /* pasarlo a white al final */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.LogInLogoVerificate {
+
+    width: 100%;
+    height: 15%;
+
+    /* background-color: blue; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.LogInLogoPicVerificate {
+
+    width: 300px;
+    height: 100%;
+
+    object-fit: contain;
+
+
+}
+
+.VerificationWelcomeText {
+
+    width: 100%;
+    height: 35%;
+
+    /* background-color: red; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+
+}
+
+.FirstVerificationText {
+
+    font-family: "Sofia Sans";
+    font-weight: 700;
+    font-size: 30px;
+    width: 100%;
+    /* padding-left: 5px; */
     color: #1b0424;
+
+    cursor: default;
+
+    text-align: center;
+
+}
+
+.SecondVerificationText {
+
+    font-family: "Sofia Sans";
+    font-weight: 500;
+    font-size: 21px;
+    width: 100%;
+    /* padding-left: 5px; */
+    color: #263849;
+    opacity: 0.97;
+
+        cursor: default;
+
+ text-align:   center;
+     
+}
+
+.LogInButtonVerificate {
+
+    width: 100%;
+    height: 7.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.LogInEmailPassButtonVerificate {
+
+    width: 100%;
+    height: 100%;
+    background-color: #1b0424;
+    color: white;
 
     font-family: "Sofia Sans";
     font-weight: 500;
@@ -282,70 +352,211 @@
     border: none;
     border-radius: 10px;
 
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+    cursor: pointer;
+
+}
+
+.LogInEmailPassButtonVerificate:hover {
+
+     background-color: rgb(71, 17, 92);
+
+}
+
+}
+
+/* FIX SECCION TABLET ------------------------------------------------------------- */
+
+@media (min-width: 500px) and (max-width: 800px) {
+
+ .FirstVerificationText {
+
+    font-size: 20px;
+
+}
+
+.SecondVerificationText {
+
+    font-size: 15px;
+     
+}
+
+}
+
+/* SECCION MOBILE ------------------------------------------------------------- */
+
+@media (max-width: 500px) {
+
+.MainLoginVerificate {
+
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+
+}
+
+.BackPickLoginVerificate {
+
+ display: none
+
+}
+
+.LoginPicVerificate {
+
+ display: none
+
+}
+
+.VerificationPanelContainer {
+
+    grid-row: 1;
+    grid-column: 1/ span 2;
+
+    height: 100%;
+    width: 100%;
 
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    cursor: pointer;
 }
 
-.googleLogo {
+.VerificationInput {
 
- width: 30px;
- height: 30px;
+    width: 80%;
+    height: 80%;
 
- object-fit: cover;
- margin-right: 7.5px;
+    /* background-color: rgb(250, 250, 250); */
 
-}
+    /* pasarlo a white al final */
 
-.LogInGoogleButton:hover {
-
-     background-color: #eeeaea;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
 }
 
-.LogInCreateAccount {
+.LogInLogoVerificate {
 
- width: 100%;
- height: 10%;
+    width: 100%;
+    height: 15%;
 
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+    /* background-color: blue; */
 
-}
-
-.createFirstText {
-
- color: #263849;
- cursor: default;
- font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.createSecondText {
+.LogInLogoPicVerificate {
 
- cursor: pointer;
- font-weight: 700;
- margin-top: 7.5px;
+    width: 300px;
+    height: 100%;
 
-}
+    object-fit: contain;
 
-.createSecondText:hover {
-
- text-decoration: underline;
 
 }
 
-.createFirstText, .createSecondText {
+.VerificationWelcomeText {
+
+    width: 100%;
+    height: 35%;
+
+    /* background-color: red; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+
+}
+
+.FirstVerificationText {
 
     font-family: "Sofia Sans";
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 30px;
+    width: 100%;
+    /* padding-left: 5px; */
+    color: #1b0424;
+
+    cursor: default;
+
+    text-align: center;
+
+}
+
+.SecondVerificationText {
+
+    font-family: "Sofia Sans";
+    font-weight: 500;
+    font-size: 21px;
+    width: 100%;
+    /* padding-left: 5px; */
+    color: #263849;
+    opacity: 0.97;
+
+        cursor: default;
+
+ text-align:   center;
+     
+}
+
+.LogInButtonVerificate {
+
+    width: 100%;
+    height: 7.5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.LogInEmailPassButtonVerificate {
+
+    width: 100%;
+    height: 100%;
+    background-color: #1b0424;
+    color: white;
+
+    font-family: "Sofia Sans";
+    font-weight: 500;
+    font-size: 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+.LogInEmailPassButtonVerificate:hover {
+
+     background-color: rgb(71, 17, 92);
+
+}
+
+}
+
+/* FIX SECCION MOBILE ------------------------------------------------------------- */
+
+@media (max-width: 450px) {
+
+ .FirstVerificationText {
+
+    font-size: 7.2vw;
+
+}
+
+.SecondVerificationText {
+
+    font-size: 4.75vw;
+     
+}
 
 }

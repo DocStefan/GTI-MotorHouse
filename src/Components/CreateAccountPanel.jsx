@@ -83,59 +83,59 @@ function LoginPanel() {
 
   return (
 
-    <div className="MainLogin">
+    <div className="MainLoginCreate">
 
-      <div className='BackPickLogin'>
+      <div className='BackPickLoginCreate'>
 
-        <img loading='eager' decoding='async' fetchPriority='high' className='LoginPic' src="LogPic.webp"></img>
+        <img loading='eager' decoding='async' fetchPriority='high' className='LoginPicCreate' src="LogPic.webp"></img>
 
       </div>
 
-      <div className='LoginPanelContainer'>
+      <div className='LoginPanelContainerCreate'>
 
-        <div className='LoginInput'>
+        <div className='LoginInputCreate'>
 
-          <div className='LogInLogo'>
+          <div className='LogInLogoCreate'>
 
-            <img loading='eager' decoding='async' fetchPriority='high' className='LogInLogoPic' src="logoc.webp" ></img>
-
-          </div>
-
-          <div className='LogInWelcomeText'>
-
-            <span className='FirstWelcomeText'>¡Bienvenido!</span>
-
-            <span className='SecondWelcomeText'>Crea tu nueva cuenta</span>
+            <img loading='eager' decoding='async' fetchPriority='high' className='LogInLogoPicCreate' src="logoc.webp" ></img>
 
           </div>
 
-          <div className='LogInSpanInput'>
+          <div className='LogInWelcomeTextCreate'>
 
-            <span className='inpuText'>Email</span>
+            <span className='FirstWelcomeTextCreate'>¡Bienvenido!</span>
 
-            <input placeholder='Ingrese su email' type="email" className='LogInput' onChange={(e) => { setEmail(e.target.value) }}></input>
-
-          </div>
-
-          <div className='LogInSpanInput'>
-
-            <span className='inpuText'>Contraseña</span>
-
-            <input placeholder='Ingrese su contraseña' type="password" className='LogInput' onChange={(e) => { setPassword(e.target.value) }}></input>
+            <span className='SecondWelcomeTextCreate'>Crea tu nueva cuenta</span>
 
           </div>
 
-          <div className='LogInSpanInput'>
+          <div className='LogInSpanInputCreate'>
 
-            <span className='inpuText'>Reingrese la contraseña</span>
+            <span className='inpuTextCreate'>Email</span>
 
-            <input placeholder='Reingrese la contraseña' type="password" className='LogInput' onChange={(e) => { setPasswordBis(e.target.value) }}></input>
+            <input placeholder='Ingrese su email' type="email" className='LogInputCreate' onChange={(e) => { setEmail(e.target.value) }}></input>
+
+          </div>
+
+          <div className='LogInSpanInputCreate'>
+
+            <span className='inpuTextCreate'>Contraseña</span>
+
+            <input placeholder='Ingrese su contraseña' type="password" className='LogInputCreate' onChange={(e) => { setPassword(e.target.value) }}></input>
+
+          </div>
+
+          <div className='LogInSpanInputCreate'>
+
+            <span className='inpuTextCreate'>Reingrese la contraseña</span>
+
+            <input placeholder='Reingrese la contraseña' type="password" className='LogInputCreate' onChange={(e) => { setPasswordBis(e.target.value) }}></input>
 
           </div>
           
-          <div className='LogInButton'>
+          <div className='LogInButtonCreate'>
 
-            <button type='button' className='LogInEmailPassButton' onClick={() => { CreateAccountEmailPass() }}>Crear cuenta</button>
+            <button type='button' className='LogInEmailPassButtonCreate' onClick={() => { CreateAccountEmailPass() }}>Crear cuenta</button>
 
           </div>
 

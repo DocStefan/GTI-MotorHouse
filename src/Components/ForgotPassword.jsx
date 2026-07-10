@@ -56,43 +56,43 @@ function LoginPanel() {
 
   return (
 
-    <div className="MainLogin">
+    <div className="MainLoginForgotPass">
 
-      <div className='BackPickLogin'>
+      <div className='BackPickLoginForgotPass'>
 
-        <img loading='eager' decoding='async' fetchPriority='high' className='LoginPic' src="LogPic.webp"></img>
+        <img loading='eager' decoding='async' fetchPriority='high' className='LoginPicForgotPass' src="LogPic.webp"></img>
 
       </div>
 
-      <div className='LoginPanelContainer'>
+      <div className='LoginPanelContainerForgotPass'>
 
         <div className='ForgotInput'>
 
-          <div className='LogInLogo'>
+          <div className='LogInLogoForgotPass'>
 
-            <img loading='eager' decoding='async' fetchPriority='high' className='LogInLogoPic' src="logoc.webp" ></img>
-
-          </div>
-
-          <div className='LogInWelcomeText'>
-
-            <span className='FirstWelcomeText'>¿Olvidaste tu contraseña?</span>
-
-            <span className='SecondWelcomeText'>Recuperala</span>
+            <img loading='eager' decoding='async' fetchPriority='high' className='LogInLogoPicForgotPass' src="logoc.webp" ></img>
 
           </div>
 
-          <div className='LogInSpanInput'>
+          <div className='LogInWelcomeTextForgotPass'>
 
-            <span className='inpuText'>Email</span>
+            <span className='FirstWelcomeTextForgotPass'>¿Olvidaste tu contraseña?</span>
 
-            <input placeholder='Ingrese su email' type="email" className='LogInput' onChange={(e) => { setEmail(e.target.value) }}></input>
+            <span className='SecondWelcomeTextForgotPass'>Recuperala</span>
 
           </div>
 
-          <div className='CreateAccountError'>
+          <div className='LogInSpanInputForgotPass'>
 
-            <div className='CreateError' style={{ visibility: ErrorHandler.state ? "visible" : "hidden"}}>
+            <span className='inpuTextForgotPass'>Email</span>
+
+            <input placeholder='Ingrese su email' type="email" className='LogInputForgotPass' onChange={(e) => { setEmail(e.target.value) }}></input>
+
+          </div>
+
+          <div className='CreateAccountErrorForgotPass'>
+
+            <div className='CreateErrorForgotPass' style={{ visibility: ErrorHandler.state ? "visible" : "hidden"}}>
 
               <span className='ForgotErrorCode' style={{color: ErrorHandler.success ? "#1b0424" : "red"}}>{ErrorHandler.code}</span>
 
@@ -100,15 +100,15 @@ function LoginPanel() {
 
           </div>
 
-          <div className='LogInButton'>
+          <div className='LogInButtonForgotPass'>
 
-            <button type='button' className='LogInEmailPassButton' onClick={() => { ForgotPassword() }}>Recuperar contraseña</button>
+            <button type='button' className='LogInEmailPassButtonForgotPass' onClick={() => { ForgotPassword() }}>Recuperar contraseña</button>
 
           </div>
 
-          <div className='LogInButton'>
+          <div className='LogInButtonForgotPass'>
 
-            <button type='button' className='LogInEmailPassButton' onClick={() => { navigate("/login") }}>Volver a iniciar sesion</button>
+            <button type='button' className='LogInEmailPassButtonForgotPass' onClick={() => { navigate("/login") }}>Volver a iniciar sesion</button>
 
           </div>
 

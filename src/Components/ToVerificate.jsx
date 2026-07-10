@@ -13,11 +13,11 @@ function LoginPanel() {
 
   return (
 
-    <div className="MainLogin">
+    <div className="MainLoginVerificate">
 
-      <div className='BackPickLogin'>
+      <div className='BackPickLoginVerificate'>
 
-        <img loading='eager' decoding='async' fetchPriority='high' className='LoginPic' src="LogPic.webp"></img>
+        <img loading='eager' decoding='async' fetchPriority='high' className='LoginPicVerificate' src="LogPic.webp"></img>
 
       </div>
 
@@ -25,9 +25,9 @@ function LoginPanel() {
 
         <div className='VerificationInput'>
 
-          <div className='LogInLogo'>
+          <div className='LogInLogoVerificate'>
 
-            <img loading='eager' decoding='async' fetchPriority='high' className='LogInLogoPic' src="logoc.webp" ></img>
+            <img loading='eager' decoding='async' fetchPriority='high' className='LogInLogoPicVerificate' src="logoc.webp" ></img>
 
           </div>
 
@@ -39,9 +39,9 @@ function LoginPanel() {
 
           </div>
           
-          <div className='LogInButton'>
+          <div className='LogInButtonVerificate'>
 
-            <button type='button' className='LogInEmailPassButton' onClick={() => { navigate("/login") }}>Volver a iniciar sesion</button>
+            <button type='button' className='LogInEmailPassButtonVerificate' onClick={() => { navigate("/login") }}>Volver a iniciar sesion</button>
 
           </div>
 
