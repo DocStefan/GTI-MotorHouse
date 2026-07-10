@@ -1,0 +1,161 @@
+import React from 'react'
+import { useState, useEffect, useRef, useId, useMemo, useContext } from 'react'
+import { useNavigate } from 'react-router'
+import "../Styles/CreateAccount.css"
+import { getAuth, connectAuthEmulator, signInWithEmailAndPassword, signInWithEmailLink, createUserWithEmailAndPassword, signOut, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, sendEmailVerification } from 'firebase/auth'
+import { initializeApp } from "firebase/app";
+import { auth } from '../firebase'
+import validator from "validator"
+
+function LoginPanel() {
+
+  const navigate = useNavigate()
+
+  let [email, setEmail] = useState("")
+  let [password, setPassword] = useState("")
+
+  let [passwordBis, setPasswordBis] = useState("")
+
+  let [ErrorHandler, setErrorHandler] = useState({state: false, code: ""})
+
+  async function CreateAccountEmailPass() {
+
+    if(!validator.isEmail(email)) {
+
+      setErrorHandler({state: true, code: "Ingrese un email valido"})
+      return
+
+    }
+
+    if(password != passwordBis) {
+
+      setErrorHandler({state: true, code: "Verifique la contraseña"})
+      return
+
+    }
+
+    if(!email || !password || !passwordBis) {
+
+      setErrorHandler({state: true, code: "Verifique los datos ingresados"})
+      return
+
+    }
+
+    try {
+
+      const userData = await createUserWithEmailAndPassword(auth, email, password)
+
+      await sendEmailVerification(userData.user)
+
+      await signOut(auth)
+      // console.log(userData.user)
+
+      setErrorHandler({state: false, code: ""})
+
+      navigate("/verification")
+
+    } catch (error) {
+
+      if(error.code == "auth/email-already-in-use") {
+
+        setErrorHandler({state: true, code: "Direccion de email ya registrada"})
+        return
+      
+      }
+
+      setErrorHandler({state: true, code: "Ocurrio un error al crear la cuenta"})
+      console.log(error.code)
+
+    }
+
+  }
+
+  useEffect(() => {
+
+    if(ErrorHandler.state) {
+
+    setErrorHandler({state: false, code: ""})
+
+    }
+
+
+  }, [email, password, passwordBis])
+
+  return (
+
+    <div className="MainLogin">
+
+      <div className='BackPickLogin'>
+
+        <img loading='eager' decoding='async' fetchPriority='high' className='LoginPic' src="LogPic.webp"></img>
+
+      </div>
+
+      <div className='LoginPanelContainer'>
+
+        <div className='LoginInput'>
+
+          <div className='LogInLogo'>
+
+            <img loading='eager' decoding='async' fetchPriority='high' className='LogInLogoPic' src="logoc.webp" ></img>
+
+          </div>
+
+          <div className='LogInWelcomeText'>
+
+            <span className='FirstWelcomeText'>¡Bienvenido!</span>
+
+            <span className='SecondWelcomeText'>Crea tu nueva cuenta</span>
+
+          </div>
+
+          <div className='LogInSpanInput'>
+
+            <span className='inpuText'>Email</span>
+
+            <input placeholder='Ingrese su email' type="email" className='LogInput' onChange={(e) => { setEmail(e.target.value) }}></input>
+
+          </div>
+
+          <div className='LogInSpanInput'>
+
+            <span className='inpuText'>Contraseña</span>
+
+            <input placeholder='Ingrese su contraseña' type="password" className='LogInput' onChange={(e) => { setPassword(e.target.value) }}></input>
+
+          </div>
+
+          <div className='LogInSpanInput'>
+
+            <span className='inpuText'>Reingrese la contraseña</span>
+
+            <input placeholder='Reingrese la contraseña' type="password" className='LogInput' onChange={(e) => { setPasswordBis(e.target.value) }}></input>
+
+          </div>
+          
+          <div className='LogInButton'>
+
+            <button type='button' className='LogInEmailPassButton' onClick={() => { CreateAccountEmailPass() }}>Crear cuenta</button>
+
+          </div>
+
+          <div className='CreateAccountError'>
+
+            <div className='CreateError' style={{ visibility: ErrorHandler.state ? "visible" : "hidden" }}>
+
+              <span className='CreateErrorCode'>{ErrorHandler.code}</span>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  )
+}
+
+export default LoginPanel

@@ -605,6 +605,77 @@
 
   }
 
+    .BotoneraSegundaSignedIn {
+
+    height: 100%;
+    /* background-color: green; */
+    width: 30%;
+    /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+  }
+
+  .SignedInPic {
+
+    width: 50px;
+    height: 70%;
+
+    object-fit: contain;
+    object-position: 50% 50%;
+
+    /* background-color: blue; */
+
+  }
+
+  .SignedInText {
+
+   margin: 12.5px;
+
+  }
+
+  .SignedInName {
+
+   width: fit-content;
+   text-align: start;
+   font-family: "Sofia Sans";
+   font-size: 20px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 400;
+
+   cursor: default;
+
+  }
+
+  .SignedOutBottonNav {
+
+   width: fit-content;
+   height: 25%;
+   text-align: center;
+   font-family: "Sofia Sans";
+   font-size: 15px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 400;
+
+   cursor: pointer;
+
+  }
+
+  .SignedOutBottonNav:hover {
+
+    color: gray;
+
+  }
+
    @keyframes HoverAnimnLogInButton {
 
     0% {
@@ -1127,7 +1198,7 @@
 
   }
 
-  .LogoAndMenu span {
+  .LogoAndMenuSpanClass {
 
     position: absolute;
     left: 10px;
@@ -1167,12 +1238,98 @@
 
   }
 
+  .BotoneraSegundaSignedIn {
+
+    height: 100%;
+    /* background-color: green; */
+    width: 30%;
+    /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+ 
+    position: absolute;
+    right: 0px;
+
+  }
+
+  .SignedInPic {
+
+    width: 50px;
+    height: 70%;
+
+    object-fit: contain;
+    object-position: 50% 50%;
+
+    /* background-color: blue; */
+
+  }
+
+  .SignedInText {
+
+   /* margin: 1px; */
+   /* background-color: red; */
+
+   width: fit-content;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
+
+   margin: 10px;
+
+  }
+
+  .SignedInName {
+
+   width: fit-content;
+   text-align: start;
+   font-family: "Sofia Sans";
+   font-size: 20px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 400;
+
+   cursor: default;
+
+  }
+
+  .SignedOutBottonNav {
+
+   width: fit-content;
+   height: 25%;
+   text-align: center;
+   font-family: "Sofia Sans";
+   font-size: 15px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 400;
+
+   cursor: pointer;
+
+  }
+
+  .SignedOutBottonNav:hover {
+
+    color: gray;
+
+  }
+
     .BotoneraRightB {
 
      display: flex;
      flex-direction: row;
-     justify-content: center;
+     justify-content: end;
      align-items: center;
+     margin-right: 20px;
 
   }
 
@@ -1604,7 +1761,7 @@
 
   }
 
-  .LogoAndMenu span {
+    .LogoAndMenuSpanClass {
 
     position: absolute;
     left: 10px;
@@ -1678,6 +1835,103 @@
     flex-direction: column;
 
     /* border-left: solid 2px white; */
+
+  }
+
+    .BotoneraSegundaSignedIn {
+
+    height: 100%;
+    /* background-color: green; */
+    width: 30%;
+    /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+ 
+    position: absolute;
+    right: 0px;
+
+  }
+
+  .SignedInPic {
+
+    width: 50px;
+    height: 70%;
+
+    object-fit: contain;
+    object-position: 50% 50%;
+
+    display: none;
+
+    /* background-color: blue; */
+
+  }
+
+  .SignedInText {
+
+   /* margin: 1px; */
+   /* background-color: red; */
+
+   width: fit-content;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
+
+   margin: 5px;
+
+  }
+
+  .SignedInName {
+
+   width: fit-content;
+   text-align: start;
+   font-family: "Sofia Sans";
+   font-size: 15px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 400;
+
+   cursor: default;
+
+  }
+
+  .SignedOutBottonNav {
+
+   width: fit-content;
+   height: 25%;
+   text-align: center;
+   font-family: "Sofia Sans";
+   font-size: 10px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 400;
+
+   cursor: pointer;
+
+  }
+
+  .SignedOutBottonNav:hover {
+
+    color: gray;
+
+  }
+
+    .BotoneraRightB {
+
+     display: flex;
+     flex-direction: row;
+     justify-content: end;
+     align-items: center;
+     margin-right: 20px;
 
   }
 

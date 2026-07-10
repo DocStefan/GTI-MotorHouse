@@ -3,8 +3,15 @@ import "../Styles/LandPag.css"
 import { useState, useEffect, useRef, useMemo, useContext, Fragment } from 'react'
 import { useScroll } from './Scroller'
 import { ModelContext } from './MainModelManager'
+import { useNavigate } from 'react-router'
+// import { userContext } from './UserStatus'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { auth } from '../firebase'
+
 
 function LandPag() {
+
+  const navigate = useNavigate()
 
   let BrandPicsArray = ["marca (1)", "marca (2)", "marca (3)", "marca (4)", "marca (5)", "marca (6)", "marca (7)", "marca (8)", "marca (9)", "marca (10)", "marca (11)"]
 
@@ -22,6 +29,64 @@ function LandPag() {
 
   const scrollToElement = useScroll();
   const {HomeModelSelected, setHomeModelSelected} = useContext(ModelContext)
+
+  let [userLogData, setUserLogData] = useState({LogIn: false, userPic: "", userName: "", userEmai: ""})
+
+  // const {isUserLogIn} = useContext(userContext)
+  // const {setIsUserLogIn} = useContext(userContext)
+
+  // useEffect(() => {
+
+  //  if(isUserLogIn) {
+
+  //    if(isUserLogIn.providerId == "google.com") {
+
+  //     setUserLogData({LogIn: true, userPic: isUserLogIn.photoUrl, userName: isUserLogIn.displayName})
+
+  //    } else {
+
+  //     setUserLogData({LogIn: true, userName: isUserLogIn.email.split("@")[0].slice(0, 15)})
+  //     console.log("aaaa")
+
+  //    }
+
+  //  }
+
+  // }, [])
+
+  async function monitorAuthState() {
+
+   await onAuthStateChanged(auth, user => {
+
+    if(user) {
+ 
+      if(user.providerData[0].providerId == "google.com") {
+
+        setUserLogData({LogIn: true, userPic: user.photoURL, userName: user.displayName.slice(0, 15)})
+
+      } else {
+
+        setUserLogData({LogIn: true, userName: user.email.split("@")[0].slice(0, 15)})
+
+      }
+
+    } else {
+
+      setUserLogData({LogIn: false, userPic: "", userName: "", userEmai: ""})
+
+    }
+
+   })
+
+  }
+
+  useEffect(() => {monitorAuthState()}, [])
+
+  async function LogOut() {
+
+   await signOut(auth)
+
+  }
 
   useEffect(() => {
 
@@ -83,10 +148,32 @@ function LandPag() {
   <div className="NavContainerMobile" style={{height: FilterActiveNotPc ? "385px" : "75px"}}>
 
     <div className="LogoAndMenu">
-      <span class="material-symbols-outlined" style={{border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)"}} onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
+      <span class="material-symbols-outlined LogoAndMenuSpanClass" style={{border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)"}} onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
       <img loading='eager' decoding='async' fetchPriority="high" className="LogoNav" src={"logoc.webp"}></img>
-      <div className="BotoneraSegundaNav" onClick={() => {}}><button type="button" className="Botonera BotoneraRightB"><div className="LogoSignIn"><div class="material-symbols-outlined NotSignIn">person</div></div>{isViewportMobileB ? "" : "Iniciar Sesion"}</button></div>
+{
+
+userLogData.LogIn ? 
+
+ <div className="BotoneraSegundaSignedIn">
+
+    <img className='SignedInPic' src={userLogData.userPic ? userLogData.userPic : "userDefaultPic.webp"}></img>
+
+    <div className='SignedInText'>
+
+    <span className='SignedInName'>{userLogData.userName}</span>
+
+    <span className='SignedOutBottonNav' onClick={() => {LogOut()}}>Cerrar sesion</span>
+
     </div>
+
+ </div> 
+
+:
+
+<div className="BotoneraSegundaNav" onClick={() => {navigate("/login")}}><button type="button" className="Botonera BotoneraRightB"><div className="LogoSignIn"><div class="material-symbols-outlined NotSignIn">person</div></div>{isViewportMobileB ? "" : "Iniciar Sesion"}</button></div> 
+
+
+}    </div>
 
 {FilterActiveNotPc && <>         
           <div className="BotoneraMobile" onClick={() => {scrollToElement("VehiclesScrollRef"), setFilterActiveNotPc(false)}}>Vehiculos</div>
@@ -109,8 +196,28 @@ function LandPag() {
         <div className="SecondPartNav">
 
           <div className="BotoneraLogoSegundaNav"><img loading='eager' decoding='async' fetchPriority="high" className="LogoNav" src={"logoc.webp"}></img></div>
-          <div className="BotoneraSegundaNav" onClick={() => {}}><button type="button" className="Botonera BotoneraRightB"><div className="LogoSignIn"><span class="material-symbols-outlined NotSignIn">person</span></div>Iniciar Sesion</button></div>
 
+
+{userLogData.LogIn ? 
+
+ <div className="BotoneraSegundaSignedIn">
+
+    <img className='SignedInPic' src={userLogData.userPic ? userLogData.userPic : "userDefaultPic.webp"}></img>
+
+    <div className='SignedInText'>
+
+    <span className='SignedInName'>{userLogData.userName}</span>
+
+    <span className='SignedOutBottonNav' onClick={() => {LogOut()}}>Cerrar sesion</span>
+
+    </div>
+
+ </div> 
+
+:
+<div className="BotoneraSegundaNav" onClick={() => {navigate("/login")}}><button type="button" className="Botonera BotoneraRightB"><div className="LogoSignIn"><span class="material-symbols-outlined NotSignIn">person</span></div>Iniciar Sesion</button></div>
+
+}
         </div>
 
       </div>}
