@@ -156,7 +156,7 @@ userLogData.LogIn ?
 
  <div className="BotoneraSegundaSignedIn">
 
-    <img className='SignedInPic' src={userLogData.userPic ? userLogData.userPic : "userDefaultPic.webp"}></img>
+    <img className='SignedInPic' loading='eager' decoding='async' fetchPriority="high" src={userLogData.userPic ? userLogData.userPic : "userDefaultPic.webp"}></img>
 
     <div className='SignedInText'>
 
@@ -202,7 +202,7 @@ userLogData.LogIn ?
 
  <div className="BotoneraSegundaSignedIn">
 
-    <img className='SignedInPic' src={userLogData.userPic ? userLogData.userPic : "userDefaultPic.webp"}></img>
+    <img className='SignedInPic' loading='eager' decoding='async' fetchPriority="high" src={userLogData.userPic ? userLogData.userPic : "userDefaultPic.webp"}></img>
 
     <div className='SignedInText'>
 
