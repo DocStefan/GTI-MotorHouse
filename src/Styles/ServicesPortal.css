@@ -1,0 +1,1468 @@
+@media (min-width: 1000px) {
+
+    .MainServicesPortal {
+
+        width: 100vw;
+        height: fit-content;
+
+        display: grid;
+        grid-template-rows: 10vh 90vh 100vh 100vh;
+        grid-template-columns: 100%;
+
+        overflow: hidden;
+
+    }
+
+    .ServicesPortalBoxA {
+
+     grid-column: 1;
+     grid-row: 2;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white ;
+
+    }
+
+    .ServicesPortalBoxB {
+
+     grid-column: 1;
+     grid-row: 3;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white ;
+
+    }
+
+    .ServicesPortalBoxC {
+
+     grid-column: 1;
+     grid-row: 4;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white ;
+
+    }
+
+    .ServicesPortalIMGContainer {
+
+     width: 40%;
+     height: 100%;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     /* background-color: pink; */
+
+    }
+
+    .ServicesPortalPic {
+
+     width: 70%;
+     height: 90%;   
+
+     object-fit: cover;
+     object-position: 50% 50%;
+
+     border: solid 2px white;
+
+    }
+
+    .ServicesPortalDataContainer {
+
+     width: 60%;
+     height: 100%;   
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: start;
+
+     /* background-color: red; */
+      
+    }
+
+    .ServicesPortalTextContainer {
+
+      width: 100%;
+      height: 90%;
+
+      /* background-color: beige; */
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+
+    }
+
+    .ServicesPortalTittle {
+
+      width: 50%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:start;
+
+      color: white;
+      font-family: "sofia sans";
+      font-size: 2.75vw;
+      font-weight: 450;
+
+      cursor: default;
+
+    }
+
+    .ServicesPortalSpanTittle {
+
+      width: 50%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:start;
+
+      color: white;
+      font-family: "sofia sans";
+      font-size: 1.25vw;
+      font-weight: 400;
+
+      border-left: 4px solid blue;
+
+      padding-left: 10px;
+
+      cursor: default;
+
+    }
+
+    .ServicesPortalSpan {
+
+      width: 90%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:justify;
+
+      color: #eeeeee;
+      font-family: "sofia sans";
+      font-size: 1vw;
+      font-weight: 400;
+
+      cursor: default;
+
+    }
+
+
+
+    .NavContainerServices {
+
+        grid-row: 1;
+        background-color: #1b0424;
+        grid-column: 1;
+        height: 100%;
+        z-index: 25;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .FirstPartNav {
+
+        width: 45%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        /* background-color: yellow; */
+
+    }
+
+    .BotoneraPrimeraNav {
+
+        height: 100%;
+        /* background-color: green; */
+        width: 30%;
+        /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .BotoneraPrimeraNav:hover {
+
+        .ButtonSymbol {
+
+            display: block;
+
+        }
+
+    }
+
+    .Botonera {
+
+        height: 100%;
+        width: 100%;
+
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 1.15vw;
+
+        background-color: #1b0424;
+        border: none;
+        padding: 0px 0px 0px 0px;
+        border-right: solid 1px rgb(255, 255, 255, 0.8);
+        border-left: solid 1px rgb(255, 255, 255, 0.8);
+
+        cursor: pointer;
+
+        /* background-color: green; */
+
+
+    }
+
+    .BotoneraLeft {
+
+        border-left: 0px;
+
+    }
+
+    .BotoneraRight {
+
+        border-right: solid 2px rgb(255, 255, 255, 0.8);
+
+    }
+
+    .Botonera:hover {
+
+        animation: HoverAnimnNavButton 0.5s forwards;
+
+    }
+
+    @keyframes HoverAnimnNavButton {
+
+        0% {
+            background-color: rgb(27, 4, 36, 0);
+            color: white;
+
+        }
+
+        100% {
+            background-color: white;
+            color: rgb(27, 4, 36);
+        }
+
+    }
+
+    .SecondPartNav {
+
+        width: 55%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    .BotoneraLogoSegundaNav {
+
+
+        height: 100%;
+        /* background-color: green; */
+        width: 75%;
+        /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .LogoNav {
+
+        height: 65%;
+        width: 50%;
+        /* background-image: "url(./logoc.png)"; */
+        object-position: center;
+        object-fit: contain;
+
+    }
+
+    .BotoneraSegundaNav {
+
+        height: 100%;
+        /* background-color: green; */
+        width: 30%;
+        /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .BotoneraSegundaNav:hover {
+
+        .LogoSignIn {
+
+            animation: HoverAnimnLogInButton 0.5s forwards
+        }
+
+    }
+
+    .LogoSignIn {
+
+        width: 2vw;
+        height: 2vw;
+
+        margin: 6.25px;
+        border-radius: 50%;
+        border: solid 2px rgb(255, 255, 255, 0.8);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0px 0px 0px 0px;
+
+
+    }
+
+    .NotSignIn {
+
+        width: 100%;
+        font-size: 1.45vw;
+        font-weight: 300;
+
+    }
+
+    .BotoneraSegundaSignedIn {
+
+        height: 100%;
+        /* background-color: green; */
+        width: 30%;
+        /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+    }
+
+    .SignedInPic {
+
+        width: 50px;
+        height: 70%;
+
+        object-fit: contain;
+        object-position: 50% 50%;
+
+        /* background-color: blue; */
+
+    }
+
+    .SignedInText {
+
+        margin: 12.5px;
+
+    }
+
+    .SignedInName {
+
+        width: fit-content;
+        text-align: start;
+        font-family: "Sofia Sans";
+        font-size: 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+
+        cursor: default;
+
+    }
+
+    .SignedOutBottonNav {
+
+        width: fit-content;
+        height: 25%;
+        text-align: center;
+        font-family: "Sofia Sans";
+        font-size: 15px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+
+        cursor: pointer;
+
+    }
+
+    .SignedOutBottonNav:hover {
+
+        color: gray;
+
+    }
+
+    @keyframes HoverAnimnLogInButton {
+
+        0% {
+            border: solid 2px rgb(255, 255, 255, 0.8);
+
+        }
+
+        100% {
+            border: solid 2px rgba(0, 0, 0, 0.8);
+
+        }
+
+    }
+
+    .BotoneraRightB {
+
+        height: 100%;
+        width: 100%;
+
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 1.15vw;
+
+        background-color: #1b0424;
+        border: none;
+        padding: 0px 0px 0px 0px;
+        /* border-right: solid 1px rgb(255, 255, 255, 0.8); */
+        border-left: solid 2px rgb(255, 255, 255, 0.8);
+
+        cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* background-color: green; */
+
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 999px) {
+
+    .MainServicesPortal {
+
+        width: 100vw;
+        height: fit-content;
+
+        display: grid;
+        grid-template-rows: 10vh 90vh 100vh 100vh;
+        grid-template-columns: 100%;
+
+        overflow: hidden;
+
+    }
+
+    .ServicesPortalBoxA {
+
+     grid-column: 1;
+     grid-row: 2;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white;
+
+    }
+
+    .ServicesPortalBoxB {
+
+     grid-column: 1;
+     grid-row: 3;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white ;
+
+    }
+
+    .ServicesPortalBoxC {
+
+     grid-column: 1;
+     grid-row: 4;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white ;
+
+    }
+
+    .ServicesPortalIMGContainer {
+
+     width: 35%;
+     height: 100%;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     /* background-color: pink; */
+
+    }
+
+    .ServicesPortalPic {
+
+     width: 85%;
+     height: 90%;   
+
+     object-fit: cover;
+     object-position: 50% 50%;
+
+     border: solid 2px white;
+
+    }
+
+    .ServicesPortalDataContainer {
+
+     width: 65%;
+     height: 100%;   
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: start;
+
+     /* background-color: red; */
+      
+    }
+
+    .ServicesPortalTextContainer {
+
+      width: 100%;
+      height: 90%;
+
+      /* background-color: beige; */
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+
+    }
+
+    .ServicesPortalTittle {
+
+      width: 75%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:start;
+
+      color: white;
+      font-family: "sofia sans";
+      font-size: 4vw;
+      font-weight: 450;
+
+      cursor: default;
+
+    }
+
+    .ServicesPortalSpanTittle {
+
+      width: 100%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:start;
+
+      color: white;
+      font-family: "sofia sans";
+      font-size: 2vw;
+      font-weight: 400;
+
+      border-left: 4px solid blue;
+
+      padding-left: 10px;
+
+      cursor: default;
+
+    }
+
+    .ServicesPortalSpan {
+
+      width: 95%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:justify;
+
+      color: #eeeeee;
+      font-family: "sofia sans";
+      font-size: 1.5vw;
+      font-weight: 400;
+
+      cursor: default;
+
+    }
+
+    @media (max-width: 750px) {
+
+    .ServicesPortalTittle {
+
+      font-size: 4.5vw;
+
+    }
+
+    .ServicesPortalSpanTittle {
+
+      font-size: 2.75vw;
+
+    }
+
+    .ServicesPortalSpan {
+
+      font-size: 2vw;
+
+    }
+
+    }
+
+    .NavContainerServices {
+
+        grid-row: 1;
+        background-color: #1b0424;
+        grid-column: 1;
+        height: auto;
+        z-index: 25;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .FirstPartNav {
+
+        width: 80%;
+        height: auto;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        /* background-color: yellow; */
+
+    }
+
+    .BotoneraPrimeraNav {
+
+        height: 100%;
+        /* background-color: green; */
+        width: 30%;
+        /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .Botonera {
+
+        height: 100%;
+        width: 100%;
+
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 18.5px;
+
+        background-color: #1b0424;
+        border: none;
+        padding: 0px 0px 0px 0px;
+        /* border-right: solid 1px rgb(255, 255, 255, 0.8);
+    border-left: solid 1px rgb(255, 255, 255, 0.8); */
+
+
+        /* background-color: green; */
+
+
+    }
+
+    .BotoneraLeft {
+
+        border-left: 0px;
+
+    }
+
+    .BotoneraRight {
+
+        border-right: solid 2px rgb(255, 255, 255, 0.8);
+
+    }
+
+    .SecondPartNav {
+
+        width: 60%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        /* background-color: yellow; */
+
+    }
+
+    .BotoneraLogoSegundaNav {
+
+
+        height: 100%;
+        /* background-color: green; */
+        width: 80%;
+        /* border-right: solid 2px rgb(255, 255, 255, 0.8); */
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    .LogoNav {
+
+        height: 100%;
+        width: 100%;
+        /* background-image: "url(./logoc.png)"; */
+        object-position: center;
+        object-fit: contain;
+        margin-left: -2.6vw;
+
+    }
+
+    @media (max-width: 700px) {
+
+        .MainContainer {
+            padding-top: 40vh;
+        }
+
+    }
+
+    .NavContainerMobileServices {
+
+        grid-row: 1;
+        grid-column: 1;
+        width: 100%;
+        /* height: 385px; */
+        background-color: #1b0424;
+
+        z-index: 100;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .LogoAndMenu {
+
+        height: 75px;
+        width: 100%;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+
+
+    }
+
+    .LogoAndMenuSpanClass {
+
+        position: absolute;
+        left: 10px;
+        bottom: 22.5px;
+        font-size: 35px;
+        color: white;
+
+    }
+
+    .LogoNav {
+
+        height: 100%;
+        width: 200px;
+        /* background-image: "url(./logoc.png)"; */
+        object-position: center;
+        object-fit: contain;
+        background-color: #1b0424;
+
+    }
+
+    .BotoneraSegundaNav {
+
+        height: 100%;
+        /* background-color: green; */
+        width: 30%;
+
+        position: absolute;
+        right: 0px;
+        /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        /* border-left: solid 2px white; */
+
+    }
+
+    .BotoneraSegundaSignedIn {
+
+        height: 100%;
+        /* background-color: green; */
+        width: 30%;
+        /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: row;
+
+        position: absolute;
+        right: 0px;
+
+    }
+
+    .SignedInPic {
+
+        width: 50px;
+        height: 70%;
+
+        object-fit: contain;
+        object-position: 50% 50%;
+
+        /* background-color: blue; */
+
+    }
+
+    .SignedInText {
+
+        /* margin: 1px; */
+        /* background-color: red; */
+
+        width: fit-content;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        margin: 10px;
+
+    }
+
+    .SignedInName {
+
+        width: fit-content;
+        text-align: start;
+        font-family: "Sofia Sans";
+        font-size: 20px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+
+        cursor: default;
+
+    }
+
+    .SignedOutBottonNav {
+
+        width: fit-content;
+        height: 25%;
+        text-align: center;
+        font-family: "Sofia Sans";
+        font-size: 15px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+
+        cursor: pointer;
+
+    }
+
+    .SignedOutBottonNav:hover {
+
+        color: gray;
+
+    }
+
+    .BotoneraRightB {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        margin-right: 20px;
+
+    }
+
+    .LogoSignIn {
+
+        width: 27px;
+        height: 27px;
+
+        margin: 4px;
+        border-radius: 50%;
+        border: solid 2px rgb(255, 255, 255, 0.8);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0px 0px 0px 0px;
+
+
+    }
+
+    .NotSignIn {
+
+        font-size: 25px;
+        font-weight: 300;
+
+    }
+
+    .BotoneraMobile {
+
+        height: 75px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 22.5px;
+
+        border-top: 2px solid white;
+
+    }
+
+}
+
+@media (min-width: 180px) and (max-width: 499px) {
+
+    .MainServicesPortal {
+
+        width: 100vw;
+        height: fit-content;
+
+        display: grid;
+        grid-template-rows: 10vh 90vh 100vh 100vh;
+        grid-template-columns: 100%;
+
+        overflow: hidden;
+
+    }
+
+    .ServicesPortalBoxA {
+
+     grid-column: 1;
+     grid-row: 2;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white;
+
+    }
+
+    .ServicesPortalBoxB {
+
+     grid-column: 1;
+     grid-row: 3;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white ;
+
+    }
+
+    .ServicesPortalBoxC {
+
+     grid-column: 1;
+     grid-row: 4;
+
+     width: 100%;
+     height: 100%;
+
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: start;
+
+     background-color: #1b0424;
+
+     border-top: solid 2px white ;
+
+    }
+
+    .ServicesPortalIMGContainer {
+
+        display: none;
+
+    }
+
+    .ServicesPortalPic {
+
+        display: none;
+
+    }
+
+    .ServicesPortalDataContainer {
+
+     width: 95%;
+     height: 100%;   
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: start;
+
+     /* background-color: red; */
+      
+    }
+
+    .ServicesPortalTextContainer {
+
+      width: 100%;
+      height: 90%;
+
+      /* background-color: beige; */
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+
+    }
+
+    .ServicesPortalTittle {
+
+      width: 100%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:center;
+
+      color: white;
+      font-family: "sofia sans";
+      font-size: 7vw;
+      font-weight: 450;
+
+      cursor: default;
+
+    }
+
+    .ServicesPortalSpanTittle {
+
+      width: 100%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:start;
+
+      color: white;
+      font-family: "sofia sans";
+      font-size: 5vw;
+      font-weight: 400;
+
+      border-left: 4px solid blue;
+
+      padding-left: 10px;
+
+      cursor: default;
+
+    }
+
+    .ServicesPortalSpan {
+
+      width: 100%;
+      height: fit-content;
+      /* background-color: red; */
+      text-align:justify;
+
+      color: #eeeeee;
+      font-family: "sofia sans";
+      font-size: 3vw;
+      font-weight: 400;
+
+      cursor: default;
+
+    }
+
+    @media (max-width: 400px) {
+
+    .ServicesPortalTittle {
+
+      font-size: 7.75vw;
+
+    }
+
+    .ServicesPortalSpanTittle {
+
+      font-size: 5.3vw;
+
+    }
+
+    .ServicesPortalSpan {
+
+      font-size: 3.25vw;
+
+    }
+
+    }
+
+
+    .NavContainerMobileServices {
+
+        grid-row: 1;
+        grid-column: 1;
+        width: 100%;
+        height: 385px;
+        background-color: #1b0424;
+
+        z-index: 100;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+    }
+
+    .LogoAndMenu {
+
+        height: 75px;
+        width: 100%;
+        /* background-color: red; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+
+
+    }
+
+    .LogoAndMenuSpanClass {
+
+        position: absolute;
+        left: 10px;
+        bottom: 22.5px;
+        font-size: 35px;
+        color: white;
+
+    }
+
+    @media (max-width: 300px) {
+
+        .LogoAndMenu {
+
+            justify-content: end;
+
+
+
+        }
+
+        .LogoAndMenu span {
+
+            left: 1px;
+
+        }
+
+    }
+
+    .LogoNav {
+
+        height: 100%;
+        width: 200px;
+        /* background-image: "url(./logoc.png)"; */
+        object-position: center;
+        object-fit: contain;
+        background-color: #1b0424;
+
+    }
+
+
+    .BotoneraMobile {
+
+        height: 75px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 22.5px;
+
+        border-top: 2px solid white;
+
+    }
+
+    .BotoneraSegundaNav {
+
+        height: 100%;
+        /* background-color: green; */
+        width: auto;
+
+        position: absolute;
+        right: 0px;
+        /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        /* border-left: solid 2px white; */
+
+    }
+
+    .BotoneraSegundaSignedIn {
+
+        height: 100%;
+        /* background-color: green; */
+        width: 30%;
+        /* border-left: solid 2px rgb(255, 255, 255, 0.8); */
+
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-direction: row;
+
+        position: absolute;
+        right: 0px;
+
+    }
+
+    .SignedInPic {
+
+        width: 50px;
+        height: 70%;
+
+        object-fit: contain;
+        object-position: 50% 50%;
+
+        display: none;
+
+        /* background-color: blue; */
+
+    }
+
+    .SignedInText {
+
+        /* margin: 1px; */
+        /* background-color: red; */
+
+        width: fit-content;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        margin: 5px;
+
+    }
+
+    .SignedInName {
+
+        width: fit-content;
+        text-align: start;
+        font-family: "Sofia Sans";
+        font-size: 15px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+
+        cursor: default;
+
+    }
+
+    .SignedOutBottonNav {
+
+        width: fit-content;
+        height: 25%;
+        text-align: center;
+        font-family: "Sofia Sans";
+        font-size: 10px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+
+        cursor: pointer;
+
+    }
+
+    .SignedOutBottonNav:hover {
+
+        color: gray;
+
+    }
+
+    .BotoneraRightB {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        margin-right: 20px;
+
+    }
+
+    .Botonera {
+
+        height: 100%;
+        width: 100%;
+
+        font-family: "IBM Plex Sans", sans-serif;
+        font-weight: 300;
+        color: white;
+        font-size: 18.5px;
+
+        background-color: #1b0424;
+        border: none;
+        padding: 0px 0px 0px 0px;
+
+        margin-right: 5px;
+        /* border-right: solid 1px rgb(255, 255, 255, 0.8);
+    border-left: solid 1px rgb(255, 255, 255, 0.8); */
+
+
+        /* background-color: green; */
+
+
+    }
+
+    .BotoneraRightB {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .LogoSignIn {
+
+        width: 38px;
+        height: 38px;
+
+        margin: 4px;
+        border-radius: 50%;
+        border: solid 2px rgb(255, 255, 255, 0.8);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0px 0px 0px 0px;
+
+
+    }
+
+    .NotSignIn {
+
+        font-size: 30px;
+        font-weight: 300;
+
+    }
+
+}

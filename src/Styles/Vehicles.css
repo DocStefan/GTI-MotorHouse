@@ -647,6 +647,12 @@
 
 }
 
+.FavPost:hover {
+
+ color: lightskyblue;
+
+}
+
 .PostName {
 
     width: 100%;

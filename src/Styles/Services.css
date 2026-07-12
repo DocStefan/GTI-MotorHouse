@@ -40,6 +40,13 @@
 
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.SpanBrandServices:hover {
+
+   color: gray;
 
 }
 
@@ -81,6 +88,18 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
+
+    cursor: pointer;
+
+}
+
+.DataServiceBox:hover {
+
+ .DataServiceTittle {
+
+  color: gray;
+
+ }
 
 }
 
@@ -181,6 +200,13 @@
 
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.SpanBrandServices:hover {
+
+   color: gray;
 
 }
 
@@ -224,6 +250,18 @@
     align-items: center;
 
     margin-top: 1%;
+
+    cursor: pointer;
+}
+
+.DataServiceBox:hover {
+
+ .DataServiceTittle {
+
+  color: gray;
+
+ }
+
 }
 
 .DataServiceLogo {
@@ -328,6 +366,13 @@
 
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
+
+}
+
+.SpanBrandServices:hover {
+
+   color: gray;
 
 }
 
@@ -372,6 +417,17 @@
     /* margin: 10px; */
     padding-bottom: 5%;
     margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.DataServiceBox:hover {
+
+ .DataServiceTittle {
+
+  color: gray;
+
+ }
 
 }
 

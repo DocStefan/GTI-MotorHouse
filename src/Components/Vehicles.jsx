@@ -2,9 +2,8 @@ import React, { lazy } from 'react'
 import "../Styles/Vehicles.css"
 import { useId, useState, useEffect, useRef, useMemo, useContext, Fragment } from 'react'
 import Select from "react-select"
-
-// import VehiclesData from './VehiclesData'
-
+import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { auth } from '../firebase'
 import { ModelContext } from './MainModelManager'
 import { useScroll } from './Scroller'
 import axios from 'axios'
@@ -32,6 +31,8 @@ function Vehicles() {
 
     let [VehiclesData, setVehiclesData] = useState([])
 
+    let [isUserLogIn, setIsUserLogIn] = useState(false)
+
 async function Starter() {
 
    try {
@@ -47,6 +48,26 @@ async function Starter() {
    }
 
 }
+
+  async function monitorAuthState() {
+
+   await onAuthStateChanged(auth, user => {
+
+    if(user) {
+
+      setIsUserLogIn(true)
+ 
+    } else {
+
+      setIsUserLogIn(false)
+
+    }
+
+   })
+
+  }
+
+useEffect(() => {monitorAuthState()}, [])
 
 useEffect(() => {Starter()}, [])
 
@@ -365,7 +386,7 @@ useEffect(() => {Starter()}, [])
 
                                     <img loading='eager' decoding='async' className="PostPic" src={val.foto}></img>
 
-                                    <div className="FavMarkPost" id={index}><span class="material-symbols-outlined FavPost">bookmark</span></div>
+                                    <div className="FavMarkPost" id={index} style={{display: isUserLogIn ? "flex" : "none"}}><span class="material-symbols-outlined FavPost">bookmark</span></div>
 
                                     <div className="PostName">
                                         <span>{val.año.toString() + " " + val.marca + " " + val.modelo} </span>
