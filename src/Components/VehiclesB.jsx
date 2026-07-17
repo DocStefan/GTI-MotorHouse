@@ -7,6 +7,7 @@ import { useScroll } from './Scroller'
 import { useNavigate } from 'react-router'
 import axios from 'axios'
 import VehiclesData from './VehiclesData'
+import { FadeLoader } from "react-spinners"
 
 function VehiclesB() {
 
@@ -17,6 +18,8 @@ function VehiclesB() {
 
   let [VehiclesData, setVehiclesData] = useState([])
 
+  let [loading, setIsLoading] = useState(true)
+
  async function Starter() {
 
    try {
@@ -26,6 +29,10 @@ function VehiclesB() {
     if(responseCatalogue) {setVehiclesData(responseCatalogue.data)}
 
    } catch {
+
+   } finally {
+
+     setIsLoading(false)
 
    }
 
@@ -135,7 +142,18 @@ useEffect(() => {Starter()}, [])
 
         <div className='LandVehiclesCataloguePostsContainer'>
 
-          {VehiclesData.slice(-4).map((val, index) => {
+          {loading ? 
+          
+          <div className='LoadingOn'>  <FadeLoader
+    color="#1b0424"
+    loading={true}
+    height={40}
+    width={5}
+    radius={2}
+    margin={20}
+  /> </div>
+
+          : VehiclesData.slice(-4).map((val, index) => {
 
               return (
 

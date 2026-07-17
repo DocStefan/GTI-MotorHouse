@@ -7,6 +7,7 @@ import { auth } from '../firebase'
 import { ModelContext } from './MainModelManager'
 import { useScroll } from './Scroller'
 import axios from 'axios'
+import { FadeLoader } from 'react-spinners'
 
 function Vehicles() {
 
@@ -32,6 +33,8 @@ function Vehicles() {
 
     let [isUserLogIn, setIsUserLogIn] = useState(false)
 
+    let [loading, setIsLoading] = useState(true)
+
 async function Starter() {
 
    try {
@@ -43,6 +46,10 @@ async function Starter() {
    } catch {
 
     setNotOptionsFilter(true)
+
+   } finally {
+
+     setIsLoading(false)
 
    }
 
@@ -348,7 +355,14 @@ useEffect(() => {Starter()}, [])
 
             <div className="VehiclesCatalogue" onClick={() => { setFilterActiveNotPc(false) }}>
 
-                <div className="VehicleCatalogueContainer" ref={containerRef}>
+{loading ?           <div className='LoadingOn'>  <FadeLoader
+    color="#1b0424"
+    loading={true}
+    height={40}
+    width={5}
+    radius={2}
+    margin={20}
+  /> </div>:                <div className="VehicleCatalogueContainer" ref={containerRef}>
 
                     {SelectedFilterOptions.map((val, index) => {
 
@@ -413,7 +427,7 @@ useEffect(() => {Starter()}, [])
                         <span className="NoOptionsAvailableText">No se encontraron vehiculos</span>
                     </div> : ""}
 
-                </div>
+                </div>}
 
                 {NoOptionsFilter ? "" : <div className="VehicleCatalogueButtons">
 
