@@ -1,0 +1,1934 @@
+/* SECCION PC ---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 1000px) {
+
+.LandVehicles {
+
+ width: 100vw;
+ height: 100vh;
+
+ display: grid;
+ grid-template-rows: 12.5% 12.5% 60% 15%;
+ grid-template-columns: 100%;
+
+ overflow: hidden;
+
+ /* background-color: red; */
+
+}
+
+.LandVehiclesAds {
+
+ grid-column: 1;
+ grid-row: 1;   
+
+ width: 100%;
+ height: 100%;
+
+ background-color: #f7f7f7;
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ align-items: center;
+
+}
+
+.AdVehiclesLand {
+
+ width: 20%;
+ height: 100%;
+
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+}
+
+.AdLogoVehiclesLand {
+
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.AdPic {
+
+ width: 70%;
+ height: 60%;
+
+ object-fit: contain;
+ object-position: 50% 50%;
+
+}
+
+.AdSpanVehiclesLand {
+
+ width: 70%;
+ height: 50%;
+ /* background-color: red; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: start;
+
+}
+
+.AdSpanFirst {
+
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 1.3vw;
+ color: #1b0424;
+ text-align: start;
+ cursor: default;
+
+}
+
+.AdSpanSecond {
+
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 0.9vw;
+ color: #1b0424;
+ text-align: start;
+ padding-left: 0.15vw;
+
+ cursor: default;
+
+}
+
+.LandVehiclesMainSpanContainer {
+
+ /* background-color: red; */
+
+ grid-column: 1;
+ grid-row: 2;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
+ align-items: center;
+
+}
+
+.LandVehiclesMainSpanHeightController {
+
+ width: 100%;
+
+ height: 65%;
+ 
+ /* background-color: beige; */
+ padding-left: 5vw;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+
+}
+
+.LandVehiclesMainTittle {
+
+ width: 100%;
+ height: fit-content;
+
+ font-family: "sofia sans";
+ font-size: 1.3vw;
+ color: blue;
+ font-weight: 600;
+
+ text-align: start;
+ cursor: default;
+
+}
+
+.LandVehiclesMainSubTittle {
+
+ width: 100%;
+ height: fit-content;
+
+ font-family: "sofia sans";
+ font-size: 1.7vw;
+ color: #1b0424;
+ font-weight: 700;
+
+ text-align: start;
+ cursor: default;
+
+}
+
+.LandVehiclesCatalogue {
+
+ grid-row: 3;
+ grid-column: 1;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: end;
+
+ /* background-color: whitesmoke; */
+
+}
+
+.LandVehicleCatalogueSpanContainer {
+
+ width: fit-content;
+ height: 10%;
+ display: flex;
+ justify-content: end;
+ align-items: center;
+
+ /* background-color: red; */
+
+ margin-right: 25px;
+
+ cursor: pointer;
+
+}
+
+.LandVehicleCatalogueSpan {
+
+ text-align: start;
+ width: fit-content;
+ 
+ font-family: "sofia sans";
+ font-size: 1vw;
+ color: rgb(0, 0, 255);
+ font-weight: 500;
+
+ text-align: start;
+ cursor: pointer;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandVehicleCatalogueSpanContainer:hover {
+
+.LandVehicleCatalogueSpan {
+
+ animation: hoverUp 0.25s ease forwards;
+
+}
+
+}
+
+.LandVehiclesCataloguePostsContainer {
+
+ grid-row: 3;
+ grid-column: 1;
+
+ width: 100%;
+ height: 90%;
+
+ /* background-color: beige; */
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+
+ overflow: hidden; 
+
+}
+
+.CataloguePostLand {
+
+    width: 25%;
+
+    /* width solia ser 25% sin flex shrink */
+
+    height: 100%;
+    flex-shrink: 0;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.CalaloguePostBoxLand {
+
+    width: 90%;
+    height: 95%;
+    background-color: white;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+    position: relative;
+
+}
+
+.PostPicLand {
+
+    width: 100%;
+    height: 55%;
+
+    /* background-image: url("./DodgeHead.png"); */
+    object-fit: cover;
+
+    /* solia ser contain */
+
+    object-position: center;
+
+    /* border-bottom: 3px black solid; */
+
+    display: flex;
+    justify-content: end;
+    align-items: start;
+
+}
+
+.PostNameLand {
+
+    width: 100%;
+    height: 8%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    color: black;
+    font-family: "Jost", sans-serif;
+    font-size: 2.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+      cursor: default;
+
+}
+
+.PostKMSLand {
+
+
+    width: 100%;
+    height: 5%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+      cursor: default;
+
+}
+
+.KmsTextLand {
+
+    margin-left: 0.2vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostTypeFilterLand {
+
+    width: 100%;
+    height: 10%;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 0.5vw;
+
+      cursor: default;
+
+}
+
+.PostTypeFilterContainerLand {
+
+    background-color: #e7eaf6;
+    width: 25%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.8vh;
+    font-weight: 600;
+    border-radius: 5PX;
+
+}
+
+.PostMainCharacteristicsLand {
+
+
+    height: 7.5%;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+
+    color: #595b5e;
+    font-family: "Jost", sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+
+      cursor: default;
+
+}
+
+.TransmisionInfoLand,
+.EngineInfoLand {
+
+    margin-left: 0.75vw;
+    width: auto;
+    /* background-color: red;   */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.InternInfoFixLand {
+
+    margin-left: 0.25vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostActionSectionLand {
+
+    height: 14.5%;
+    /* background-color: red; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.PostPriceLand {
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #1b0424;
+    font-family: "Jost", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 500;
+
+    /* margin-bottom: vw; */
+    /* background-color: red; */
+
+      cursor: default;
+
+}
+
+.PostActionButtonLand {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* margin-top: 0.8vw; */
+
+}
+
+.BuyNowButtonLand {
+
+    background-color: #1b0424;
+    /* color: #3b82f6; */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 85%;
+    height: 60%;
+    transition: 0.3s;
+
+    color: white;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+}
+
+.BuyNowButtonLand:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #cdc9cf;
+    color: #fff;
+}
+
+.LandCatalogueButtonContainer {
+
+ grid-row: 4;
+ grid-column: 1;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandCatalogueButton {
+
+ width: 38vw;
+ height: 70%;
+
+ background-color: #1b0424;
+
+ border-radius: 20px;
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+ overflow: hidden;
+
+ cursor: pointer;
+
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.LandCatalogueBottonLogo {
+
+ width: 20%;
+ height: 100%;
+
+ /* background-color: red; */
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandCatalogueBottonLogoPic {
+
+ object-fit: contain;
+ object-position: 50% 50%;
+ width: 70%;
+ height: 60%;
+
+}
+
+.LandCatalogueBottonLogoPicArrow {
+
+  object-fit: contain;
+ object-position: 50% 50%;
+ width: 50%;
+ height: 35%;
+
+ padding-left: 3vw;
+
+}
+
+.LandCatalogueButtonSpan {
+
+ width: 60%;
+ height: 70%;
+
+ /* background-color: green; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: start;
+
+}
+
+.LandCatalogueButtonSpanFirst {
+
+ width: 100%;
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 1.2vw;
+ color: white;
+ text-align: start;
+
+}
+
+.LandCatalogueButtonSpanSecond {
+
+ width: 100%;
+ font-family: "sofia sans";
+ font-weight: 400;
+ font-size: 0.9vw;
+ color: rgb(255, 255, 255, 0.875);
+ text-align: start;
+
+}
+
+.LandCatalogueButton:hover {
+
+ animation: hoverUpB 0.25s ease forwards;
+
+}
+
+@keyframes hoverUp {
+
+    100% {transform: translateY(-20%);}
+    
+}
+
+@keyframes hoverUpB {
+
+    100% {transform: translateY(-7.5%);}
+    
+}
+
+}
+
+/* FIXES SECCION PC ---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+
+.AdVehiclesLand {
+
+ width: 25%;
+
+}
+
+
+.AdSpanFirst {
+
+ font-size: 1.65vw;
+
+}
+
+.AdSpanSecond {
+
+ font-size: 1.2vw;
+ padding-left: 0.15vw;
+
+}
+
+.LandVehiclesMainTittle {
+
+ font-size: 2vw;
+
+}
+
+.LandVehiclesMainSubTittle {
+
+ font-size: 3vw;
+
+}
+
+.LandVehicleCatalogueSpan {
+
+ font-size: 1.75vw;
+}
+
+.LandCatalogueButtonSpanFirst {
+
+ font-size: 1.5vw;
+
+}
+
+.LandCatalogueButtonSpanSecond {
+
+ font-size: 1.3vw;
+
+}
+
+.PostNameLand {
+
+    font-size: 2.4vh;
+    padding-left: 0.25vw;
+
+}
+
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+
+ .PostPriceLand {
+
+    font-size: 2.2vh;
+
+}
+
+.BuyNowButtonLand {
+
+    font-size: 1.4vh;
+
+}
+
+}
+
+/* SECCION TABLET ---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 500px) and (max-width: 999px) {
+
+ .LandVehicles {
+
+ width: 100vw;
+ height: 200vh;
+
+ display: grid;
+ grid-template-rows: 12.5% 8% 64.5% 15%;
+ grid-template-columns: 100%;
+
+ overflow: hidden;
+
+ /* background-color: red; */
+
+}
+
+.LandVehiclesAds {
+
+ grid-column: 1;
+ grid-row: 1;   
+
+ width: 100%;
+ height: 100%;
+
+ background-color: #f7f7f7;
+
+ display: flex;
+ flex-wrap: wrap ;
+ flex-direction: row;
+ justify-content: space-evenly;
+ align-items: center;
+
+}
+
+.AdVehiclesLand {
+
+ width: 50%;
+ height: 50%;
+
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+}
+
+.AdLogoVehiclesLand {
+
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.AdPic {
+
+ width: 70%;
+ height: 75%;
+
+ object-fit: contain;
+ object-position: 50% 50%;
+
+}
+
+.AdSpanVehiclesLand {
+
+ width: 70%;
+ height: 50%;
+ /* background-color: red; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: start;
+
+}
+
+.AdSpanFirst {
+
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 3.3vw;
+ color: #1b0424;
+ text-align: start;
+ cursor: default;
+
+}
+
+.AdSpanSecond {
+
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 2.2vw;
+ color: #1b0424;
+ text-align: start;
+ padding-left: 0.15vw;
+
+ cursor: default;
+
+}
+
+.LandVehiclesMainSpanContainer {
+
+ /* background-color: red; */
+
+ grid-column: 1;
+ grid-row: 2;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
+ align-items: center;
+
+}
+
+.LandVehiclesMainSpanHeightController {
+
+ width: 100%;
+
+ height: 65%;
+ 
+ /* background-color: beige; */
+ padding-left: 5vw;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
+ align-items: center;
+
+}
+
+.LandVehiclesMainTittle {
+
+ width: 100%;
+ height: fit-content;
+
+ font-family: "sofia sans";
+ font-size: 4vw;
+ color: blue;
+ font-weight: 600;
+
+ text-align: start;
+ cursor: default;
+
+}
+
+.LandVehiclesMainSubTittle {
+
+ width: 100%;
+ height: fit-content;
+
+ font-family: "sofia sans";
+ font-size: 5.5vw;
+ color: #1b0424;
+ font-weight: 700;
+
+ text-align: start;
+ cursor: default;
+
+}
+
+.LandVehiclesCatalogue {
+
+ grid-row: 3;
+ grid-column: 1;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: end;
+
+ /* background-color: whitesmoke; */
+
+}
+
+.LandVehicleCatalogueSpanContainer {
+
+ width: fit-content;
+ height: 10%;
+ display: flex;
+ justify-content: end;
+ align-items: center;
+
+ /* background-color: red; */
+
+ margin-right: 25px;
+
+ cursor: pointer;
+
+}
+
+.LandVehicleCatalogueSpan {
+
+ text-align: start;
+ width: fit-content;
+ 
+ font-family: "sofia sans";
+ font-size: 3vw;
+ color: rgb(0, 0, 255);
+ font-weight: 500;
+
+ text-align: start;
+ cursor: pointer;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandVehiclesCataloguePostsContainer {
+
+ grid-row: 3;
+ grid-column: 1;
+
+ width: 100%;
+ height: 100%;
+
+ /* background-color: beige; */
+
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+
+ overflow: hidden; 
+
+}
+
+.CataloguePostLand {
+
+    width: 50%;
+
+    /* width solia ser 25% sin flex shrink */
+
+    height: 50%;
+    flex-shrink: 0;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.CalaloguePostBoxLand {
+
+    width: 90%;
+    height: 95%;
+    background-color: white;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+    position: relative;
+
+}
+
+.PostPicLand {
+
+    width: 100%;
+    height: 55%;
+
+    /* background-image: url("./DodgeHead.png"); */
+    object-fit: cover;
+
+    /* solia ser contain */
+
+    object-position: center;
+
+    /* border-bottom: 3px black solid; */
+
+    display: flex;
+    justify-content: end;
+    align-items: start;
+
+}
+
+.PostNameLand {
+
+    width: 100%;
+    height: 8%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    color: black;
+    font-family: "Jost", sans-serif;
+    font-size: 2.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+      cursor: default;
+
+}
+
+.PostKMSLand {
+
+
+    width: 100%;
+    height: 5%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+      cursor: default;
+
+}
+
+.KmsTextLand {
+
+    margin-left: 0.2vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostTypeFilterLand {
+
+    width: 100%;
+    height: 10%;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 0.5vw;
+
+      cursor: default;
+
+}
+
+.PostTypeFilterContainerLand {
+
+    background-color: #e7eaf6;
+    width: 25%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.8vh;
+    font-weight: 600;
+    border-radius: 5PX;
+
+}
+
+.PostMainCharacteristicsLand {
+
+
+    height: 7.5%;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+
+    color: #595b5e;
+    font-family: "Jost", sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+
+      cursor: default;
+
+}
+
+.TransmisionInfoLand,
+.EngineInfoLand {
+
+    margin-left: 0.75vw;
+    width: auto;
+    /* background-color: red;   */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.InternInfoFixLand {
+
+    margin-left: 0.25vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostActionSectionLand {
+
+    height: 14.5%;
+    /* background-color: red; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.PostPriceLand {
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #1b0424;
+    font-family: "Jost", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 500;
+
+    /* margin-bottom: vw; */
+    /* background-color: red; */
+
+      cursor: default;
+
+}
+
+.PostActionButtonLand {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* margin-top: 0.8vw; */
+
+}
+
+.BuyNowButtonLand {
+
+    background-color: #1b0424;
+    /* color: #3b82f6; */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 85%;
+    height: 60%;
+    transition: 0.3s;
+
+    color: white;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+}
+
+.BuyNowButtonLand:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #cdc9cf;
+    color: #fff;
+}
+
+.LandCatalogueButtonContainer {
+
+ grid-row: 4;
+ grid-column: 1;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandCatalogueButton {
+
+ width: 95%;
+ height: 80%;
+
+ background-color: #1b0424;
+
+ border-radius: 20px;
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+ overflow: hidden;
+
+ cursor: pointer;
+
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.LandCatalogueBottonLogo {
+
+ width: 20%;
+ height: 100%;
+
+ /* background-color: red; */
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandCatalogueBottonLogoPic {
+
+ object-fit: contain;
+ object-position: 50% 50%;
+ width: 70%;
+ height: 60%;
+
+}
+
+.LandCatalogueBottonLogoPicArrow {
+
+  object-fit: contain;
+ object-position: 50% 50%;
+ width: 50%;
+ height: 35%;
+
+}
+
+.LandCatalogueButtonSpan {
+
+ width: 60%;
+ height: 50%;
+
+ /* background-color: green; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: start;
+
+}
+
+.LandCatalogueButtonSpanFirst {
+
+ width: 100%;
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 3.5vw;
+ color: white;
+ text-align: start;
+
+}
+
+.LandCatalogueButtonSpanSecond {
+
+ width: 100%;
+ font-family: "sofia sans";
+ font-weight: 400;
+ font-size: 2.5vw;
+ color: rgb(255, 255, 255, 0.875);
+ text-align: start;
+
+}
+
+}
+
+/* FIXES SECCION TABLET ---------------------------------------------------------------------------------------------------- */
+
+@media (min-width: 500px) and (max-width: 700px) {
+
+.LandVehiclesMainTittle {
+
+ font-size: 5vw;
+
+}
+
+.LandVehiclesMainSubTittle {
+
+ font-size: 7vw;
+
+}
+
+.LandVehicleCatalogueSpan {
+
+ font-size: 4.5vw;
+}
+
+.LandCatalogueButtonSpanFirst {
+
+ font-size: 5vw;
+
+}
+
+.LandCatalogueButtonSpanSecond {
+
+ font-size: 4vw;
+
+}
+
+.PostNameLand {
+
+    font-size: 2.4vh;
+    padding-left: 0.1vw;
+
+}
+
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+
+ .PostPriceLand {
+
+    font-size: 2.2vh;
+
+}
+
+.BuyNowButtonLand {
+
+    font-size: 1.4vh;
+
+}
+
+}
+
+/* SECCION MOBILE ---------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 499px) {
+
+ .LandVehicles {
+
+ width: 100vw;
+ height: 415vh;
+
+ display: grid;
+ grid-template-rows: 15% 2.5% 77.5% 5%;
+ grid-template-columns: 100%;
+
+ overflow: hidden;
+
+ /* background-color: red; */
+
+}
+
+.LandVehiclesAds {
+
+ grid-column: 1;
+ grid-row: 1;   
+
+ width: 100%;
+ height: 100%;
+
+ background-color: #f7f7f7;
+
+ display: flex;
+ flex-wrap: wrap ;
+ flex-direction: row;
+ justify-content: space-evenly;
+ align-items: center;
+
+}
+
+.AdVehiclesLand {
+
+ width: 100%;
+ height: 25%;
+
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+}
+
+.AdLogoVehiclesLand {
+
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.AdPic {
+
+ width: 70%;
+ height: 75%;
+
+ object-fit: contain;
+ object-position: 50% 50%;
+
+}
+
+.AdSpanVehiclesLand {
+
+ width: 70%;
+ height: 50%;
+ /* background-color: red; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: start;
+
+}
+
+.AdSpanFirst {
+
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 6vw;
+ color: #1b0424;
+ text-align: start;
+ cursor: default;
+
+}
+
+.AdSpanSecond {
+
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 5vw;
+ color: #1b0424;
+ text-align: start;
+ padding-left: 0.3vw;
+
+ cursor: default;
+
+}
+
+.LandVehiclesMainSpanContainer {
+
+ /* background-color: red; */
+
+ grid-column: 1;
+ grid-row: 2;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
+ align-items: center;
+
+}
+
+.LandVehiclesMainSpanHeightController {
+
+ width: 100%;
+
+ height: 65%;
+ 
+ /* background-color: beige; */
+ padding-left: 2vw;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: end;
+ align-items: center;
+
+}
+
+.LandVehiclesMainTittle {
+
+ width: 100%;
+ height: fit-content;
+
+ font-family: "sofia sans";
+ font-size: 6vw;
+ color: blue;
+ font-weight: 600;
+
+ text-align: start;
+ cursor: default;
+
+}
+
+.LandVehiclesMainSubTittle {
+
+ width: 100%;
+ height: fit-content;
+
+ font-family: "sofia sans";
+ font-size: 7vw;
+ color: #1b0424;
+ font-weight: 700;
+
+ text-align: start;
+ cursor: default;
+
+}
+
+.LandVehiclesCatalogue {
+
+ grid-row: 3;
+ grid-column: 1;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: end;
+
+ /* background-color: whitesmoke; */
+
+}
+
+.LandVehicleCatalogueSpanContainer {
+
+ width: fit-content;
+ height: 2%;
+ display: flex;
+ justify-content: end;
+ align-items: center;
+
+ /* background-color: red; */
+
+ margin-right: 25px;
+
+ cursor: pointer;
+
+}
+
+.LandVehicleCatalogueSpan {
+
+ text-align: start;
+ width: fit-content;
+ 
+ font-family: "sofia sans";
+ font-size: 5.25vw;
+ color: rgb(0, 0, 255);
+ font-weight: 500;
+
+ text-align: start;
+ cursor: pointer;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandVehiclesCataloguePostsContainer {
+
+ grid-row: 3;
+ grid-column: 1;
+
+ width: 100%;
+ height: 100%;
+
+ /* background-color: beige; */
+
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-evenly;
+
+ overflow: hidden; 
+
+}
+
+.CataloguePostLand {
+
+    width: 100%;
+
+    /* width solia ser 25% sin flex shrink */
+
+    height: 25%;
+    flex-shrink: 0;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.CalaloguePostBoxLand {
+
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+    position: relative;
+
+}
+
+.PostPicLand {
+
+    width: 100%;
+    height: 55%;
+
+    /* background-image: url("./DodgeHead.png"); */
+    object-fit: cover;
+
+    /* solia ser contain */
+
+    object-position: center;
+
+    /* border-bottom: 3px black solid; */
+
+    display: flex;
+    justify-content: end;
+    align-items: start;
+
+}
+
+.PostNameLand {
+
+    width: 100%;
+    height: 8%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    color: black;
+    font-family: "Jost", sans-serif;
+    font-size: 2.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+      cursor: default;
+
+}
+
+.PostKMSLand {
+
+
+    width: 100%;
+    height: 5%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.7vh;
+    font-weight: 400;
+
+    padding-left: 0.5vw;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+      cursor: default;
+
+}
+
+.KmsTextLand {
+
+    margin-left: 0.2vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostTypeFilterLand {
+
+    width: 100%;
+    height: 10%;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    padding-left: 0.5vw;
+
+      cursor: default;
+
+}
+
+.PostTypeFilterContainerLand {
+
+    background-color: #e7eaf6;
+    width: 25%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #606470;
+    font-family: "Jost", sans-serif;
+    font-size: 1.8vh;
+    font-weight: 600;
+    border-radius: 5PX;
+
+}
+
+.PostMainCharacteristicsLand {
+
+
+    height: 7.5%;
+    width: 100%;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+
+    color: #595b5e;
+    font-family: "Jost", sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+
+      cursor: default;
+
+}
+
+.TransmisionInfoLand,
+.EngineInfoLand {
+
+    margin-left: 0.75vw;
+    width: auto;
+    /* background-color: red;   */
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.InternInfoFixLand {
+
+    margin-left: 0.25vw;
+    margin-top: 0.1vw;
+
+}
+
+.PostActionSectionLand {
+
+    height: 14.5%;
+    /* background-color: red; */
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+}
+
+.PostPriceLand {
+
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #1b0424;
+    font-family: "Jost", sans-serif;
+    font-size: 2.5vh;
+    font-weight: 500;
+
+    /* margin-bottom: vw; */
+    /* background-color: red; */
+
+      cursor: default;
+
+}
+
+.PostActionButtonLand {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* margin-top: 0.8vw; */
+
+}
+
+.BuyNowButtonLand {
+
+    background-color: #1b0424;
+    /* color: #3b82f6; */
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 85%;
+    height: 60%;
+    transition: 0.3s;
+
+    color: white;
+    font-family: "Sofia Sans", Arial;
+    font-size: 1.6vh;
+    font-weight: 600;
+
+}
+
+.BuyNowButtonLand:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #cdc9cf;
+    color: #fff;
+}
+
+.LandCatalogueButtonContainer {
+
+ grid-row: 4;
+ grid-column: 1;
+
+ width: 100%;
+ height: 100%;
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandCatalogueButton {
+
+ width: 95%;
+ height: 80%;
+
+ background-color: #1b0424;
+
+ border-radius: 20px;
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+ overflow: hidden;
+
+ cursor: pointer;
+
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.LandCatalogueBottonLogo {
+
+ width: 20%;
+ height: 100%;
+
+ /* background-color: red; */
+
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.LandCatalogueBottonLogoPic {
+
+ object-fit: contain;
+ object-position: 50% 50%;
+ width: 70%;
+ height: 60%;
+
+}
+
+.LandCatalogueBottonLogoPicArrow {
+
+  object-fit: contain;
+ object-position: 50% 50%;
+ width: 50%;
+ height: 35%;
+
+}
+
+.LandCatalogueButtonSpan {
+
+ width: 60%;
+ height: 50%;
+
+ /* background-color: green; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: start;
+
+}
+
+.LandCatalogueButtonSpanFirst {
+
+ width: 100%;
+ font-family: "sofia sans";
+ font-weight: 600;
+ font-size: 5.75vw;
+ color: white;
+ text-align: start;
+
+}
+
+.LandCatalogueButtonSpanSecond {
+
+ width: 100%;
+ font-family: "sofia sans";
+ font-weight: 400;
+ font-size: 4vw;
+ color: rgb(255, 255, 255, 0.875);
+ text-align: start;
+
+}
+
+}
+

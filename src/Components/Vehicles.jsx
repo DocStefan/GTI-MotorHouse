@@ -27,7 +27,6 @@ function Vehicles() {
     let [PaginatorBackwardsStyleManager, setPaginatorBackwardsStyleManager] = useState(false)
 
     const scrollToElement = useScroll();
-    const { HomeModelSelected } = useContext(ModelContext)
 
     let [VehiclesData, setVehiclesData] = useState([])
 
@@ -149,13 +148,13 @@ useEffect(() => {Starter()}, [])
     let IndexPlus = useId()
     let IndexMinus = useId()
 
-    let [VehicleDataLengthIndex, setVehicleDataLengthIndex] = useState(SelectedFilterOptions.length - 4)
+    let [VehicleDataLengthIndex, setVehicleDataLengthIndex] = useState(SelectedFilterOptions.length - 8)
 
     const containerRef = useRef(null);
 
     useEffect(() => {
 
-        setVehicleDataLengthIndex(SelectedFilterOptions.length - 4)
+        setVehicleDataLengthIndex(SelectedFilterOptions.length - 8)
         setPaginatorIndexManager(0)
 
 
@@ -198,7 +197,7 @@ useEffect(() => {Starter()}, [])
 
                 if (PaginatorIndexManager >= 0 && PaginatorIndexManager < VehicleDataLengthIndex) {
 
-                    setPaginatorIndexManager(Preval => Preval + 4)
+                    setPaginatorIndexManager(Preval => Preval + 8)
 
                 }
 
@@ -207,7 +206,7 @@ useEffect(() => {Starter()}, [])
 
                 if (PaginatorIndexManager > 0) {
 
-                    setPaginatorIndexManager(Preval => Preval - 4)
+                    setPaginatorIndexManager(Preval => Preval - 8)
 
                 }
 
@@ -215,25 +214,6 @@ useEffect(() => {Starter()}, [])
         }
 
     }
-
-    useEffect(() => {
-
-        if (HomeModelSelected) {
-
-            if (HomeModelSelected.ModeloSeleccionado === "Bmw") {
-
-                setFilterAction(PreVal => ({ ...PreVal, Marca: "BMW" }))
-
-
-            } else {
-
-                setFilterAction(PreVal => ({ ...PreVal, Marca: HomeModelSelected.ModeloSeleccionado }))
-
-            }
-
-        }
-
-    }, [HomeModelSelected])
 
     let [NoOptionsFilter, setNotOptionsFilter] = useState(false)
 
@@ -264,19 +244,13 @@ useEffect(() => {Starter()}, [])
     let [FilterActiveNotPc, setFilterActiveNotPc] = useState(false)
 
     return (
-        <div className="MainVehicles" id="VehiclesScrollRef" onClick={() => { scrollToElement("VehiclesScrollRef") }}>
+        <div className="MainVehicles" id="VehiclesScrollRef">
 
             <div className="VehiclesTypes">
 
                 <div className="VehiclesTypesTittle">
 
                     <span class="material-symbols-outlined VehiclesFilterTypeApart VehiclesFylterToogleButton" onClick={() => { setFilterActiveNotPc(!FilterActiveNotPc) }} style={{ color: FilterActiveNotPc ? "lightgray" : "" }}> menu </span>
-
-                    <div className="SeparatorVehicles"></div>
-
-                    <span className="SpanBrandVehicles">Vehiculos</span>
-
-                    <div className="SeparatorVehicles"></div>
 
                 </div>
 
@@ -378,7 +352,7 @@ useEffect(() => {Starter()}, [])
 
                     {SelectedFilterOptions.map((val, index) => {
 
-                        if (index === PaginatorIndexManager || index === PaginatorIndexManager + 1 || index === PaginatorIndexManager + 2 || index === PaginatorIndexManager + 3) {
+                        if (index === PaginatorIndexManager || index === PaginatorIndexManager + 1 || index === PaginatorIndexManager + 2 || index === PaginatorIndexManager + 3 || index === PaginatorIndexManager + 7 || index === PaginatorIndexManager + 4 || index === PaginatorIndexManager + 5 || index === PaginatorIndexManager + 6) {
 
 
                             return <div className="CataloguePost">
@@ -449,7 +423,7 @@ useEffect(() => {Starter()}, [])
 
                         <div className="CatalogueNumbers">
 
-                            {Array.from({ length: Math.ceil(VehicleDataLengthIndex / 4) + 1 }, (val, index) => { if (index === PaginatorIndexManager / 4) { return <span className="MainNumberCatalogue">{index}</span> } else { return <span onClick={() => { setPaginatorIndexManager(index * 4) }} className="SecondaryNumberCatalogue">{index}</span> } })}
+                            {Array.from({ length: Math.ceil(VehicleDataLengthIndex / 8) + 1 }, (val, index) => { if (index === PaginatorIndexManager / 8) { return <span className="MainNumberCatalogue">{index}</span> } else { return <span onClick={() => { setPaginatorIndexManager(index * 8) }} className="SecondaryNumberCatalogue">{index}</span> } })}
 
                         </div>
 

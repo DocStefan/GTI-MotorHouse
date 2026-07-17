@@ -1,0 +1,50 @@
+@media (min-width: 1000px) {
+
+    .MainCataloguePortal {
+
+        width: 100vw;
+        height: fit-content;
+
+        display: grid;
+        grid-template-rows: 10vh auto;
+        grid-template-columns: 100%;
+
+        overflow: hidden;
+
+    }
+
+}
+
+@media (min-width: 500px) and (max-width: 999px) {
+
+    .MainCataloguePortal {
+
+        width: 100vw;
+        height: fit-content;
+
+        display: grid;
+        grid-template-rows: 10vh;
+        grid-template-columns: 100%;
+
+        /* overflow: hidden; */
+
+    }
+
+}
+
+@media (min-width: 180px) and (max-width: 499px) {
+
+    .MainCataloguePortal {
+
+        width: 100vw;
+        height: fit-content;
+
+        display: grid;
+        grid-template-rows: 10vh;
+        grid-template-columns: 100%;
+
+        /* overflow: hidden; */
+
+    }
+
+}

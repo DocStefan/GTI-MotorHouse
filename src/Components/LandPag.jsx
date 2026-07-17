@@ -145,7 +145,7 @@ function LandPag() {
 
   {isViewportMobile ? 
   
-  <div className="NavContainerMobile" style={{height: FilterActiveNotPc ? "385px" : "75px"}}>
+  <div className="NavContainerMobile" style={{height: FilterActiveNotPc ? "308px" : "75px"}}>
 
     <div className="LogoAndMenu">
       <span class="material-symbols-outlined LogoAndMenuSpanClass" style={{border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)"}} onClick={() => {setFilterActiveNotPc(!FilterActiveNotPc)}}> menu </span>
@@ -176,9 +176,8 @@ userLogData.LogIn ?
 }    </div>
 
 {FilterActiveNotPc && <>         
-          <div className="BotoneraMobile" onClick={() => {scrollToElement("VehiclesScrollRef"), setFilterActiveNotPc(false)}}>Vehiculos</div>
+          <div className="BotoneraMobile" onClick={() => {navigate("/catalogue"), setFilterActiveNotPc(false)}}>Vehiculos</div>
           <div className="BotoneraMobile" onClick={() => {navigate("/services"), setFilterActiveNotPc(false)}}>Servicios</div>
-          <div className="BotoneraMobile" onClick={() => {scrollToElement("NewsScrollRef"), setFilterActiveNotPc(false)}}>Noticias</div>
           <div className="BotoneraMobile" onClick={() => {scrollToElement("FooterScrollRef"), setFilterActiveNotPc(false)}}>Contacto</div></> }
      </div> 
   
@@ -186,9 +185,8 @@ userLogData.LogIn ?
 
        <div className="FirstPartNav">
 
-          <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("VehiclesScrollRef")}}><button type="button" className="Botonera BotoneraLeft">Vehiculos</button></div>
+          <div className="BotoneraPrimeraNav" onClick={() => {navigate("/catalogue")}}><button type="button" className="Botonera BotoneraLeft">Vehiculos</button></div>
           <div className="BotoneraPrimeraNav" onClick={() => {navigate("/services")}}><button type="button" className="Botonera">Servicios</button></div>
-          <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("NewsScrollRef")}}><button type="button" className="Botonera">Noticias</button></div>
           <div className="BotoneraPrimeraNav" onClick={() => {scrollToElement("FooterScrollRef")}}><button type="button" className="Botonera BotoneraRight">Contacto</button></div>
 
         </div>
@@ -243,7 +241,7 @@ userLogData.LogIn ?
 
             <div className="ActionButton">
 
-              <button type="button" className="ButtonMain" onClick={() => {setHomeModelSelected({ModeloSeleccionado: SelectedCarMenu.Marca.charAt(0).toUpperCase() + SelectedCarMenu.Marca.slice(1).toLowerCase()}), scrollToElement("VehiclesScrollRef")}}>Ver Modelos</button>
+              <button type="button" className="ButtonMain" onClick={() => {navigate("/catalogue")}}>Ver Modelos</button>
 
             </div>
 

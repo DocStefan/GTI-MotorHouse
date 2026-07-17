@@ -8,7 +8,7 @@ let VehiclesData = [
     tipo: "Sedan",
     caja: "Automatico",
     combustible: "Hibrido",
-    foto: "url(./fordMondeo.jpg)"
+    foto: "fordMondeo.webp"
   },
   {
     marca: "Toyota",
@@ -19,7 +19,7 @@ let VehiclesData = [
     tipo: "SUV",
     caja: "Automatico",
     combustible: "Hibrido",
-    foto: "url(./toyotaLandCruiser.jpg)"
+    foto: "toyotaLandCruiser.webp"
   },
   {
     marca: "Ford",
@@ -30,7 +30,7 @@ let VehiclesData = [
     tipo: "Coupe",
     caja: "Manual",
     combustible: "Gasolina",
-    foto: "url(./fordMustang.jpg)"
+    foto: "fordMustang.webp"
   },
   {
     marca: "Volkswagen",
@@ -41,7 +41,7 @@ let VehiclesData = [
     tipo: "PickUp",
     caja: "Automatico",
     combustible: "Diesel",
-    foto: "url(./volkswagenAmarok.jpg)"
+    foto: "volkswagenAmarok.webp"
   },
   {
     marca: "Toyota",

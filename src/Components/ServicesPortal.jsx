@@ -67,7 +67,7 @@ function ServicesPortal() {
 
             {isViewportMobile ?
 
-                <div className="NavContainerMobileServices" id='BoxAref' style={{ height: FilterActiveNotPc ? "385px" : "83px" }}>
+                <div className="NavContainerMobileServices" id='BoxAref' style={{ height: FilterActiveNotPc ? "308px" : "83px" }}>
 
                     <div className="LogoAndMenu">
                         <span class="material-symbols-outlined LogoAndMenuSpanClass" style={{ border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)" }} onClick={() => { setFilterActiveNotPc(!FilterActiveNotPc) }}> menu </span>
@@ -99,8 +99,7 @@ function ServicesPortal() {
 
                     {FilterActiveNotPc && <>
                         <div className="BotoneraMobile" onClick={() => { navigate("/"), setFilterActiveNotPc(false) }}>Inicio</div>
-                        <div className="BotoneraMobile" onClick={() => { navigate("/"), setFilterActiveNotPc(false) }}>Vehiculos</div>
-                        <div className="BotoneraMobile" onClick={() => { navigate("/"), setFilterActiveNotPc(false) }}>Noticias</div>
+                        <div className="BotoneraMobile" onClick={() => { navigate("/catalogue"), setFilterActiveNotPc(false) }}>Vehiculos</div>
                         <div className="BotoneraMobile" onClick={() => { scrollToElement("FooterScrollRef"), setFilterActiveNotPc(false) }}>Contacto</div></>}
                 </div>
 
@@ -109,8 +108,7 @@ function ServicesPortal() {
                     <div className="FirstPartNav">
 
                         <div className="BotoneraPrimeraNav" onClick={() => { navigate("/") }}><button type="button" className="Botonera BotoneraLeft">Inicio</button></div>
-                        <div className="BotoneraPrimeraNav" onClick={() => { navigate("/") }}><button type="button" className="Botonera">Vehiculos</button></div>
-                        <div className="BotoneraPrimeraNav" onClick={() => { navigate("/") }}><button type="button" className="Botonera">Noticias</button></div>
+                        <div className="BotoneraPrimeraNav" onClick={() => { navigate("/catalogue") }}><button type="button" className="Botonera">Vehiculos</button></div>
                         <div className="BotoneraPrimeraNav" onClick={() => { scrollToElement("FooterScrollRef") }}><button type="button" className="Botonera BotoneraRight">Contacto</button></div>
 
                     </div>
