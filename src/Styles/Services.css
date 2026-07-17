@@ -1,489 +1,989 @@
-/* SECCION PC --------------------------------*/
+/* SECCION PC ------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 1000px) {
 
-.MainServices {
+    .MainServicesLand {
 
-    background-color: #1b0424;
-    /* height: 45vh; */
-    /* width: 100vw; */
+        background-color: #f7f7f7;
+        height: 100vh;
+        width: 100vw;
 
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 100%;
 
-    cursor: default;
+    }
 
-}    
+    .ServicesLandLogo {
 
-.ContainerTittleServices {
+        grid-row: 1;
+        grid-column: 2;
 
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
+        width: 100%;
+        height: 100%;
 
-    grid-row: 1;
-    grid-column: 1;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .ServicesLandLogoPic {
 
-    font-family: "Sofia Sans", Arial;
-    font-weight: 200;
-    font-size: 1.5vw;
-    color: white;
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: 50% 50%;
+
+    }
+
+    .ServicesLandText {
+
+        grid-row: 1;
+        grid-column: 1;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding-left: 7.5vw;
+
+    }
+
+    .ServicesLandTextContainer {
+
+        width: 90%;
+        height: 100%;
+
+        /* background-color: white; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+
+    }
+
+    .ServiceLandFirstTextContainer {
+
+        height: 45%;
+        width: 100%;
+
+        /* background-color: blue; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+
+    }
+
+    .FirstSpanServiceLand {
+
+        font-family: "sofia sans";
+        font-size: 2vw;
+        color: rgb(27, 4, 36, 0.7);
+
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+
+        font-weight: 400;
+
+        cursor: default;
+
+    }
+
+    .SecondSpanServiceLand {
+
+        font-family: "sofia sans";
+        font-size: 3vw;
+        color: #1b0424;
+
+        text-align: start;
+        width: 60%;
+        height: fit-content;
+
+        font-weight: 700;
+
+        cursor: default;
+
+
+
+    }
+
+    .ThirdSpanServiceLand {
+
+        font-family: "sofia sans";
+        font-size: 1.75vw;
+        color: rgb(27, 4, 36, 0.7);
+
+        text-align: justify;
+        width: 55%;
+        height: fit-content;
+
+        font-weight: 500;
+
+        cursor: default;
+
+
+    }
+
+    .ServicesLandSecondTextContainer {
+
+        width: 100%;
+        height: 55%;
+
+        /* background-color: red; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+
+    }
+
+    .ServicedLandPropContainer {
+
+        width: 100%;
+        height: 20%;
+
+        /* background-color: white; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .ServicedLandPropContainerLogo {
+
+        width: 10%;
+        height: 100%;
+
+        /* background-color: blue; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .ServicedLandPropContainerLogoPic {
+
+        object-fit: contain;
+        object-position: 50% 50%;
+        width: 65%;
+        height: 80%;
+
+    }
+
+    .ServicedLandPropContainerSpan {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        height: 100%;
+        width: 90%;
+
+    }
+
+    .ServicedLandPropContainerSpanFirst {
+
+        width: 100%;
+        font-family: "sofia sans";
+        font-size: 1.5vw;
+        color: #1b0424;
+
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+        font-weight: 500;
+        cursor: default;
+
+    }
+
+    .ServicedLandPropContainerSpanSecond {
+
+        width: 100%;
+        font-family: "sofia sans";
+        font-size: 1.2vw;
+        color: rgb(27, 4, 36, 0.8);
+
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+        font-weight: 400;
+
+        cursor: default;
+
+    }
+
+    .ServicesLandButton {
+
+        width: 60%;
+        height: 30%;
+        /* background-color: red; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .LandServiceButton {
+
+        width: 80%;
+        height: 60%;
+
+        background-color: #1b0424;
+
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+
+        cursor: pointer;
+
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    }
+
+    .LandServiceBottonLogo {
+
+        width: 20%;
+        height: 100%;
+
+        /* background-color: red; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .LandServiceBottonLogoPicArrow {
+
+        object-fit: contain;
+        object-position: 50% 50%;
+        width: 50%;
+        height: 35%;
+
+        padding-left: 3vw;
+
+    }
+
+    .LandServiceButtonSpan {
+
+        width: 60%;
+        height: 70%;
+
+        /* background-color: green; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .LandServiceButtonSpanFirst {
+
+        width: 100%;
+        font-family: "sofia sans";
+        font-weight: 500;
+        font-size: 1.3vw;
+        color: white;
+        text-align: center;
+
+    }
+
+    .LandServiceButton:hover {
+
+        animation: hoverUpB 0.25s ease forwards;
+
+    }
+
+    @keyframes hoverUp {
+
+        100% {
+            transform: translateY(-20%);
+        }
+
+    }
+
+    @keyframes hoverUpB {
+
+        100% {
+            transform: translateY(-7.5%);
+        }
+
+    }
+
 
 }
 
-.SpanBrandServices {
+/* FIXES SECCION PC ------------------------------------------------------------------------------------------------*/
 
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
+@media (min-width: 1000px) and (max-width: 1300px) {
 
-}
+    .FirstSpanServiceLand {
 
-.SpanBrandServices:hover {
+        font-size: 2.5vw;
 
-   color: gray;
+    }
 
-}
+    .SecondSpanServiceLand {
 
-.SeparatorServices {
+        font-size: 3.4vw;
 
-    width: 20%;
-    height: 1.5px;
-    background-color: white;
+    }
 
+    .ThirdSpanServiceLand {
 
-}
+        font-size: 2.5vw;
 
-.ContainerDataService {
-    /* 
-    width: 100%;
-    height: 100%; */
+    }
 
-    /* background-color: lightblue; */
+    .ServicedLandPropContainerSpanFirst {
 
-    grid-column: 1;
-    grid-row: 2;
+        font-size: 2.2vw;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
+    }
 
-    padding-bottom: 2%;
+    .ServicedLandPropContainerSpanSecond {
 
-}
+        font-size: 1.5vw;
 
-.DataServiceBox {
+    }
 
-    width: 27.5%;
-    height: 20vw;
-    /* background-color: wheat; */
+    .LandServiceButtonSpanFirst {
 
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+        font-size: 2vw;
 
-    cursor: pointer;
+    }
+
+    .ServicedLandPropContainerLogoPic {
+
+        object-fit: contain;
+        object-position: 50% 50%;
+        width: 80%;
+        height: 90%;
+
+    }
 
 }
 
-.DataServiceBox:hover {
 
- .DataServiceTittle {
-
-  color: gray;
-
- }
-
-}
-
-.DataServiceLogo {
-
-    width: 20%;
-    height: 40%;
-
-    /* background-image: url("./public/SaleLogo.png"); */
-    object-position: center;
-    object-fit: contain;
-
-    /* background-color: red; */
-
-}
-
-.DataServiceTittle {
-
-    width: 100%;
-    height: 15.4%;
-
-    font-family: "Sofia Sans", Arial;
-    font-weight: 200;
-    font-size: 1.3vw;
-    color: white;
-
-    display: flex;
-    justify-content: center;
-    align-items: start;
-
-    /* background-color: black; */
-
-}
-
-.DataServiceDescription {
-
-
-    font-family: "Sofia Sans", Arial;
-    font-weight: 300;
-    font-size: 1vw;
-    color: white;
-
-    display: flex;
-    justify-content: center;
-
-    /* background-color: blue; */
-
-}
-
-.DataServiceDescription span {
-
-    width: 80%;
-    text-align: justify;
-
-}
-
-}
-
-/* SECCION TABLET ---------------------------------------*/
+/* SECCION TABLET ---------------------------------------------------------------------------------------------------------*/
 
 @media (min-width: 700px) and (max-width: 999px) {
 
- .MainServices {
+    .MainServicesLand {
 
-    background-color: #1b0424;
-    /* height: 45vh; */
-    /* width: 100vw; */
+        background-color: #f7f7f7;
+        height: 100vh;
+        width: 100vw;
 
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 10% 90%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
 
-    cursor: default;
+    }
+
+    .ServicesLandLogo {
+
+        grid-row: 1;
+        grid-column: 2;
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .ServicesLandLogoPic {
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: 50% 50%;
+
+    }
+
+    .ServicesLandText {
+
+        grid-row: 1;
+        grid-column: 1;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .ServicesLandTextContainer {
+
+        width: 90%;
+        height: 100%;
+
+        /* background-color: white; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
+
+    }
+
+    .ServiceLandFirstTextContainer {
+
+        height: 45%;
+        width: 100%;
+
+        /* background-color: blue; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+
+    }
+
+    .FirstSpanServiceLand {
+
+        font-family: "sofia sans";
+        font-size: 4vw;
+        color: rgb(27, 4, 36, 0.7);
+
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+
+        font-weight: 400;
+
+        cursor: default;
+
+    }
+
+    .SecondSpanServiceLand {
+
+        font-family: "sofia sans";
+        font-size: 4.8vw;
+        color: #1b0424;
+
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+
+        font-weight: 700;
+
+        cursor: default;
+
+
+
+    }
+
+    .ThirdSpanServiceLand {
+
+        font-family: "sofia sans";
+        font-size: 2.75vw;
+        color: rgb(27, 4, 36, 0.7);
+
+        text-align: justify;
+        width: 100%;
+        height: fit-content;
+
+        font-weight: 500;
+
+        cursor: default;
+
+
+    }
+
+    .ServicesLandSecondTextContainer {
+
+        width: 100%;
+        height: 55%;
+
+        /* background-color: red; */
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+
+    }
+
+    .ServicedLandPropContainer {
+
+        width: 100%;
+        height: 20%;
+
+        /* background-color: white; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .ServicedLandPropContainerLogo {
+
+        width: 15%;
+        height: 100%;
+
+        /* background-color: blue; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .ServicedLandPropContainerLogoPic {
+
+        object-fit: contain;
+        object-position: 50% 50%;
+        width: 85%;
+        height: 100%;
+
+    }
+
+    .ServicedLandPropContainerSpan {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        height: 100%;
+        width: 90%;
+
+    }
+
+    .ServicedLandPropContainerSpanFirst {
+
+        width: 100%;
+        font-family: "sofia sans";
+        font-size: 3vw;
+        color: #1b0424;
+
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+        font-weight: 500;
+        cursor: default;
+
+    }
+
+    .ServicedLandPropContainerSpanSecond {
+
+        width: 100%;
+        font-family: "sofia sans";
+        font-size: 1.8vw;
+        color: rgb(27, 4, 36, 0.8);
+
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+        font-weight: 400;
+
+        cursor: default;
+
+    }
+
+    .ServicesLandButton {
+
+        width: 100%;
+        height: 30%;
+        /* background-color: red; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .LandServiceButton {
+
+        width: 90%;
+        height: 60%;
+
+        background-color: #1b0424;
+
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+
+        cursor: pointer;
+
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    }
+
+    .LandServiceBottonLogo {
+
+        width: 20%;
+        height: 100%;
+
+        /* background-color: red; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .LandServiceBottonLogoPicArrow {
+
+        object-fit: contain;
+        object-position: 50% 50%;
+        width: 50%;
+        height: 35%;
+
+        padding-left: 3vw;
+
+    }
+
+    .LandServiceButtonSpan {
+
+        width: 60%;
+        height: 70%;
+
+        /* background-color: green; */
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .LandServiceButtonSpanFirst {
+
+        width: 100%;
+        font-family: "sofia sans";
+        font-weight: 500;
+        font-size: 2.75vw;
+        color: white;
+        text-align: center;
+
+    }
+
+    .LandServiceButton:hover {
+
+        animation: hoverUpB 0.25s ease forwards;
+
+    }
 
 }
 
- .ContainerTittleServices {
+/* SECCION MOBILE ----------------------------------------------------------------------------------------------------------------*/
 
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
+@media (max-width: 699px) {
 
-    grid-row: 1;
-    grid-column: 1;
+    .MainServicesLand {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        background-color: #f7f7f7;
+        height: 100vh;
+        width: 100vw;
 
-    font-family: "Sofia Sans", Arial;
-    font-weight: 200;
-    font-size: 4vw;
-    color: white;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
 
-}
+    }
 
-.SpanBrandServices {
+    .ServicesLandLogo {
 
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
+        display: none;
 
-}
+    }
 
-.SpanBrandServices:hover {
+    .ServicesLandLogoPic {
+        
+        display: none;
 
-   color: gray;
+    }
 
-}
+    .ServicesLandText {
 
-.SeparatorServices {
+        grid-row: 1;
+        grid-column: 1;
 
-    width: 20%;
-    height: 1.5px;
-    background-color: white;
+        width: 100%;
+        height: 100%;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-}
+    }
 
-.ContainerDataService {
-    /* 
-    width: 100%;
-    height: 100%; */
+    .ServicesLandTextContainer {
 
-    /* background-color: lightblue; */
+        width: 90%;
+        height: 100%;
 
-    grid-column: 1;
-    grid-row: 2;
+        /* background-color: white; */
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: start;
 
-    padding-bottom: 7.5%;
+    }
 
-}
+    .ServiceLandFirstTextContainer {
 
-.DataServiceBox {
+        height: 45%;
+        width: 100%;
 
-    width: 33%;
-    height: auto;
-    /* background-color: wheat; */
+        /* background-color: blue; */
 
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
 
-    margin-top: 1%;
+    }
 
-    cursor: pointer;
-}
+    .FirstSpanServiceLand {
 
-.DataServiceBox:hover {
+        font-family: "sofia sans";
+        font-size: 6vw;
+        color: rgb(27, 4, 36, 0.7);
 
- .DataServiceTittle {
+        text-align: start;
+        width: 100%;
+        height: fit-content;
 
-  color: gray;
+        font-weight: 400;
 
- }
+        cursor: default;
 
-}
+    }
 
-.DataServiceLogo {
+    .SecondSpanServiceLand {
 
-    width: 75%;
-    height: 10vw;
+        font-family: "sofia sans";
+        font-size: 9vw;
+        color: #1b0424;
 
-    /* background-image: url("./public/SaleLogo.png"); */
-    object-position: center;
-    object-fit: contain;
+        text-align: start;
+        width: 100%;
+        height: fit-content;
 
-    /* background-color: red; */
+        font-weight: 700;
 
-    margin-bottom: 15px;
+        cursor: default;
 
-}
 
-.DataServiceTittle {
 
-    width: 100%;
-    height: 15.4%;
+    }
 
-    font-family: "Sofia Sans", Arial;
-    font-weight: 200;
-    font-size: 3vw;
-    color: white;
+    .ThirdSpanServiceLand {
 
-    display: flex;
-    justify-content: center;
-    align-items: start;
+        font-family: "sofia sans";
+        font-size: 5.5vw;
+        color: rgb(27, 4, 36, 0.7);
 
-    margin-bottom: 25px;
+        text-align: justify;
+        width: 100%;
+        height: fit-content;
 
+        font-weight: 500;
 
-    /* background-color: black; */
+        cursor: default;
 
-}
 
-.DataServiceDescription {
+    }
 
+    .ServicesLandSecondTextContainer {
 
-    font-family: "Sofia Sans", Arial;
-    font-weight: 300;
-    font-size: 2.5vw;
-    color: white;
+        width: 100%;
+        height: 55%;
 
-    display: flex;
-    justify-content: center;
+        /* background-color: red; */
 
-    /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
 
-}
+    }
 
-.DataServiceDescription span {
+    .ServicedLandPropContainer {
 
-    width: 80%;
-    text-align: justify;
+        width: 100%;
+        height: 20%;
 
-}
+        /* background-color: white; */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 
-}
+    }
 
-/* SECCION MOBILE --------------------------------*/
+    .ServicedLandPropContainerLogo {
 
-@media (min-width: 180px) and (max-width: 699px) {
+        width: 15%;
+        height: 100%;
 
-    .MainServices {
+        /* background-color: blue; */
 
-    background-color: #1b0424;
-    /* height: 45vh; */
-    /* width: 100vw; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 7.5% 92.5%;
+    }
 
-    cursor: default;
+    .ServicedLandPropContainerLogoPic {
 
-}
+        object-fit: contain;
+        object-position: 50% 50%;
+        width: 95%;
+        height: 100%;
 
-    .ContainerTittleServices {
+    }
 
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
+    .ServicedLandPropContainerSpan {
 
-    grid-row: 1;
-    grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        height: 100%;
+        width: 80%;
 
-    font-family: "Sofia Sans", Arial;
-    font-weight: 200;
-    font-size: 7vw;
-    color: white;
+    }
 
-}
+    .ServicedLandPropContainerSpanFirst {
 
-.SpanBrandServices {
+        width: 100%;
+        font-family: "sofia sans";
+        font-size: 6.5vw;
+        color: #1b0424;
 
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+        font-weight: 500;
+        cursor: default;
 
-}
+    }
 
-.SpanBrandServices:hover {
+    .ServicedLandPropContainerSpanSecond {
 
-   color: gray;
+        width: 100%;
+        font-family: "sofia sans";
+        font-size: 3.5vw;
+        color: rgb(27, 4, 36, 0.8);
 
-}
+        text-align: start;
+        width: 100%;
+        height: fit-content;
+        font-weight: 400;
 
-.SeparatorServices {
+        cursor: default;
 
-    width: 20%;
-    height: 1.5px;
-    background-color: white;
+    }
 
+    .ServicesLandButton {
 
-}
+        width: 100%;
+        height: 30%;
+        /* background-color: red; */
 
- .ContainerDataService {
-    /* 
-    width: 100%;
-    height: 100%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-    /* background-color: lightblue; */
+    .LandServiceButton {
 
-    grid-column: 1;
-    grid-row: 2;
+        width: 90%;
+        height: 60%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+        background-color: #1b0424;
 
-    padding-bottom: 7.5%;
+        border-radius: 20px;
 
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-.DataServiceBox {
+        overflow: hidden;
 
-    width: 80%;
-    height: auto;
-    /* background-color: wheat; */
+        cursor: pointer;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    /* margin: 10px; */
-    padding-bottom: 5%;
-    margin-bottom: 10px;
-    cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
-}
+    }
 
-.DataServiceBox:hover {
+    .LandServiceBottonLogo {
 
- .DataServiceTittle {
+        width: 20%;
+        height: 100%;
 
-  color: gray;
+        /* background-color: red; */
 
- }
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-}
+    }
 
-.DataServiceLogo {
+    .LandServiceBottonLogoPicArrow {
 
-    width: 35%;
-    height: 20vw;
+        object-fit: contain;
+        object-position: 50% 50%;
+        width: 50%;
+        height: 35%;
 
-    /* background-image: url("./public/SaleLogo.png"); */
-    object-position: center;
-    object-fit: contain;
+        padding-left: 3vw;
 
-    margin-bottom: 10px;
+    }
 
-    /* background-color: red; */
+    .LandServiceButtonSpan {
 
-}
+        width: 60%;
+        height: 70%;
 
-.DataServiceTittle {
+        /* background-color: green; */
 
-    width: 100%;
-    height: 15.4%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    font-family: "Sofia Sans", Arial;
-    font-weight: 200;
-    font-size: 5.5vw;
-    color: white;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: start;
+    .LandServiceButtonSpanFirst {
 
-    /* background-color: black; */
+        width: 100%;
+        font-family: "sofia sans";
+        font-weight: 500;
+        font-size: 7vw;
+        color: white;
+        text-align: center;
 
-}
+    }
 
-.DataServiceDescription {
+    .LandServiceButton:hover {
 
+        animation: hoverUpB 0.25s ease forwards;
 
-    font-family: "Sofia Sans", Arial;
-    font-weight: 300;
-    font-size: 3.5vw;
-    color: white;
+    }
 
-    display: flex;
-    justify-content: center;
-
-    /* background-color: blue; */
-
-}
-
-.DataServiceDescription span {
-
-    width: 80%;
-    text-align: justify;
-
-}
-    
 }
