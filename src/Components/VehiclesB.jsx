@@ -216,7 +216,7 @@ useEffect(() => {Starter()}, [])
 
         <div className='LandCatalogueBottonLogo'>
 
-          <img className='LandCatalogueBottonLogoPic' src="SaleLogo.webp"></img>
+          <img loading='eager' decoding='async' className='LandCatalogueBottonLogoPic' src="SaleLogo.webp"></img>
 
         </div>
 
@@ -230,7 +230,7 @@ useEffect(() => {Starter()}, [])
 
         <div className='LandCatalogueBottonLogo'>
 
-          <img className='LandCatalogueBottonLogoPicArrow' src="right.webp"></img>
+          <img loading='eager' decoding='async' className='LandCatalogueBottonLogoPicArrow' src="right.webp"></img>
 
         </div>
         

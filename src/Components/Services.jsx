@@ -11,16 +11,13 @@ function Services() {
 
   const navigate = useNavigate()
 
-  let ServicesData = [{ Img: "SaleLogo.webp", Tittle: "Compra en el momento", Description: "Comprá o vendé tu vehículo de manera rápida, segura y al mejor valor del mercado. Te ofrecemos tasaciones justas, opciones de pago flexibles y un acompañamiento profesional en cada paso para que la operación sea simple, ágil y sin complicaciones." }, { Img: "finance.webp", Tittle: "Financiacion", Description: "Accedé a planes de financiación flexibles y adaptados a tus necesidades, con cuotas accesibles y distintas opciones de pago. Te asesoramos para que elijas la mejor alternativa y puedas llevarte tu vehículo de forma rápida y sin complicaciones." }, { Img: "officialService.webp", Tittle: "Service Oficial", Description: "Realizá el mantenimiento de tu vehículo en nuestro service oficial, con técnicos especializados, repuestos originales y equipamiento de última tecnología. Cuidamos tu auto como corresponde para que mantenga su rendimiento, seguridad y valor a lo largo del tiempo." }]
-
-
   return (
 
     <div className="MainServicesLand" id="ServicesScrollRef" onClick={() => { scrollToElement("ServicesScrollRef") }}>
 
       <div className='ServicesLandLogo'>
 
-        <img className='ServicesLandLogoPic' src="serviceBack.webp"></img>
+        <img loading='eager' decoding='async' className='ServicesLandLogoPic' src="serviceBack.webp"></img>
 
       </div>
 
@@ -44,7 +41,7 @@ function Services() {
 
               <div className='ServicedLandPropContainerLogo'>
 
-                <img className='ServicedLandPropContainerLogoPic' src='car.webp'></img>
+                <img loading='eager' decoding='async' className='ServicedLandPropContainerLogoPic' src='car.webp'></img>
 
               </div>
 
@@ -62,7 +59,7 @@ function Services() {
 
               <div className='ServicedLandPropContainerLogo'>
 
-                <img className='ServicedLandPropContainerLogoPic' src='deal.webp'></img>
+                <img loading='eager' decoding='async' className='ServicedLandPropContainerLogoPic' src='deal.webp'></img>
 
               </div>
 
@@ -80,7 +77,7 @@ function Services() {
 
               <div className='ServicedLandPropContainerLogo'>
 
-                <img className='ServicedLandPropContainerLogoPic' src='service.webp'></img>
+                <img loading='eager' decoding='async' className='ServicedLandPropContainerLogoPic' src='service.webp'></img>
 
               </div>
 
@@ -106,7 +103,7 @@ function Services() {
 
                 <div className='LandCatalogueBottonLogo'>
 
-                  <img className='LandServiceBottonLogoPicArrow' src="right.webp"></img>
+                  <img loading='eager' decoding='async' className='LandServiceBottonLogoPicArrow' src="right.webp"></img>
 
                 </div>
 
