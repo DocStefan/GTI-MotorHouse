@@ -136,6 +136,8 @@ function LandPag() {
   
       const isViewportMobile = width <= 999;
       const isViewportMobileB = width <= 500;
+
+      const isViewportMobileStyleRef = width <= 1300
   
       let [FilterActiveNotPc, setFilterActiveNotPc] = useState(false)
 
@@ -285,7 +287,7 @@ userLogData.LogIn ?
 
             {BrandPicsArray.map((val, index) => {
 
-              if(isViewportMobile) {
+              if(isViewportMobileStyleRef) {
 
                 if(index != 10) {
 
