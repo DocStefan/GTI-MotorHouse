@@ -237,7 +237,7 @@ userLogData.LogIn ?
 
               <span className='MainModelText'>{SelectedCarMenu.Frase}</span>
 
-              <span className='MainModelParagraph'>Descubrí tu próximo auto entre las marcas más prestigiosas del mundo.</span>
+              <span className='MainModelParagraph'>Descubrí tu próximo auto en nuestro distinguido catalogo</span>
 
               <div className="ActionButton">
 
@@ -285,6 +285,10 @@ userLogData.LogIn ?
 
             {BrandPicsArray.map((val, index) => {
 
+              if(isViewportMobile) {
+
+                if(index != 10) {
+
               return (
 
                 <div className="PicBrandsLogo" style={{ animationDelay: index * -10 - 10 + "s" }}>
@@ -294,6 +298,25 @@ userLogData.LogIn ?
                 </div>
 
               )
+
+                }
+
+              } else {
+
+
+              return (
+
+                <div className="PicBrandsLogo" style={{ animationDelay: index * -10 - 10 + "s" }}>
+
+                  <img className="BrandsPics" loading='eager' decoding='async' fetchPriority="high" src={val + ".webp"} ></img>
+
+                </div>
+
+              )
+
+
+              }
+
 
             })}
 
