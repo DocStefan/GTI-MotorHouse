@@ -16,12 +16,12 @@ function LandPag() {
   let BrandPicsArray = ["marca (1)", "marca (2)", "marca (3)", "marca (4)", "marca (5)", "marca (6)", "marca (7)", "marca (8)", "marca (9)", "marca (10)", "marca (11)"]
 
   let LandPagManager = [
-    { Marca: "TOYOTA", Modelo: "Crown", Foto: "ToyotaHead.webp", Frase: "El auto que siempre quisiste a un click de distancia", ColorModelo: "#a1151eff" },
-    { Marca: "PORSCHE", Modelo: "718 Cayman", Foto: "PorscheHead.webp", Frase: "El auto ideal para vos te esta esperando", ColorModelo: "#ff5722", Fix: true },
-    { Marca: "AUDI", Modelo: "SportBack", Foto: "AudiHead.webp", Frase: "El camino a tu nuevo auto empieza hoy", ColorModelo: "#0e7cf4" },
-    { Marca: "BMW", Modelo: "M4 Coupe", Foto: "BMWHead.webp", Frase: "El auto que deseas esta mas cerca que nunca", ColorModelo: "#2772db" },
-    { Marca: "DODGE", Modelo: "Challenger", Foto: "DodgeHead.webp", Frase: "Tu auto ideal, más cerca y más fácil que nunca", ColorModelo: "#0fc9e7" },
-    { Marca: "FORD", Modelo: "Mustang", Foto: "FordHead.webp", Frase: "Elegir tu próximo auto nunca fue tan emocionante", ColorModelo: "#eb2632" },
+    { Marca: "TOYOTA", Modelo: "GR SUPRA", Foto: "ToyotaHead.webp", Frase: "Tu próximo auto te está esperando", ColorModelo: "#a1151eff" },
+    { Marca: "PORSCHE", Modelo: "718 CAYMAN", Foto: "PorscheHead.webp", Frase: "El auto ideal para vos te esta esperando", ColorModelo: "#ff5722", Fix: true },
+    { Marca: "AUDI", Modelo: "SPORTBACK", Foto: "AudiHead.webp", Frase: "El camino a tu nuevo auto empieza hoy", ColorModelo: "#0e7cf4" },
+    { Marca: "BMW", Modelo: "M4 COUPE", Foto: "BMWHead.webp", Frase: "El auto que deseas esta mas cerca que nunca", ColorModelo: "#2772db" },
+    { Marca: "DODGE", Modelo: "CHALLENGER", Foto: "DodgeHead.webp", Frase: "Tu auto ideal, más cerca y más fácil que nunca", ColorModelo: "#0fc9e7" },
+    { Marca: "FORD", Modelo: "MUSTANG", Foto: "FordHead.webp", Frase: "Más que un auto, tu proxima experiencia", ColorModelo: "#eb2632" },
     { Marca: "NISSAN", Modelo: "GTR", Foto: "NissanHead.webp", Frase: "Encontrá el auto ideal para vos con tan solo un click", ColorModelo: "#f96d00" },
   ]
 
@@ -94,35 +94,35 @@ function LandPag() {
 
   }, [])
 
-  function MainLogoALternatorPlusButton() {
+  // function MainLogoALternatorPlusButton() {
 
-    switch (true) {
+  //   switch (true) {
 
-      case MainLogoAlternator >= 0 && MainLogoAlternator < 6:
-        setMainLogoAlternator(preVal => preVal + 1)
-        return;
+  //     case MainLogoAlternator >= 0 && MainLogoAlternator < 6:
+  //       setMainLogoAlternator(preVal => preVal + 1)
+  //       return;
 
-      case MainLogoAlternator == 6:
-        setMainLogoAlternator(0)
-        return;
-    }
+  //     case MainLogoAlternator == 6:
+  //       setMainLogoAlternator(0)
+  //       return;
+  //   }
 
-  }
+  // }
 
-  function MainLogoALternatorMinusButton() {
+  // function MainLogoALternatorMinusButton() {
 
-    switch (true) {
+  //   switch (true) {
 
-      case MainLogoAlternator > 0 && MainLogoAlternator <= 6:
-        setMainLogoAlternator(preVal => preVal - 1)
-        return;
+  //     case MainLogoAlternator > 0 && MainLogoAlternator <= 6:
+  //       setMainLogoAlternator(preVal => preVal - 1)
+  //       return;
 
-      case MainLogoAlternator == 0:
-        setMainLogoAlternator(6)
-        return;
-    }
+  //     case MainLogoAlternator == 0:
+  //       setMainLogoAlternator(6)
+  //       return;
+  //   }
 
-  }
+  // }
 
   let SelectedCarMenu = useMemo(() => { return LandPagManager[MainLogoAlternator] }, [LandPagManager, MainLogoAlternator])
 
@@ -231,21 +231,21 @@ userLogData.LogIn ?
 
         <div className="MainText" >
 
-          <div className="MainContainer">
-
             <div className="MainTextContainer" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
-              {SelectedCarMenu.Frase}
+              <span className='MainBrandAndModel'>{SelectedCarMenu.Marca}{" "}{SelectedCarMenu.Modelo}</span>
+
+              <span className='MainModelText'>{SelectedCarMenu.Frase}</span>
+
+              <span className='MainModelParagraph'>Descubrí tu próximo auto entre las marcas más prestigiosas del mundo.</span>
+
+              <div className="ActionButton">
+
+                <button type="button" className="ButtonMain" onClick={() => {navigate("/catalogue")}}>Ir al catalogo</button>
+
+              </div>
 
             </div>
-
-            <div className="ActionButton">
-
-              <button type="button" className="ButtonMain" onClick={() => {navigate("/catalogue")}}>Ver Modelos</button>
-
-            </div>
-
-          </div>
 
         </div>
 
@@ -255,11 +255,11 @@ userLogData.LogIn ?
 
         </div>
 
-        <div className="MainLogoBrandModel" onClick={() => {scrollToElement("MainLandPagRef")}}>
+        {/* <div className="MainLogoBrandModel" onClick={() => {scrollToElement("MainLandPagRef")}}>
 
           <span className="LogoBrandModel" style={{ color: SelectedCarMenu.ColorModelo }}>{SelectedCarMenu.Modelo}</span>
 
-        </div>
+        </div> */}
 
       </Fragment>
 
@@ -269,7 +269,7 @@ userLogData.LogIn ?
 
           <div className="BrandsText">
 
-            <button type="button" className="SliderActionButton" onClick={() => { MainLogoALternatorMinusButton() }}><span className="material-symbols-outlined PlusArrowSymbols">arrow_back</span></button>
+            {/* <button type="button" className="SliderActionButton" onClick={() => { MainLogoALternatorMinusButton() }}><span className="material-symbols-outlined PlusArrowSymbols">arrow_back</span></button> */}
 
             <div className="Separator"></div>
 
@@ -277,7 +277,7 @@ userLogData.LogIn ?
 
             <div className="Separator"></div>
 
-            <button type="button" className="SliderActionButton" onClick={() => { MainLogoALternatorPlusButton() }}><span className="material-symbols-outlined PlusArrowSymbols">arrow_forward</span></button>
+            {/* <button type="button" className="SliderActionButton" onClick={() => { MainLogoALternatorPlusButton() }}><span className="material-symbols-outlined PlusArrowSymbols">arrow_forward</span></button> */}
 
           </div>
 
