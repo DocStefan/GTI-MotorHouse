@@ -553,7 +553,7 @@
     /* background-color: red; */
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 
     flex-wrap: wrap;
     overflow-x: scroll;
@@ -584,7 +584,7 @@
 
 .CalaloguePostBox {
 
-    width: 80%;
+    width: 90%;
     height: 90%;
     background-color: white;
     border-radius: 20px;
@@ -841,6 +841,28 @@
     background-color: #1b0424;
     box-shadow: 0 0 0 5px #cdc9cf;
     color: #fff;
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+
+ .PostName {
+
+    font-size: 1.85vw;
+
+}
+
+.BuyNowButton {
+
+    font-size: 1.1vw;
+
+}
+
+.PostPrice {
+
+    font-size: 1.7vw;
+
+}
+
 }
 
 .NoAvailableOptionsSign {
@@ -1409,6 +1431,17 @@ border-radius: 10px;
     grid-template-rows: 92.5% 7.5%;
 
     z-index: 2;
+
+}
+
+.LoadingOn {
+
+ grid-column: 1;
+ grid-row: 1/ span 2;
+
+ display: flex;
+ justify-content: center;
+ align-items: center; 
 
 }
 
@@ -2238,6 +2271,17 @@ border-radius: 10px;
     grid-template-rows: 92.5% 7.5%;
 
     z-index: 2;
+
+}
+
+.LoadingOn {
+
+ grid-column: 1;
+ grid-row: 1/ span 2;
+
+ display: flex;
+ justify-content: center;
+ align-items: center; 
 
 }
 

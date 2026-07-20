@@ -293,7 +293,7 @@ userLogData.LogIn ?
 
               return (
 
-                <div className="PicBrandsLogo" style={{ animationDelay: index * -10 - 10 + "s" }}>
+                <div className="PicBrandsLogo">
 
                   <img className="BrandsPics" loading='eager' decoding='async' fetchPriority="high" src={val + ".webp"} ></img>
 
