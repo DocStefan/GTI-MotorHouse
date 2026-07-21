@@ -17,6 +17,7 @@ import ServicesPortal from './Components/ServicesPortal'
 import ScrollToTop from './Components/ScrollToTop'
 import CataloguePortal from './Components/CataloguePortal'
 import VehiclesB from './Components/VehiclesB'
+import FavMainButton from './Components/FavMainButton'
 
 function App() {
 
@@ -25,13 +26,13 @@ function App() {
     <BrowserRouter>
     <ScrollToTop />
      <Routes>
-       <Route path="/" element={[<ScrollProvider><MainModelManager><LandPag /><VehiclesB /><Services /><Footer /></MainModelManager></ScrollProvider>]}/>
+       <Route path="/" element={[<ScrollProvider><FavMainButton /><MainModelManager><LandPag /><VehiclesB /><Services /><Footer /></MainModelManager></ScrollProvider>]}/>
        <Route path="/login" element={[<LoginPanel />]} />
        <Route path="/createAccount" element={[<CreateAccountPanel />]} />
        <Route path="/verification" element={[<ToVerificate />]} />
        <Route path="/forgotpass" element={[<ForgotPassword />]}></Route>
-       <Route path="/services" element={[<ScrollProvider><ServicesPortal /><Footer /></ScrollProvider>]}></Route>
-        <Route path="/catalogue" element={[<MainModelManager><ScrollProvider><CataloguePortal /><Vehicles /><Footer /></ScrollProvider></MainModelManager>]}></Route>
+       <Route path="/services" element={[<ScrollProvider><FavMainButton /><ServicesPortal /><Footer /></ScrollProvider>]}></Route>
+        <Route path="/catalogue" element={[<MainModelManager><ScrollProvider><FavMainButton /><CataloguePortal /><Vehicles /><Footer /></ScrollProvider></MainModelManager>]}></Route>
      </Routes>
     </BrowserRouter>
 

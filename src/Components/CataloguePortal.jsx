@@ -69,10 +69,10 @@ function CataloguePortal() {
     
     {isViewportMobile ?
 
-                <div className="NavContainerMobileServices" id='BoxAref' style={{ height: FilterActiveNotPc ? "308px" : "83px" }}>
+                <div className="NavContainerMobileServices" id='BoxAref' style={{ height: FilterActiveNotPc ? "fit-content" : "100%", justifyContent: FilterActiveNotPc ? "start" : "center" }}>
 
-                    <div className="LogoAndMenu">
-                        <span class="material-symbols-outlined LogoAndMenuSpanClass" style={{ border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)" }} onClick={() => { setFilterActiveNotPc(!FilterActiveNotPc) }}> menu </span>
+                    <div className="LogoAndMenuServices">
+                        <span class="material-symbols-outlined LogoAndMenuSpanClassServices" style={{ border: FilterActiveNotPc ? "solid 1.5px white" : "solid 1.5px rgb(255, 255, 255, 0)" }} onClick={() => { setFilterActiveNotPc(!FilterActiveNotPc) }}> menu </span>
                         <img loading='eager' decoding='async' fetchPriority="high" className="LogoNav" src={"logoc.webp"}></img>
                         {
 
@@ -102,7 +102,7 @@ function CataloguePortal() {
                     {FilterActiveNotPc && <>
                         <div className="BotoneraMobile" onClick={() => { navigate("/"), setFilterActiveNotPc(false) }}>Inicio</div>
                         <div className="BotoneraMobile" onClick={() => { navigate("/services"), setFilterActiveNotPc(false) }}>Servicios</div>
-                        <div className="BotoneraMobile" onClick={() => { scrollToElement("FooterScrollRef"), setFilterActiveNotPc(false) }}>Contacto</div></>}
+                        <div className="BotoneraMobile" style={{borderBottom: "solid 2px white"}} onClick={() => { scrollToElement("FooterScrollRef"), setFilterActiveNotPc(false) }}>Contacto</div></>}
                 </div>
 
                 : <div className="NavContainerServices" id='BoxAref'>

@@ -355,7 +355,7 @@ useEffect(() => {Starter()}, [])
 
             <div className="VehiclesCatalogue" onClick={() => { setFilterActiveNotPc(false) }}>
 
-{loading ?           <div className='LoadingOn'>  <FadeLoader
+{loading ?           <div className='LoadingOnMainCatalogue'>  <FadeLoader
     color="#1b0424"
     loading={true}
     height={40}
@@ -374,7 +374,7 @@ useEffect(() => {Starter()}, [])
 
                                     <img loading='eager' decoding='async' className="PostPic" src={val.foto}></img>
 
-                                    <div className="FavMarkPost" id={index} style={{display: isUserLogIn ? "flex" : "none"}}><span class="material-symbols-outlined FavPost">bookmark</span></div>
+                                    <div className="FavMarkPost" id={index} style={{display: isUserLogIn ? "flex" : "none"}}><span class="material-symbols-outlined FavPost">favorite</span></div>
 
                                     <div className="PostName">
                                         <span>{val.año.toString() + " " + val.marca + " " + val.modelo} </span>

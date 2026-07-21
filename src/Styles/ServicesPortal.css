@@ -817,9 +817,9 @@
 
     }
 
-    .LogoAndMenu {
+    .LogoAndMenuServices {
 
-        height: 75px;
+        height: 10vh;
         width: 100%;
         /* background-color: red; */
         display: flex;
@@ -833,11 +833,11 @@
 
     }
 
-    .LogoAndMenuSpanClass {
+    .LogoAndMenuSpanClassServices {
 
         position: absolute;
         left: 10px;
-        bottom: 22.5px;
+        /* bottom: 22.5px; */
         font-size: 35px;
         color: white;
 
@@ -1217,9 +1217,9 @@
 
     }
 
-    .LogoAndMenu {
+    .LogoAndMenuServices {
 
-        height: 75px;
+        height: 10vh;
         width: 100%;
         /* background-color: red; */
         display: flex;
@@ -1233,11 +1233,11 @@
 
     }
 
-    .LogoAndMenuSpanClass {
+    .LogoAndMenuSpanClassServices {
 
         position: absolute;
         left: 10px;
-        bottom: 22.5px;
+        /* bottom: 22.5px; */
         font-size: 35px;
         color: white;
 
