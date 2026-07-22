@@ -4,6 +4,7 @@ import { useId, useState, useEffect, useRef, useMemo, useContext, Fragment } fro
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../firebase'
 import { useNavigate } from 'react-router'
+import axios from 'axios'
 
 
 
@@ -12,6 +13,7 @@ function FavMainButton() {
     const navigate = useNavigate()
 
     let [userOnline, setUserOnline] = useState(false)
+    let [userData, serUserData] = useState(null)
 
     async function monitorAuthState() {
 
@@ -20,6 +22,8 @@ function FavMainButton() {
             if (user) {
 
                setUserOnline(true)
+               serUserData(user.data)
+               console.log(user)
 
             } else {
 
@@ -32,6 +36,22 @@ function FavMainButton() {
     }
 
     useEffect(() => { monitorAuthState() }, [])
+
+    async function FavStarter() {
+
+      try {
+
+        const response = await axios.get("https://us-central1-gti-motorhouse.cloudfunctions.net/api/auth/GetFavorites", {
+            params: {
+             fav_id: userData.email
+            }
+        })
+
+        console.log(response)
+
+      } catch(error) {}
+
+    }
 
     return (
 

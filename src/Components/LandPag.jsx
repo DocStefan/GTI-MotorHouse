@@ -158,7 +158,7 @@ userLogData.LogIn ?
 
  <div className="BotoneraSegundaSignedIn">
 
-    <img className='SignedInPic' loading='eager' decoding='async' fetchPriority="high" src={userLogData.userPic ? userLogData.userPic : "userDefaultPic.webp"}></img>
+    <img className='SignedInPic' alt='' loading='eager' decoding='async' fetchPriority="high" src={userLogData.userPic ? userLogData.userPic : "userDefaultPic.webp"}></img>
 
     <div className='SignedInText'>
 
