@@ -191,6 +191,210 @@ box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0p
 
   }
 
+  .FavoritePostBox {
+
+   width: 95%;
+   height: 25vh;
+
+   background-color: white;
+
+   border-radius: 20px;
+   overflow: hidden;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.FavoritePostImg {
+
+  width: 22.5%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 50% 50%;
+
+  background-color: gold;
+
+}
+
+.FavoritePostSpanContainer {
+
+ width: 57.5%;
+ height: 100%;
+
+ background-color: red;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+
+ padding-left: 10px;
+
+ gap: 3.5vh;
+
+}
+
+.FavoritePostTittleSpan {
+
+ width: 100%;
+ text-align: start;
+ height: fit-content;
+
+ font-family: "Sofia Sans", Arial;
+ font-weight: 550;
+ font-size: 35px;
+ color: #1b0424;
+
+ cursor: default;
+
+}
+
+.FavoritePostMainCharacteristics {
+
+
+    height:fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 17.5px;
+
+    color: #595b5e;
+    font-family: "Jost", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+
+      cursor: default;
+
+}
+
+.FavoriteKmsInfo,
+.FavoriteTransmisionInfo,
+.FavoriteEngineInfo {
+
+    width: auto;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* background-color: red; */
+    /* min-width: 180px; */
+    width: fit-content;
+
+}
+
+.FavoriteInternInfoFix {
+
+    margin-left: 5px;
+    margin-top: 2.5px;
+
+}
+
+.FavoriteCharacteristicLogo {
+
+ font-size: 30px;
+
+}
+
+.FavoritePostPriceAndButtonsContainer {
+
+ width: 20%;
+ height: 70%;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+
+}
+
+.FavoritePostActionButton {
+
+    width: 90%;
+    height: 32.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.FavoriteBuyNowButton {
+
+    background-color: #1b0424;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+
+    color: white;
+    font-family: "Sofia Sans", Arial;
+    font-size: 17.5px;
+    font-weight: 600;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+}
+
+.FavoriteBuyNowButton:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #cdc9cf;
+    color: #fff;
+}
+
+.FavoritePostPriceContainer {
+
+ width: 90%;
+ height: 40%;
+
+ /* background-color: yellow; */
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+}
+
+.FavoritePostPriceLogo {
+
+ font-variation-settings:'FILL' 1;
+ color: #1b0424;
+ font-size: 2.75vw;
+
+ cursor: pointer;
+
+}
+
+.FavoritePostPriceLogo:hover {
+
+  transform: scale(0.9);
+  color: transparent;
+-webkit-text-stroke: 3px #ff3b5c;
+}
+
+.FavoritePostPriceTittle {
+
+ font-family: "sofia sans";
+ font-size: 2.25vw;
+ font-weight: 500;
+ color:#1b0424;
+
+  cursor: default;
+
+
+}
+
 }
 
 /* SECCION TABLET ---------------------------------------------------------------------------------------------------------------------------------------- */ 
@@ -204,15 +408,19 @@ box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0p
  /* background-color: red; */
 
  display: flex;
- flex-direction: column;
- justify-content: flex-start;
- align-items: center;
+ flex-direction: row;
+ justify-content: start;
+ align-items: flex-start;
+ flex-wrap: wrap;
+
+ /* padding: 2.5%; */
+ /* gap: 5%; */
 
 }
 
 .MainFavoritesTittleContainer {
 
- width: 95%;
+ width: 100%;
  height: 17.5vh;
 
  /* background-color: blue; */
@@ -221,6 +429,9 @@ box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0p
  flex-direction: row;
  justify-content: space-between;
  align-items: center;
+
+ padding-left: 2.5%;
+  padding-right: 2.5%;
 
 }
 
@@ -350,7 +561,7 @@ box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0p
 
   .MainNoFavorites {
 
-    width: 50vw;
+    width: 100%;
     height: 40vh;
 
     /* background-color: red; */
@@ -386,6 +597,214 @@ box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0p
 
   }
 
+    .FavoritePostBox {
+
+   width: 45%;
+   height: 60vh;
+
+   background-color: white;
+
+   border-radius: 20px;
+   overflow: hidden;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    margin-right: 2.5%;
+    margin-left: 2.5%;
+
+}
+
+.FavoritePostImg {
+
+  width: 100%;
+  height: 50%;
+
+  object-fit: cover;
+  object-position: 50% 50%;
+
+  background-color: gold;
+
+}
+
+.FavoritePostSpanContainer {
+
+ width: 100%;
+ height: fit-content;
+
+ /* background-color: red; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+
+ padding-left: 10px;
+
+ gap: 0.5vh;
+
+}
+
+.FavoritePostTittleSpan {
+
+ width: 100%;
+ text-align: start;
+ height: fit-content;
+
+ font-family: "Sofia Sans", Arial;
+ font-weight: 550;
+ font-size: 30px;
+ color: #1b0424;
+
+ cursor: default;
+
+}
+
+.FavoritePostMainCharacteristics {
+
+
+    height:fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* gap: 17.5px; */
+
+    color: #595b5e;
+    font-family: "Jost", sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+
+      cursor: default;
+
+}
+
+.FavoriteKmsInfo,
+.FavoriteTransmisionInfo,
+.FavoriteEngineInfo {
+
+    width: auto;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* background-color: red; */
+    /* min-width: 180px; */
+    width: fit-content;
+
+}
+
+.FavoriteInternInfoFix {
+
+    margin-left: 5px;
+    margin-top: 2.5px;
+
+}
+
+.FavoriteCharacteristicLogo {
+
+ font-size: 25px;
+
+}
+
+.FavoritePostPriceAndButtonsContainer {
+
+ width: 100%;
+ /* height: 20%; */
+ flex: 1;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.FavoritePostActionButton {
+
+    width: 90%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.FavoriteBuyNowButton {
+
+    background-color: #1b0424;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+
+    color: white;
+    font-family: "Sofia Sans", Arial;
+    font-size: 17.5px;
+    font-weight: 600;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+}
+
+.FavoriteBuyNowButton:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #cdc9cf;
+    color: #fff;
+}
+
+.FavoritePostPriceContainer {
+
+ width: 90%;
+ height: 40%;
+
+ /* background-color: yellow; */
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+}
+
+.FavoritePostPriceLogo {
+
+ font-variation-settings:'FILL' 1;
+ color: #1b0424;
+ font-size: 27.5px;
+
+ cursor: pointer;
+
+}
+
+.FavoritePostPriceLogo:hover {
+
+  transform: scale(0.9);
+  color: transparent;
+-webkit-text-stroke: 3px #ff3b5c;
+}
+
+.FavoritePostPriceTittle {
+
+ font-family: "sofia sans";
+ font-size: 25px;
+ font-weight: 500;
+ color:#1b0424;
+
+  cursor: default;
+
+
+}
+
 }
 
 /* SECCION MOBILE ---------------------------------------------------------------------------------------------------------------------------------------- */ 
@@ -416,6 +835,8 @@ box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0p
  flex-direction: column;
  justify-content: space-between;
  align-items: center;
+
+ margin-bottom: 15px;
 
 }
 
@@ -580,6 +1001,212 @@ box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0p
     
 
   }
+
+  
+    .FavoritePostBox {
+
+   width: 90%;
+   height: 60vh;
+
+   background-color: white;
+
+   border-radius: 20px;
+   overflow: hidden;
+
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    margin-bottom: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+}
+
+.FavoritePostImg {
+
+  width: 100%;
+  height: 50%;
+
+  object-fit: cover;
+  object-position: 50% 50%;
+
+  background-color: gold;
+
+}
+
+.FavoritePostSpanContainer {
+
+ width: 100%;
+ height: fit-content;
+
+ /* background-color: red; */
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+
+ padding-left: 10px;
+
+ gap: 0.5vh;
+
+}
+
+.FavoritePostTittleSpan {
+
+ width: 100%;
+ text-align: start;
+ height: fit-content;
+
+ font-family: "Sofia Sans", Arial;
+ font-weight: 550;
+ font-size: 30px;
+ color: #1b0424;
+
+ cursor: default;
+
+}
+
+.FavoritePostMainCharacteristics {
+
+
+    height:fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* gap: 17.5px; */
+
+    color: #595b5e;
+    font-family: "Jost", sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+
+      cursor: default;
+
+}
+
+.FavoriteKmsInfo,
+.FavoriteTransmisionInfo,
+.FavoriteEngineInfo {
+
+    width: auto;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* background-color: red; */
+    /* min-width: 180px; */
+    width: fit-content;
+
+}
+
+.FavoriteInternInfoFix {
+
+    margin-left: 5px;
+    margin-top: 2.5px;
+
+}
+
+.FavoriteCharacteristicLogo {
+
+ font-size: 25px;
+
+}
+
+.FavoritePostPriceAndButtonsContainer {
+
+ width: 100%;
+ /* height: 20%; */
+ flex: 1;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+}
+
+.FavoritePostActionButton {
+
+    width: 90%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.FavoriteBuyNowButton {
+
+    background-color: #1b0424;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+
+    color: white;
+    font-family: "Sofia Sans", Arial;
+    font-size: 17.5px;
+    font-weight: 600;
+
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+}
+
+.FavoriteBuyNowButton:hover {
+    background-color: #1b0424;
+    box-shadow: 0 0 0 5px #cdc9cf;
+    color: #fff;
+}
+
+.FavoritePostPriceContainer {
+
+ width: 90%;
+ height: 40%;
+
+ /* background-color: yellow; */
+
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+
+}
+
+.FavoritePostPriceLogo {
+
+ font-variation-settings:'FILL' 1;
+ color: #1b0424;
+ font-size: 27.5px;
+
+ cursor: pointer;
+
+}
+
+.FavoritePostPriceLogo:hover {
+
+  transform: scale(0.9);
+  color: transparent;
+-webkit-text-stroke: 3px #ff3b5c;
+}
+
+.FavoritePostPriceTittle {
+
+ font-family: "sofia sans";
+ font-size: 25px;
+ font-weight: 500;
+ color:#1b0424;
+
+  cursor: default;
+
+
+}
 
 }
 
