@@ -83,7 +83,7 @@ function FavoritesPortal() {
 
   async function FavChosenDelete() {
 
-    console.log(FavIDmanager)
+    // console.log(FavIDmanager)
 
     if (userData.email) {
 
