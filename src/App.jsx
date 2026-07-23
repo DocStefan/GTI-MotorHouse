@@ -6,17 +6,15 @@ import Vehicles from './Components/Vehicles'
 import { ScrollProvider } from './Components/Scroller'
 import { MainFavorites } from './Components/MainFavoritesManager'
 import Services from './Components/Services'
-// import News from './Components/News'
 import Footer from './Components/Footer'
 import LoginPanel from './Components/LoginPanel'
 import CreateAccountPanel from "./Components/CreateAccountPanel"
 import ToVerificate from "./Components/ToVerificate"
-// import { UserProvider } from './Components/UserStatus'
 import ForgotPassword from "./Components/ForgotPassword"
 import ServicesPortal from './Components/ServicesPortal'
 import ScrollToTop from './Components/ScrollToTop'
 import CataloguePortal from './Components/CataloguePortal'
-import VehiclesB from './Components/VehiclesB'
+import VehiclesLand from './Components/VehiclesLand'
 import FavMainButton from './Components/FavMainButton'
 import FavoritesPortal from './Components/FavoritesPortal'
 
@@ -28,7 +26,7 @@ function App() {
     <ScrollToTop />
     <MainFavorites>
      <Routes>
-       <Route path="/" element={[<ScrollProvider><FavMainButton /><LandPag /><VehiclesB /><Services /><Footer /></ScrollProvider>]}/>
+       <Route path="/" element={[<ScrollProvider><FavMainButton /><LandPag /><VehiclesLand /><Services /><Footer /></ScrollProvider>]}/>
        <Route path="/login" element={[<LoginPanel />]} />
        <Route path="/createAccount" element={[<CreateAccountPanel />]} />
        <Route path="/verification" element={[<ToVerificate />]} />

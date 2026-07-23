@@ -6,7 +6,6 @@ import { getAuth, connectAuthEmulator, signInWithEmailAndPassword, signInWithEma
 import { initializeApp } from "firebase/app";
 import { auth } from '../firebase'
 import validator from "validator"
-// import { userContext } from './UserStatus'
 
 function LoginPanel() {
 
@@ -16,9 +15,6 @@ function LoginPanel() {
   let [password, setPassword] = useState("")
 
   let [ErrorHandler, setErrorHandler] = useState({state: false, code: ""})
-
-  // const {isUserLogIn} = useContext(userContext)
-  // const {setIsUserLogIn} = useContext(userContext)
 
   async function LogInEmailPass() {
 
@@ -39,8 +35,6 @@ function LoginPanel() {
     try {
 
       const userData = await signInWithEmailAndPassword(auth, email, password)
-      console.log(userData.user) 
-
 
       if(!userData.user.emailVerified) {
         
@@ -50,12 +44,9 @@ function LoginPanel() {
       } else {
 
         setErrorHandler({state: false, code: ""})
-        // setIsUserLogIn(userData.user)
         navigate("/")
 
       }
-
-      // este errorHandler solia estar fuera del if (arriba de este)
 
     } catch(error) {
 
@@ -72,7 +63,6 @@ function LoginPanel() {
    try {
 
      const userData = await signInWithPopup(auth, provider)
-    //  setIsUserLogIn(userData.user)
      navigate("/")
 
    } catch(error) {

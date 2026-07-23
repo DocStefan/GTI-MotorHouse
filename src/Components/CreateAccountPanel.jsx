@@ -48,7 +48,6 @@ function LoginPanel() {
       await sendEmailVerification(userData.user)
 
       await signOut(auth)
-      // console.log(userData.user)
 
       setErrorHandler({state: false, code: ""})
 

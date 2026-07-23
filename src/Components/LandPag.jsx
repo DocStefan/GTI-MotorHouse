@@ -3,7 +3,6 @@ import "../Styles/LandPag.css"
 import { useState, useEffect, useRef, useMemo, useContext, Fragment } from 'react'
 import { useScroll } from './Scroller'
 import { useNavigate } from 'react-router'
-// import { userContext } from './UserStatus'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../firebase'
 
@@ -27,31 +26,8 @@ function LandPag() {
   let [MainLogoAlternator, setMainLogoAlternator] = useState(0)
 
   const scrollToElement = useScroll();
-  // const {HomeModelSelected, setHomeModelSelected} = useContext(ModelContext)
 
   let [userLogData, setUserLogData] = useState({LogIn: false, userPic: "", userName: "", userEmai: ""})
-
-  // const {isUserLogIn} = useContext(userContext)
-  // const {setIsUserLogIn} = useContext(userContext)
-
-  // useEffect(() => {
-
-  //  if(isUserLogIn) {
-
-  //    if(isUserLogIn.providerId == "google.com") {
-
-  //     setUserLogData({LogIn: true, userPic: isUserLogIn.photoUrl, userName: isUserLogIn.displayName})
-
-  //    } else {
-
-  //     setUserLogData({LogIn: true, userName: isUserLogIn.email.split("@")[0].slice(0, 15)})
-  //     console.log("aaaa")
-
-  //    }
-
-  //  }
-
-  // }, [])
 
   async function monitorAuthState() {
 
@@ -92,36 +68,6 @@ function LandPag() {
     setMainLogoAlternator(Math.floor(Math.random() * LandPagManager.length))
 
   }, [])
-
-  // function MainLogoALternatorPlusButton() {
-
-  //   switch (true) {
-
-  //     case MainLogoAlternator >= 0 && MainLogoAlternator < 6:
-  //       setMainLogoAlternator(preVal => preVal + 1)
-  //       return;
-
-  //     case MainLogoAlternator == 6:
-  //       setMainLogoAlternator(0)
-  //       return;
-  //   }
-
-  // }
-
-  // function MainLogoALternatorMinusButton() {
-
-  //   switch (true) {
-
-  //     case MainLogoAlternator > 0 && MainLogoAlternator <= 6:
-  //       setMainLogoAlternator(preVal => preVal - 1)
-  //       return;
-
-  //     case MainLogoAlternator == 0:
-  //       setMainLogoAlternator(6)
-  //       return;
-  //   }
-
-  // }
 
   let SelectedCarMenu = useMemo(() => { return LandPagManager[MainLogoAlternator] }, [LandPagManager, MainLogoAlternator])
 
@@ -256,12 +202,6 @@ userLogData.LogIn ?
 
         </div>
 
-        {/* <div className="MainLogoBrandModel" onClick={() => {scrollToElement("MainLandPagRef")}}>
-
-          <span className="LogoBrandModel" style={{ color: SelectedCarMenu.ColorModelo }}>{SelectedCarMenu.Modelo}</span>
-
-        </div> */}
-
       </Fragment>
 
       <div className="MainBrands" onClick={() => {scrollToElement("MainLandPagRef")}}>
@@ -270,15 +210,11 @@ userLogData.LogIn ?
 
           <div className="BrandsText">
 
-            {/* <button type="button" className="SliderActionButton" onClick={() => { MainLogoALternatorMinusButton() }}><span className="material-symbols-outlined PlusArrowSymbols">arrow_back</span></button> */}
-
             <div className="Separator"></div>
 
             <span className="SpanBrand">Destacados</span>
 
             <div className="Separator"></div>
-
-            {/* <button type="button" className="SliderActionButton" onClick={() => { MainLogoALternatorPlusButton() }}><span className="material-symbols-outlined PlusArrowSymbols">arrow_forward</span></button> */}
 
           </div>
 

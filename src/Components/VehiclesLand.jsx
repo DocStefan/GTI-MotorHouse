@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Styles/VehiclesB.css"
+import "../Styles/VehiclesLand.css"
 import { useId, useState, useEffect, useRef, useMemo, useContext, Fragment } from 'react'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../firebase'
@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router'
 import axios from 'axios'
 import { FadeLoader } from "react-spinners"
 
-function VehiclesB() {
+function VehiclesLand() {
 
 
   const scrollToElement = useScroll();
@@ -242,4 +242,4 @@ useEffect(() => {Starter()}, [])
   )
 }
 
-export default VehiclesB
+export default VehiclesLand

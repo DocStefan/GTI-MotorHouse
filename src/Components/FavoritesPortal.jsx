@@ -86,8 +86,6 @@ function FavoritesPortal() {
 
   async function FavChosenDelete() {
 
-    // console.log(FavIDmanager)
-
     if (userData) {
 
       try {
