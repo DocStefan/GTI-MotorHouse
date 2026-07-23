@@ -4,10 +4,10 @@ import { useId, useState, useEffect, useRef, useMemo, useContext, Fragment } fro
 import Select from "react-select"
 import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../firebase'
-import { ModelContext } from './MainModelManager'
 import { useScroll } from './Scroller'
 import axios from 'axios'
 import { FadeLoader } from 'react-spinners'
+import { FavoritesContext } from './MainFavoritesManager'
 
 function Vehicles() {
 
@@ -39,6 +39,9 @@ function Vehicles() {
     let [isUserLogIn, setIsUserLogIn] = useState(false)
 
     let [loading, setIsLoading] = useState(true)
+
+    const {favoritesUpdate, setFavoritesUpdate} = useContext(FavoritesContext)
+    
 
 async function Starter() {
 
@@ -144,6 +147,8 @@ useEffect(() => {Starter()}, [])
           }
         })
 
+        setFavoritesUpdate(prev => prev + 1)
+
         } catch(error) {
 
          console.log(error)
@@ -161,6 +166,8 @@ useEffect(() => {Starter()}, [])
             user_email:  userData.email
           
         })
+
+        setFavoritesUpdate(prev => prev + 1)
 
         } catch(error) {
 

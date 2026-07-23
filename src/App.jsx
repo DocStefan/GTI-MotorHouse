@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 import LandPag from './Components/LandPag'
 import Vehicles from './Components/Vehicles'
 import { ScrollProvider } from './Components/Scroller'
-import { MainModelManager } from './Components/MainModelManager'
+import { MainFavorites } from './Components/MainFavoritesManager'
 import Services from './Components/Services'
 // import News from './Components/News'
 import Footer from './Components/Footer'
@@ -26,16 +26,18 @@ function App() {
     
     <BrowserRouter>
     <ScrollToTop />
+    <MainFavorites>
      <Routes>
-       <Route path="/" element={[<ScrollProvider><FavMainButton /><MainModelManager><LandPag /><VehiclesB /><Services /><Footer /></MainModelManager></ScrollProvider>]}/>
+       <Route path="/" element={[<ScrollProvider><FavMainButton /><LandPag /><VehiclesB /><Services /><Footer /></ScrollProvider>]}/>
        <Route path="/login" element={[<LoginPanel />]} />
        <Route path="/createAccount" element={[<CreateAccountPanel />]} />
        <Route path="/verification" element={[<ToVerificate />]} />
        <Route path="/forgotpass" element={[<ForgotPassword />]}></Route>
        <Route path="/services" element={[<ScrollProvider><FavMainButton /><ServicesPortal /><Footer /></ScrollProvider>]}></Route>
-       <Route path="/catalogue" element={[<MainModelManager><ScrollProvider><FavMainButton /><CataloguePortal /><Vehicles /><Footer /></ScrollProvider></MainModelManager>]}></Route>
+       <Route path="/catalogue" element={[<ScrollProvider><FavMainButton /><CataloguePortal /><Vehicles /><Footer /></ScrollProvider>]}></Route>
        <Route path="/favorites" element={[<ScrollProvider><CataloguePortal /><FavoritesPortal /><Footer /></ScrollProvider>]}></Route> 
      </Routes>
+     </MainFavorites>
     </BrowserRouter>
 
   )

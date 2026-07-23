@@ -2,7 +2,6 @@ import React from 'react'
 import "../Styles/LandPag.css"
 import { useState, useEffect, useRef, useMemo, useContext, Fragment } from 'react'
 import { useScroll } from './Scroller'
-import { ModelContext } from './MainModelManager'
 import { useNavigate } from 'react-router'
 // import { userContext } from './UserStatus'
 import { onAuthStateChanged, signOut } from 'firebase/auth'
@@ -28,7 +27,7 @@ function LandPag() {
   let [MainLogoAlternator, setMainLogoAlternator] = useState(0)
 
   const scrollToElement = useScroll();
-  const {HomeModelSelected, setHomeModelSelected} = useContext(ModelContext)
+  // const {HomeModelSelected, setHomeModelSelected} = useContext(ModelContext)
 
   let [userLogData, setUserLogData] = useState({LogIn: false, userPic: "", userName: "", userEmai: ""})
 

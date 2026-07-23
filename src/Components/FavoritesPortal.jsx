@@ -7,6 +7,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../firebase'
 import axios from 'axios'
 import { FadeLoader } from 'react-spinners'
+import { FavoritesContext } from './MainFavoritesManager'
 
 
 
@@ -22,6 +23,8 @@ function FavoritesPortal() {
   let [loading, setLoading] = useState(true)
 
   let [FavIDmanager, setFavIdmanager] = useState({ selected_id: 0 })
+
+  const {favoritesUpdate, setFavoritesUpdate} = useContext(FavoritesContext)
 
   async function monitorAuthState() {
 
@@ -95,6 +98,8 @@ function FavoritesPortal() {
             user_email: userData.email
           }
         })
+
+       setFavoritesUpdate(prev => prev + 1)
 
       } catch (error) {
 

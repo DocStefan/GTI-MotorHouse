@@ -6,7 +6,6 @@ import { auth } from '../firebase'
 import { useScroll } from './Scroller'
 import { useNavigate } from 'react-router'
 import axios from 'axios'
-import VehiclesData from './VehiclesData'
 import { FadeLoader } from "react-spinners"
 
 function VehiclesB() {

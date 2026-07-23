@@ -5,6 +5,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../firebase'
 import { useNavigate } from 'react-router'
 import axios from 'axios'
+import { FavoritesContext } from './MainFavoritesManager'
 
 
 
@@ -16,6 +17,8 @@ function FavMainButton() {
     let [userData, serUserData] = useState(null)
 
     let [favoritesAmount, setFavoritesAmount] = useState(0)
+
+    const {favoritesUpdate, setFavoritesUpdate} = useContext(FavoritesContext)
 
     async function monitorAuthState() {
 
@@ -67,13 +70,13 @@ function FavMainButton() {
     
         FavStarter()
     
-      }, [userData])
+      }, [userData, favoritesUpdate])
 
     return (
 
-        <div className='ContainerFavButton' style={{display: userOnline ? "flex" : "none"}} onClick={() => {navigate("/favorites")}}>
+        <div className='ContainerFavButton' style={{display: (userOnline ? (favoritesAmount > 0 ? "flex" : "none") : "none")}} onClick={() => {navigate("/favorites")}}>
 
-            <div className='TrueFavs' style={{display: "none"}}>{favoritesAmount}</div>
+            <div className='TrueFavs'>{favoritesAmount}</div>
 
             <span class="material-symbols-outlined FavMainButtonClass">favorite</span>
 
