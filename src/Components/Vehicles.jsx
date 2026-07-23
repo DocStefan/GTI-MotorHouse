@@ -27,6 +27,11 @@ function Vehicles() {
     let [PaginatorFowardStyleManager, SetPaginatorFowardStyleManager] = useState(true)
     let [PaginatorBackwardsStyleManager, setPaginatorBackwardsStyleManager] = useState(false)
 
+    let [userData, setUserData] = useState("")
+    let [favorites, setFavorites] = useState([])
+
+    let [FavIDmanager, setFavIdmanager] = useState({selected_id: 0})
+
     const scrollToElement = useScroll();
 
     let [VehiclesData, setVehiclesData] = useState([])
@@ -62,10 +67,13 @@ async function Starter() {
     if(user) {
 
       setIsUserLogIn(true)
+      setUserData(user)
  
     } else {
 
       setIsUserLogIn(false)
+      setUserData(null)
+
 
     }
 
@@ -76,6 +84,101 @@ async function Starter() {
 useEffect(() => {monitorAuthState()}, [])
 
 useEffect(() => {Starter()}, [])
+
+  async function ToBeFavStarter() {
+
+    if (userData) {
+
+      try {
+
+        const response = await axios.get("https://us-central1-gti-motorhouse.cloudfunctions.net/api/auth/GetFavorites", {
+          params: {
+            fav_id: userData.email
+          }
+        })
+
+        let favIdsArray = []
+
+        response.data.forEach((obj) => {
+
+         favIdsArray.push(obj.catalogue_id)
+
+        })
+
+        setFavorites(favIdsArray)
+
+      } catch (error) {
+
+        console.log(error)
+
+      } 
+
+    } else {
+
+      setFavorites([])
+
+    }
+
+  }
+
+  useEffect(() => {
+
+    ToBeFavStarter()
+
+  }, [userData])
+
+  async function FavChosen() {
+
+    console.log(FavIDmanager)
+
+    if(userData.email) {
+
+    if(favorites.includes(FavIDmanager.selected_id)) {
+
+        try {
+
+        const response = await axios.delete("https://us-central1-gti-motorhouse.cloudfunctions.net/api/auth/RemoveFavorite", {
+          params: {
+            tonotbe_fav_id: FavIDmanager.selected_id,
+            user_email:  userData.email
+          }
+        })
+
+        } catch(error) {
+
+         console.log(error)
+
+        }
+
+
+    } else {
+
+        try {
+
+        const response = await axios.post("https://us-central1-gti-motorhouse.cloudfunctions.net/api/auth/AddFavorite", {
+       
+            tobe_fav_id: FavIDmanager.selected_id,
+            user_email:  userData.email
+          
+        })
+
+        } catch(error) {
+
+         console.log(error)
+
+        }
+
+    } }
+
+    ToBeFavStarter()
+
+  }
+
+  useEffect(() => {
+
+    FavChosen()
+
+  }, [FavIDmanager])
 
     let ModelOptions = useMemo(() => {
 
@@ -374,7 +477,7 @@ useEffect(() => {Starter()}, [])
 
                                     <img loading='eager' decoding='async' className="PostPic" src={val.foto}></img>
 
-                                    <div className="FavMarkPost" id={index} style={{display: isUserLogIn ? "flex" : "none"}}><span class="material-symbols-outlined FavPost">favorite</span></div>
+                                    <div className="FavMarkPost" onClick={() => {setFavIdmanager({selected_id: val.catalogue_id})}} style={{display: isUserLogIn ? "flex" : "none"}}><span class="material-symbols-outlined FavPost" style={{fontVariationSettings: favorites.includes(val.catalogue_id) ? "'FILL' 1" : "'FILL' 0"}}>favorite</span></div>
 
                                     <div className="PostName">
                                         <span>{val.año.toString() + " " + val.marca + " " + val.modelo} </span>

@@ -650,7 +650,7 @@
 
 .FavPost {
 
- font-variation-settings:'FILL' 0;
+ /* font-variation-settings:'FILL' 0; */
  color: white;
  font-size: 30px;
 

@@ -15,6 +15,8 @@ function FavMainButton() {
     let [userOnline, setUserOnline] = useState(false)
     let [userData, serUserData] = useState(null)
 
+    let [favoritesAmount, setFavoritesAmount] = useState(0)
+
     async function monitorAuthState() {
 
         await onAuthStateChanged(auth, user => {
@@ -22,12 +24,12 @@ function FavMainButton() {
             if (user) {
 
                setUserOnline(true)
-               serUserData(user.data)
-               console.log(user)
+               serUserData(user)
 
             } else {
 
                setUserOnline(false)
+               serUserData(null)
 
             }
 
@@ -39,6 +41,8 @@ function FavMainButton() {
 
     async function FavStarter() {
 
+        if(userData) {
+
       try {
 
         const response = await axios.get("https://us-central1-gti-motorhouse.cloudfunctions.net/api/auth/GetFavorites", {
@@ -47,17 +51,29 @@ function FavMainButton() {
             }
         })
 
-        console.log(response)
+        setFavoritesAmount(response.data.length)
 
-      } catch(error) {}
+      } catch(error) {
+
+        console.log(error)
+
+      }
+
+        } 
 
     }
 
+      useEffect(() => {
+    
+        FavStarter()
+    
+      }, [userData])
+
     return (
 
-        <div className='ContainerFavButton' style={{display: userOnline ? "none" : "none"}} onClick={() => {navigate("/favorites")}}>
+        <div className='ContainerFavButton' style={{display: userOnline ? "flex" : "none"}} onClick={() => {navigate("/favorites")}}>
 
-            <div className='TrueFavs'>5</div>
+            <div className='TrueFavs' style={{display: "none"}}>{favoritesAmount}</div>
 
             <span class="material-symbols-outlined FavMainButtonClass">favorite</span>
 
