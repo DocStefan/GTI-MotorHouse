@@ -129,9 +129,9 @@ useEffect(() => {Starter()}, [])
 
   async function FavChosen() {
 
-    console.log(FavIDmanager)
+    // console.log(FavIDmanager)
 
-    if(userData.email) {
+    if(userData) {
 
     if(favorites.includes(FavIDmanager.selected_id)) {
 

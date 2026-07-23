@@ -85,7 +85,7 @@ function FavoritesPortal() {
 
     // console.log(FavIDmanager)
 
-    if (userData.email) {
+    if (userData) {
 
       try {
 
